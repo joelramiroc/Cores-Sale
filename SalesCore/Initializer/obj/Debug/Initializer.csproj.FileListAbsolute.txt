@@ -1,0 +1,12 @@
+c:\users\joel.caballero\documents\visual studio 2015\Projects\SalesCore\Initializer\obj\Debug\Initializer.csprojResolveAssemblyReference.cache
+c:\users\joel.caballero\documents\visual studio 2015\Projects\SalesCore\Initializer\bin\Debug\Initializer.dll.config
+c:\users\joel.caballero\documents\visual studio 2015\Projects\SalesCore\Initializer\bin\Debug\Initializer.dll
+c:\users\joel.caballero\documents\visual studio 2015\Projects\SalesCore\Initializer\bin\Debug\Initializer.pdb
+c:\users\joel.caballero\documents\visual studio 2015\Projects\SalesCore\Initializer\bin\Debug\DataBase.dll
+c:\users\joel.caballero\documents\visual studio 2015\Projects\SalesCore\Initializer\bin\Debug\EntityFramework.dll
+c:\users\joel.caballero\documents\visual studio 2015\Projects\SalesCore\Initializer\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\joel.caballero\documents\visual studio 2015\Projects\SalesCore\Initializer\bin\Debug\DataBase.pdb
+c:\users\joel.caballero\documents\visual studio 2015\Projects\SalesCore\Initializer\bin\Debug\EntityFramework.xml
+c:\users\joel.caballero\documents\visual studio 2015\Projects\SalesCore\Initializer\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\joel.caballero\documents\visual studio 2015\Projects\SalesCore\Initializer\obj\Debug\Initializer.dll
+c:\users\joel.caballero\documents\visual studio 2015\Projects\SalesCore\Initializer\obj\Debug\Initializer.pdb
