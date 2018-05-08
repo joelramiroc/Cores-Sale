@@ -8,16 +8,17 @@ using System.Web;
 using System.Web.Mvc;
 using SalesCore.Models;
 using Database.Repository;
+using DataBase.Model;
 
 namespace SalesCore.Controllers
 {
     public class TestsController : Controller
     {
-        private readonly BaseRepository<TestViewModel> testRepository;
+        private readonly BaseRepository<Test> testRepository;
         private ApplicationDbContext db = new ApplicationDbContext();
 
 
-        public TestsController(BaseRepository<TestViewModel> testRepository)
+        public TestsController(BaseRepository<Test> testRepository)
         {
             this.testRepository = testRepository;
         }

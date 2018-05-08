@@ -8,3 +8,13 @@ c:\users\joel.caballero\documents\visual studio 2015\Projects\SalesCore\DataBase
 c:\users\joel.caballero\documents\visual studio 2015\Projects\SalesCore\DataBase\obj\Debug\DataBase.csprojResolveAssemblyReference.cache
 c:\users\joel.caballero\documents\visual studio 2015\Projects\SalesCore\DataBase\obj\Debug\DataBase.dll
 c:\users\joel.caballero\documents\visual studio 2015\Projects\SalesCore\DataBase\obj\Debug\DataBase.pdb
+C:\Users\joel.caballero\Desktop\Cores-Sale\SalesCore\DataBase\bin\Debug\DataBase.dll.config
+C:\Users\joel.caballero\Desktop\Cores-Sale\SalesCore\DataBase\bin\Debug\DataBase.dll
+C:\Users\joel.caballero\Desktop\Cores-Sale\SalesCore\DataBase\bin\Debug\DataBase.pdb
+C:\Users\joel.caballero\Desktop\Cores-Sale\SalesCore\DataBase\bin\Debug\EntityFramework.dll
+C:\Users\joel.caballero\Desktop\Cores-Sale\SalesCore\DataBase\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\joel.caballero\Desktop\Cores-Sale\SalesCore\DataBase\bin\Debug\EntityFramework.xml
+C:\Users\joel.caballero\Desktop\Cores-Sale\SalesCore\DataBase\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\joel.caballero\Desktop\Cores-Sale\SalesCore\DataBase\obj\Debug\DataBase.csprojResolveAssemblyReference.cache
+C:\Users\joel.caballero\Desktop\Cores-Sale\SalesCore\DataBase\obj\Debug\DataBase.dll
+C:\Users\joel.caballero\Desktop\Cores-Sale\SalesCore\DataBase\obj\Debug\DataBase.pdb
