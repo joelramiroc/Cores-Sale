@@ -48,14 +48,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Models\Address.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\BusinessName.cs" />
-    <Compile Include="Models\CurrentAccountDocuments.cs" />
     <Compile Include="Models\CurrentAccountDocumentType.cs" />
     <Compile Include="Models\CurrentAccountProvider.cs" />
+    <Compile Include="Models\DocumentTypeProvider.cs" />
+    <Compile Include="Models\MovimentsProvider.cs" />
     <Compile Include="Models\Provider.cs" />
     <Compile Include="Models\PurchaseDocument.cs" />
     <Compile Include="Models\PurchaseOrder.cs" />
+    <Compile Include="Models\Telephone.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

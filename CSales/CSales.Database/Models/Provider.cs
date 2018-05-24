@@ -17,10 +17,10 @@ namespace CSales.Database.Models
         [Key]
         public long Id { get; set; }
 
-        public string Address { get; set; }
+        public ICollection<Address> Address { get; set; }
 
         [Required]
-        public string Telephone { get; set; }
+        public ICollection<Telephone> Telephones { get; set; }
 
         [Required]
         public bool Active { get; set; }

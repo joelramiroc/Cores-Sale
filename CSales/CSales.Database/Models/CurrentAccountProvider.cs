@@ -22,8 +22,6 @@ namespace CSales.Database.Models
 
         public virtual Provider Provider { get; set; }
 
-        public ICollection<CurrentAccountDocuments> CurrentAccountDocuments { get; set; }
-
         public DateTime CreatedDate { get; set; }
     }
 }
