@@ -1,4 +1,4 @@
-﻿// <copyright file="CurrentAccountProvider.cs" company="PlaceholderCompany">
+﻿// <copyright file="Storage.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
@@ -12,18 +12,21 @@ namespace CSales.Database.Models
     using System.Text;
     using System.Threading.Tasks;
 
-    public class CurrentAccountProvider
+    public class Storage
     {
         [Key]
-        public long IdCurrentAccountProvider { get; set; }
+        public long IdStorage { get; set; }
 
-        [ForeignKey(nameof(Provider))]
-        public long IdProvider { get; set; }
+        public string StorageName { get; set; }
 
-        public virtual Provider Provider { get; set; }
+        [ForeignKey(nameof(Address))]
+        public long IdAddress { get; set; }
 
-        public decimal TotalDebt { get; set; }
+        public virtual Address Address { get; set; }
+
+        public ICollection<Telephone> Telephones { get; set; }
 
         public DateTime CreatedDate { get; set; }
+
     }
 }

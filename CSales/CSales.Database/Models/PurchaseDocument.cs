@@ -6,6 +6,7 @@ namespace CSales.Database.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
     using System.Text;
@@ -13,20 +14,13 @@ namespace CSales.Database.Models
 
     public class PurchaseDocument
     {
+        [Key]
         public long IdPurchaseDocument { get; set; }
 
         [ForeignKey(nameof(Provider))]
         public long IdProvider { get; set; }
 
         public virtual Provider Provider { get; set; }
-
-        public int Quantity { get; set; }
-
-        public decimal UnitPrice { get; set; }
-
-        public decimal? Discount { get; set; }
-
-        public decimal TotalAmount { get; set; }
 
         [ForeignKey(nameof(CurrentAccountDocumentType))]
         public long IdCurrentAccountDocumentType { get; set; }
@@ -39,5 +33,9 @@ namespace CSales.Database.Models
         public virtual PurchaseOrder PurchaseOrder { get; set; }
 
         public DateTime CreatedDate { get; set; }
+
+        public ICollection<DetailsProductsToSale> DetailsProductsToSale { get; set; }
+
+        public decimal TotalAmount { get; set; }
     }
 }

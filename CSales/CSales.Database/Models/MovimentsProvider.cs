@@ -16,7 +16,7 @@ namespace CSales.Database.Models
         [ForeignKey(nameof(DocumentTypeProvider))]
         public long IdDocumentType { get; set; }
 
-        public virtual DocumentTypeProvider DocumentTypeProvider { get; set; }
+        public virtual TypeOfPurchaseDocument DocumentTypeProvider { get; set; }
 
         public long DocumentId { get; set; }
 

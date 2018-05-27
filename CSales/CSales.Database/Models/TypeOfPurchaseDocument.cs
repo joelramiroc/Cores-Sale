@@ -11,7 +11,7 @@ namespace CSales.Database.Models
     using System.Text;
     using System.Threading.Tasks;
 
-    public class DocumentTypeProvider
+    public class TypeOfPurchaseDocument
     {
         [Key]
         public long IdDocumentTypeProvider { get; set; }

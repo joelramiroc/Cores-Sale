@@ -25,5 +25,7 @@ namespace CSales.Database.Models
         public virtual Provider Provider { get; set; }
 
         public DateTime CreatedDate { get; set; }
+
+        public ICollection<DetailsProductsToSale> DetailsProductsToSale { get; set; }
     }
 }

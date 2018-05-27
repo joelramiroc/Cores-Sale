@@ -15,7 +15,7 @@ namespace CSales.Database.Models
     public class Provider
     {
         [Key]
-        public long Id { get; set; }
+        public long IdProvider { get; set; }
 
         public ICollection<Address> Address { get; set; }
 

@@ -1,4 +1,4 @@
-﻿// <copyright file="CurrentAccountProvider.cs" company="PlaceholderCompany">
+﻿// <copyright file="CustomerCheckingAccount.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
@@ -12,15 +12,15 @@ namespace CSales.Database.Models
     using System.Text;
     using System.Threading.Tasks;
 
-    public class CurrentAccountProvider
+    public class CustomerCheckingAccount
     {
         [Key]
-        public long IdCurrentAccountProvider { get; set; }
+        public long IdCustomerCheckingAccount { get; set; }
 
-        [ForeignKey(nameof(Provider))]
-        public long IdProvider { get; set; }
+        [ForeignKey(nameof(Client))]
+        public long IdClient { get; set; }
 
-        public virtual Provider Provider { get; set; }
+        public virtual Client Client { get; set; }
 
         public decimal TotalDebt { get; set; }
 
