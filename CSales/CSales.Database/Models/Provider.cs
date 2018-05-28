@@ -12,33 +12,47 @@ namespace CSales.Database.Models
     using System.Text;
     using System.Threading.Tasks;
 
+    [Table("PROVIDER")]
+
     public class Provider
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Column("IDPROVIDER")]
         public long IdProvider { get; set; }
 
-        public ICollection<Address> Address { get; set; }
+        [Column("ADDRESSES")]
+        public ICollection<Address> Addresses { get; set; }
 
         [Required]
+        [Column("TELEPHONES")]
         public ICollection<Telephone> Telephones { get; set; }
 
         [Required]
+        [Column("ACTIVE")]
         public bool Active { get; set; }
 
-        public string City { get; set; }
+        [Column("CITIESDISTRICTS")]
+        public ICollection<CityDistrict> CitiesDistricts { get; set; }
 
+        [Column("CONTACT")]
         public string Contact { get; set; }
 
         [Required]
-        public bool IsForeingProvider { get; set; }
+        [Column("ISFOREIGNPROVIDER")]
+        public bool IsForeignProvider { get; set; }
 
         [ForeignKey(nameof(BusinessName))]
+        [Column("IDBUSINESSNAME")]
         public long IdBusinessName { get; set; }
 
+        [Column("BUSINESSNAME")]
         public virtual BusinessName BusinessName { get; set; }
 
+        [Column("CREATEDBY")]
         public virtual ApplicationUser CreatedBy { get; set; }
 
+        [Column("CREATEDDATE")]
         public DateTime CreatedDate { get; set; }
     }
 }

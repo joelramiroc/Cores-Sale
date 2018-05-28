@@ -1,0 +1,14 @@
+C:\Users\Joeru\Desktop\Cores-Sale\CSales\CSales.Database\bin\Debug\CSales.Database.dll.config
+C:\Users\Joeru\Desktop\Cores-Sale\CSales\CSales.Database\bin\Debug\CSales.Database.dll
+C:\Users\Joeru\Desktop\Cores-Sale\CSales\CSales.Database\bin\Debug\CSales.Database.pdb
+C:\Users\Joeru\Desktop\Cores-Sale\CSales\CSales.Database\bin\Debug\EntityFramework.dll
+C:\Users\Joeru\Desktop\Cores-Sale\CSales\CSales.Database\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Joeru\Desktop\Cores-Sale\CSales\CSales.Database\bin\Debug\FirebirdSql.Data.FirebirdClient.dll
+C:\Users\Joeru\Desktop\Cores-Sale\CSales\CSales.Database\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Joeru\Desktop\Cores-Sale\CSales\CSales.Database\bin\Debug\EntityFramework.xml
+C:\Users\Joeru\Desktop\Cores-Sale\CSales\CSales.Database\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Joeru\Desktop\Cores-Sale\CSales\CSales.Database\bin\Debug\FirebirdSql.Data.FirebirdClient.pdb
+C:\Users\Joeru\Desktop\Cores-Sale\CSales\CSales.Database\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Joeru\Desktop\Cores-Sale\CSales\CSales.Database\obj\Debug\CSales.Database.csproj.CoreCompileInputs.cache
+C:\Users\Joeru\Desktop\Cores-Sale\CSales\CSales.Database\obj\Debug\CSales.Database.dll
+C:\Users\Joeru\Desktop\Cores-Sale\CSales\CSales.Database\obj\Debug\CSales.Database.pdb
