@@ -32,10 +32,10 @@ namespace CSales.Database.Models
 
         public virtual Employee Employee { get; set; }
 
-        [ForeignKey(nameof(NoteOutput))]
+        [ForeignKey(nameof(OutputNote))]
         public long IdNoteOutput { get; set; }
 
-        public virtual NoteOutput NoteOutput { get; set; }
+        public OutputNote OutputNote { get; set; }
 
         public DateTime CreatedDate { get; set; }
     }

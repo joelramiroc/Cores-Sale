@@ -27,7 +27,11 @@ namespace CSales.Database.Contexts
 
         public DbSet<Provider> Provider { get; set; }
 
+        public DbSet<Address> Address { get; set; }
+
         public DbSet<Bank> Bank { get; set; }
+
+        public DbSet<DetailsProductsToSale> DetailsProductsToSale { get; set; }
 
         public DbSet<Bill> Bill { get; set; }
 
@@ -36,6 +40,8 @@ namespace CSales.Database.Contexts
         public DbSet<Check> Chek { get; set; }
 
         public DbSet<BusinessName> BusinessName { get; set; }
+
+        public DbSet<DetailEntryNote> DetailEntryNote { get; set; }
 
         public DbSet<CityDistrict> CityDistrict { get; set; }
 
@@ -56,9 +62,7 @@ namespace CSales.Database.Contexts
         public DbSet<CustomerCheckingAccount> CustomerCheckingAccount { get; set; }
 
         public DbSet<DebitNote> DebitNote { get; set; }
-
-        public DbSet<DetailEntryNote> DetailEntryNote { get; set; }
-
+        
         public DbSet<Email> Email { get; set; }
 
         public DbSet<Employee> Employee { get; set; }

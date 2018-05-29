@@ -4,6 +4,8 @@
 
 namespace CSales.Controllers
 {
+    using Database.Models;
+    using Database.Repositories;
     using System;
     using System.Collections.Generic;
     using System.Data.Entity;
@@ -14,10 +16,17 @@ namespace CSales.Controllers
 
     public class HomeController : Controller
     {
+        private readonly IRepository<Provider> providerRepository;
+
+        public HomeController(IRepository<Provider> providerRepository)
+        {
+            this.providerRepository = providerRepository;
+        }
+
         public ActionResult Index()
         {
-
-            return View();
+            var c = this.providerRepository.All();
+            return this.View();
         }
 
         public bool Add()
