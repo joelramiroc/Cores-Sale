@@ -182,3 +182,4 @@ C:\Users\Joeru\Desktop\Cores-Sale\CSales\CSales\bin\Ninject.xml
 C:\Users\Joeru\Desktop\Cores-Sale\CSales\CSales\bin\Ninject.Extensions.Factory.xml
 C:\Users\Joeru\Desktop\Cores-Sale\CSales\CSales\bin\Ninject.Web.Common.xml
 C:\Users\Joeru\Desktop\Cores-Sale\CSales\CSales\bin\Ninject.Web.Mvc.xml
+C:\Users\Joeru\Desktop\Cores-Sale\CSales\CSales\obj\Debug\CSales.csprojResolveAssemblyReference.cache

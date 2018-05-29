@@ -11,7 +11,7 @@ namespace CSales.Database.Models
     using System.Text;
     using System.Threading.Tasks;
 
-    public class MovimentsProvider
+    public class MovementsProvider
     {
         [ForeignKey(nameof(DocumentTypeProvider))]
         public long IdDocumentType { get; set; }
