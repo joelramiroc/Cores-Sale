@@ -81,6 +81,7 @@
     <Compile Include="Models\Kardex.cs" />
     <Compile Include="Models\MovementType.cs" />
     <Compile Include="Models\PaymentMethod.cs" />
+    <Compile Include="Repositories\PaymentMethodRepository.cs" />
     <Compile Include="Models\StatusNote.cs" />
     <Compile Include="Models\ExternalInventory.cs" />
     <Compile Include="Models\ExternalProduct.cs" />
@@ -140,8 +141,28 @@
     <Compile Include="Repositories\KardexRepository.cs" />
     <Compile Include="Repositories\MovementsProviderepository.cs" />
     <Compile Include="Repositories\MovementsTypeRepository.cs" />
+    <Compile Include="Repositories\OrderDetailRepository.cs" />
+    <Compile Include="Repositories\OutputNoteRepository.cs" />
+    <Compile Include="Repositories\PaymentConditionRepository.cs" />
+    <Compile Include="Repositories\ProductLineRepository.cs" />
+    <Compile Include="Repositories\ProductRepository.cs" />
+    <Compile Include="Repositories\ProductTypeRepository.cs" />
     <Compile Include="Repositories\ProviderRepository.cs" />
+    <Compile Include="Repositories\PurchaseDocumentRepository.cs" />
+    <Compile Include="Repositories\PurchaseOrderRepository.cs" />
+    <Compile Include="Repositories\ReasonNoteRepository.cs" />
     <Compile Include="Repositories\RepositoryBase.cs" />
+    <Compile Include="Repositories\RUCRepository.cs" />
+    <Compile Include="Repositories\SaleOrderRepository.cs" />
+    <Compile Include="Repositories\SaleRepository.cs" />
+    <Compile Include="Repositories\SalesByDispatchRepository.cs" />
+    <Compile Include="Repositories\StatusNoteRepository.cs" />
+    <Compile Include="Repositories\StorageRepository.cs" />
+    <Compile Include="Repositories\TelephoneRepository.cs" />
+    <Compile Include="Repositories\TypeOfPuchaseDocumentRepository.cs" />
+    <Compile Include="Repositories\TypeOfSaleDocumentRepository.cs" />
+    <Compile Include="Repositories\UnitOfMeasurementRepository.cs" />
+    <Compile Include="Repositories\VoucherRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
