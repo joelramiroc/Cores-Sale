@@ -17,6 +17,7 @@ namespace CSales.Database.Models
     public class CounterSale
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("IDCOUNTERSALE")]
         public long IdCounterSale { get; set; }
 

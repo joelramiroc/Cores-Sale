@@ -17,6 +17,7 @@ namespace CSales.Database.Models
     public class Storage
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("IDSTORAGE")]
         public long IdStorage { get; set; }
 

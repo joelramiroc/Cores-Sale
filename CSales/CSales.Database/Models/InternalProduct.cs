@@ -17,6 +17,7 @@ namespace CSales.Database.Models
     public class InternalProduct
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("IDINTERNALPRODUCT")]
         public long IdInternalProduct { get; set; }
 

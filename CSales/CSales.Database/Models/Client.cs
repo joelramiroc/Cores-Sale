@@ -17,6 +17,7 @@ namespace CSales.Database.Models
     public class Client
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("IDCLIENT")]
         public long IdClient { get; set; }
 

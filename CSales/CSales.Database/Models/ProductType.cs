@@ -17,6 +17,7 @@ namespace CSales.Database.Models
     public class ProductType
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("IDPRODUCTTYPE")]
         public long IdProductType { get; set; }
 

@@ -6,6 +6,7 @@ namespace CSales.Database.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
     using System.Text;
@@ -15,6 +16,8 @@ namespace CSales.Database.Models
 
     public class SaleOrder
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("IDSALEORDER")]
         public long IdSaleOrder { get; set; }
 

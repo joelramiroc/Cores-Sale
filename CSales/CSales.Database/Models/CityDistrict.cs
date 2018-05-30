@@ -17,6 +17,7 @@ namespace CSales.Database.Models
     public class CityDistrict
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("IDCITYDISCTRICT")]
         public long IdCityDistrict { get; set; }
 

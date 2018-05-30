@@ -17,6 +17,7 @@ namespace CSales.Database.Models
     public class StatusNote
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("IDSTATUSNOTE")]
         public long IdStatusNote { get; set; }
 

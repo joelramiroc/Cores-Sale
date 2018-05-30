@@ -17,6 +17,7 @@ namespace CSales.Database.Models
     public class BusinessName
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("ID")]
         public long Id { get; set; }
 

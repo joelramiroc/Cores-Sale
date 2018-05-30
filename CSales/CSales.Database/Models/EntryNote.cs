@@ -17,6 +17,7 @@ namespace CSales.Database.Models
     public class EntryNote
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("IDENTRYNOTE")]
         public long IdEntryNote { get; set; }
 

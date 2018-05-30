@@ -17,6 +17,7 @@ namespace CSales.Database.Models
     public class UnitOfMeasurement
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("IDUNITOFMEASUREMENT")]
         public long IdUnitOfMeasurement { get; set; }
 

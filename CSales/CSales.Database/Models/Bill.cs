@@ -17,6 +17,7 @@ namespace CSales.Database.Models
     public class Bill
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("IDBILL")]
         public long IdBill { get; set; }
 

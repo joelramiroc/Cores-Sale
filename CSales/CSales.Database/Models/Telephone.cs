@@ -17,6 +17,7 @@ namespace CSales.Database.Models
     public class Telephone
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("IDTELEPHONE")]
         public long IdTelephone { get; set; }
 

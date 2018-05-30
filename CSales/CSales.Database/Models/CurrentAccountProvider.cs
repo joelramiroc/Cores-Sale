@@ -17,6 +17,7 @@ namespace CSales.Database.Models
     public class CurrentAccountProvider
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("IDCURRENTACCOUNTPROVIDER")]
         public long IdCurrentAccountProvider { get; set; }
 

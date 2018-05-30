@@ -17,6 +17,7 @@ namespace CSales.Database.Models
     public class CreditNote
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("IDCREDITNOTE")]
         public long IdCreditNote { get; set; }
 

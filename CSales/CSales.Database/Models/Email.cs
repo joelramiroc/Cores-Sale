@@ -13,6 +13,7 @@
     public class Email
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("IDEMAIL")]
         public long IdEmail { get; set; }
 

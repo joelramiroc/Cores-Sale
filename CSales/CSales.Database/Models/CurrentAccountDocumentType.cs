@@ -13,6 +13,7 @@
     public class CurrentAccountDocumentType
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("IDCURRENTACCOUNTDOCUMENTTYPE")]
         public long IdCurrentAccountDocumentType { get; set; }
 

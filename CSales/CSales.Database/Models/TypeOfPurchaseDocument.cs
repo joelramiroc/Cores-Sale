@@ -17,6 +17,7 @@ namespace CSales.Database.Models
     public class TypeOfPurchaseDocument
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("IDDOCUMENTTYPEPROVIDER")]
         public long IdDocumentTypeProvider { get; set; }
 

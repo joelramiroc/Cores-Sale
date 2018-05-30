@@ -17,6 +17,7 @@ namespace CSales.Database.Models
     public class Fax
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("IDFAX")]
         public long IdFax { get; set; }
 

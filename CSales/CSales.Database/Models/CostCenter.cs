@@ -17,6 +17,7 @@ namespace CSales.Database.Models
     public class CostCenter
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("IDCOSTCENTER")]
         public long IdCostCenter { get; set; }
 

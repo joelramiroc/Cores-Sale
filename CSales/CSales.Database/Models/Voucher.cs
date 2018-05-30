@@ -17,6 +17,7 @@ namespace CSales.Database.Models
     public class Voucher
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("IDVOUCHER")]
         public long IdVoucher { get; set; }
 

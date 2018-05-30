@@ -17,6 +17,7 @@ namespace CSales.Database.Models
     public class MovementType
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("IDMOVIMENTTYPE")]
         public long IdMovimentType { get; set; }
 

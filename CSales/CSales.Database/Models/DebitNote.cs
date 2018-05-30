@@ -17,6 +17,7 @@ namespace CSales.Database.Models
     public class DebitNote
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("IDDEBITNOTE")]
         public long IdDebitNote { get; set; }
 

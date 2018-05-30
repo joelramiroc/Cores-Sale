@@ -17,6 +17,7 @@ namespace CSales.Database.Models
     public class Bank
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("IDBANK")]
         public long IdBank { get; set; }
 

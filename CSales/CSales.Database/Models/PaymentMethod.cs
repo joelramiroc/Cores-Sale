@@ -17,6 +17,7 @@ namespace CSales.Database.Models
     public class PaymentMethod
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("IDPAYMENTMETHOD")]
         public long IdPaymentMethod { get; set; }
 

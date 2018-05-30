@@ -17,6 +17,7 @@ namespace CSales.Database.Models
     public class Address
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("IDADDRESS")]
         public long IdAddress { get; set; }
 

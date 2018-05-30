@@ -17,6 +17,7 @@ namespace CSales.Database.Models
     public class ExternalInventory
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("IDEXTERNALINVENTORY")]
         public long IdExternalInventory { get; set; }
 

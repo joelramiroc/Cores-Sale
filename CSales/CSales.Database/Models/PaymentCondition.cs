@@ -17,6 +17,7 @@ namespace CSales.Database.Models
     public class PaymentCondition
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("IDPAYMENTCONDITION")]
         public long IdPaymentCondition { get; set; }
 

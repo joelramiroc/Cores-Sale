@@ -17,6 +17,7 @@ namespace CSales.Database.Models
     public class PurchaseDocument
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("IDPURCHASEDOCUMENT")]
         public long IdPurchaseDocument { get; set; }
 

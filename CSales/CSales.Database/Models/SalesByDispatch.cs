@@ -17,6 +17,7 @@ namespace CSales.Database.Models
     public class SalesByDispatch
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("IDSALESDISPATCH")]
         public long IdSalesByDispatch { get; set; }
 

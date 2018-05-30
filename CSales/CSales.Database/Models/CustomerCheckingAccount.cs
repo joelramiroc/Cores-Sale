@@ -17,6 +17,7 @@ namespace CSales.Database.Models
     public class CustomerCheckingAccount
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("IDCUSTOMERCHECKINGACCOUNT")]
         public long IdCustomerCheckingAccount { get; set; }
 
