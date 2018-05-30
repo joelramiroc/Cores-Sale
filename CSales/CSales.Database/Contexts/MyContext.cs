@@ -55,6 +55,8 @@ namespace CSales.Database.Contexts
 
         public DbSet<CreditNote> CreditNote { get; set; }
 
+        public DbSet<CreditNoteType> CreditNoteType { get; set; }
+
         public DbSet<CurrentAccountDocumentType> CurrentAccountDocumentType { get; set; }
 
         public DbSet<CurrentAccountProvider> CurrentAcountProvider { get; set; }

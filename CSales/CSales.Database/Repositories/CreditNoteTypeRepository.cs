@@ -1,4 +1,4 @@
-﻿// <copyright file="CounterSaleRepository.cs" company="PlaceholderCompany">
+﻿// <copyright file="CreditNoteTypeRepository.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
@@ -12,19 +12,19 @@ namespace CSales.Database.Repositories
     using CSales.Database.Contexts;
     using CSales.Database.Models;
 
-    public class CounterSaleRepository : CSalesRepositoryBase<CounterSale>
+    public class CreditNoteTypeRepository : CSalesRepositoryBase<CreditNoteType>
     {
-        public CounterSaleRepository(MyContext context)
+        public CreditNoteTypeRepository(MyContext context)
             : base(context)
         {
         }
 
-        public override IQueryable<CounterSale> All()
+        public override IQueryable<CreditNoteType> All()
         {
-            return this.Context.CounterSale;
+            return this.Context.CreditNoteType;
         }
 
-        protected override CounterSale MapNewValuesToOld(CounterSale oldEntity, CounterSale newEntity)
+        protected override CreditNoteType MapNewValuesToOld(CreditNoteType oldEntity, CreditNoteType newEntity)
         {
             throw new NotImplementedException();
         }
