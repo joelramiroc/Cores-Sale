@@ -12,11 +12,15 @@ namespace CSales.Database.Models
     using System.Text;
     using System.Threading.Tasks;
 
+    [Table("SALESBYDISPATCH")]
+
     public class SalesByDispatch
     {
         [Key]
+        [Column("IDSALESDISPATCH")]
         public long IdSalesByDispatch { get; set; }
 
+        [Column("BILLS")]
         public ICollection<Bill> Bills { get; set; }
     }
 }

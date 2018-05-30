@@ -12,14 +12,19 @@ namespace CSales.Database.Models
     using System.Text;
     using System.Threading.Tasks;
 
+    [Table("COUNTERSALE")]
+
     public class CounterSale
     {
         [Key]
+        [Column("IDCOUNTERSALE")]
         public long IdCounterSale { get; set; }
 
         [ForeignKey(nameof(Bill))]
+        [Column("IDBILL")]
         public long IdBill { get; set; }
 
+        [Column("BILL")]
         public virtual Bill Bill { get; set; }
     }
 }

@@ -12,18 +12,25 @@ namespace CSales.Database.Models
     using System.Text;
     using System.Threading.Tasks;
 
+    [Table("CURRENTACCOUNTPROVIDER")]
+
     public class CurrentAccountProvider
     {
         [Key]
+        [Column("IDCURRENTACCOUNTPROVIDER")]
         public long IdCurrentAccountProvider { get; set; }
 
         [ForeignKey(nameof(Provider))]
+        [Column("IDPROVIDER")]
         public long IdProvider { get; set; }
 
+        [Column("PROVIDER")]
         public virtual Provider Provider { get; set; }
 
+        [Column("TOTALDEBT")]
         public decimal TotalDebt { get; set; }
 
+        [Column("CREATEDDATE")]
         public DateTime CreatedDate { get; set; }
     }
 }

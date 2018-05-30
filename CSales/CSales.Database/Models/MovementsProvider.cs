@@ -11,19 +11,27 @@ namespace CSales.Database.Models
     using System.Text;
     using System.Threading.Tasks;
 
+    [Table("MOVEMENTSPROVIDER")]
+
     public class MovementsProvider
     {
         [ForeignKey(nameof(DocumentTypeProvider))]
+        [Column("IDDOCUMENTTYPE")]
         public long IdDocumentType { get; set; }
 
+        [Column("DOCUMENTTYPEPROVIDER")]
         public virtual TypeOfPurchaseDocument DocumentTypeProvider { get; set; }
 
+        [Column("DOCUMENTID")]
         public long DocumentId { get; set; }
 
+        [Column("INGRESOS")]
         public decimal Ingresos { get; set; }
 
+        [Column("EGRESOS")]
         public decimal Egresos { get; set; }
 
+        [Column("CREATEDDATE")]
         public DateTime CreatedDate { get; set; }
     }
 }
