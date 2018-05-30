@@ -7,15 +7,21 @@ namespace CSales.Database.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
 
+    [Table("REASONNOTE")]
+
     public class ReasonNote
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Column("IDREASONENTRYNOTE")]
         public long IdReasonEntryNote { get; set; }
 
+        [Column("REASONNAME")]
         public string ReasonName { get; set; }
     }
 }

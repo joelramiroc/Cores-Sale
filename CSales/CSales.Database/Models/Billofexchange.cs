@@ -12,23 +12,33 @@ namespace CSales.Database.Models
     using System.Text;
     using System.Threading.Tasks;
 
+    [Table("BILLOFEXCHANGE")]
+
     public class BillOfExchange
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Column("IDBILLOFEXCHANGE")]
         public long IdBillOfExchange { get; set; }
 
         [ForeignKey(nameof(Client))]
+        [Column("IDCLIENT")]
         public long IdClient { get; set; }
 
+        [Column("CLIENT")]
         public virtual Client Client { get; set; }
 
         [ForeignKey(nameof(Employee))]
+        [Column("IDEMPLOYEE")]
         public long IdEmployee { get; set; }
 
+        [Column("EMPLOYEE")]
         public virtual Employee Employee { get; set; }
 
+        [Column("PAYMENTDATE")]
         public DateTime PaymentDate { get; set; }
 
+        [Column("TOTAL")]
         public decimal Total { get; set; }
 
     }

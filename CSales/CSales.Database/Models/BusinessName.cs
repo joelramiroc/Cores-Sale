@@ -7,15 +7,21 @@ namespace CSales.Database.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
 
+    [Table("BUSINESSNAME")]
+
     public class BusinessName
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Column("ID")]
         public long Id { get; set; }
 
+        [Column("NAME")]
         public string Name { get; set; }
     }
 }

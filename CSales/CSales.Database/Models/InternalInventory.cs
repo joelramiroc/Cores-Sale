@@ -12,23 +12,33 @@ namespace CSales.Database.Models
     using System.Text;
     using System.Threading.Tasks;
 
+    [Table("INTERNALINVENTORY")]
+
     public class InternalInventory
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Column("IDINTERNALINVENTORY")]
         public long IdInternalInventory { get; set; }
 
         [ForeignKey(nameof(Storage))]
+        [Column("IDSTORAGE")]
         public long IdStorage { get; set; }
 
+        [Column("SOTRAGE")]
         public virtual Storage Storage { get; set; }
 
         [ForeignKey(nameof(InternalProduct))]
+        [Column("IDINTERNALPRODUCT")]
         public long IdInternalProduct { get; set; }
 
+        [Column("INTERNALPRODUCT")]
         public virtual InternalProduct InternalProduct { get; set; }
 
+        [Column("PRODUCTDESCRIPTION")]
         public string ProductDescription { get; set; }
 
+        [Column("QUANTITY")]
         public int Quantity { get; set; }
     }
 }

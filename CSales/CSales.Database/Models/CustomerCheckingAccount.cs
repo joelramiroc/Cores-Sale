@@ -12,18 +12,26 @@ namespace CSales.Database.Models
     using System.Text;
     using System.Threading.Tasks;
 
+    [Table("CUSTOMERCHECKINGACCOUNT")]
+
     public class CustomerCheckingAccount
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Column("IDCUSTOMERCHECKINGACCOUNT")]
         public long IdCustomerCheckingAccount { get; set; }
 
         [ForeignKey(nameof(Client))]
+        [Column("IDCLIENT")]
         public long IdClient { get; set; }
 
+        [Column("CLIENT")]
         public virtual Client Client { get; set; }
 
+        [Column("TOTALDEBT")]
         public decimal TotalDebt { get; set; }
 
+        [Column("CREATEDDATE")]
         public DateTime CreatedDate { get; set; }
     }
 }

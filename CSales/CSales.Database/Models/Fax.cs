@@ -7,15 +7,21 @@ namespace CSales.Database.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
 
+    [Table("FAX")]
+
     public class Fax
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Column("IDFAX")]
         public long IdFax { get; set; }
 
+        [Column("FAXX")]
         public string Faxx { get; set; }
     }
 }
