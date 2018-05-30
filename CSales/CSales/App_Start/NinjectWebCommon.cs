@@ -16,7 +16,7 @@ namespace CSales.App_Start
         private static readonly Bootstrapper Bootstrapper = new Bootstrapper();
 
         /// <summary>
-        /// Starts the application
+        /// Starts the application here
         /// </summary>
         public static void Start()
         {
