@@ -1,11 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27004.2005
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSales", "CSales\CSales.csproj", "{E8907592-774D-4E56-950D-FF4973C89AE4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSales.Database", "CSales.Database\CSales.Database.csproj", "{5AAB6282-990C-41C5-84F5-5A956BF51F22}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Migrations", "Migrations", "{D912E99A-0B48-41C2-8FBE-61111CE07D50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSales.DataBase.Migration.FireBird", "CSales.DataBase.Migration.FireBird\CSales.DataBase.Migration.FireBird.csproj", "{D22FFABC-6B3E-481A-B5C0-4E206309274A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSales.DataBase.Migration.Seed", "CSales.DataBase.Migration.Seed\CSales.DataBase.Migration.Seed.csproj", "{41EEBFE9-5EC2-419E-96C5-6D3D60B1A055}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +27,21 @@ Global
 		{5AAB6282-990C-41C5-84F5-5A956BF51F22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AAB6282-990C-41C5-84F5-5A956BF51F22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AAB6282-990C-41C5-84F5-5A956BF51F22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D22FFABC-6B3E-481A-B5C0-4E206309274A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D22FFABC-6B3E-481A-B5C0-4E206309274A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D22FFABC-6B3E-481A-B5C0-4E206309274A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D22FFABC-6B3E-481A-B5C0-4E206309274A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41EEBFE9-5EC2-419E-96C5-6D3D60B1A055}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41EEBFE9-5EC2-419E-96C5-6D3D60B1A055}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41EEBFE9-5EC2-419E-96C5-6D3D60B1A055}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41EEBFE9-5EC2-419E-96C5-6D3D60B1A055}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D22FFABC-6B3E-481A-B5C0-4E206309274A} = {D912E99A-0B48-41C2-8FBE-61111CE07D50}
+		{41EEBFE9-5EC2-419E-96C5-6D3D60B1A055} = {D912E99A-0B48-41C2-8FBE-61111CE07D50}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1AF7785C-2F08-4740-80D3-9DF75920965D}

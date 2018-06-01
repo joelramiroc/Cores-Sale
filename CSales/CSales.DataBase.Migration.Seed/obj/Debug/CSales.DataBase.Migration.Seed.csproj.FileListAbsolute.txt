@@ -1,0 +1,14 @@
+C:\Users\joel.caballero\Desktop\Cores-Sale\CSales\CSales.DataBase.Migration.Seed\bin\Debug\CSales.DataBase.Migration.Seed.dll.config
+C:\Users\joel.caballero\Desktop\Cores-Sale\CSales\CSales.DataBase.Migration.Seed\bin\Debug\CSales.DataBase.Migration.Seed.dll
+C:\Users\joel.caballero\Desktop\Cores-Sale\CSales\CSales.DataBase.Migration.Seed\bin\Debug\CSales.DataBase.Migration.Seed.pdb
+C:\Users\joel.caballero\Desktop\Cores-Sale\CSales\CSales.DataBase.Migration.Seed\bin\Debug\CSales.Database.dll
+C:\Users\joel.caballero\Desktop\Cores-Sale\CSales\CSales.DataBase.Migration.Seed\bin\Debug\EntityFramework.dll
+C:\Users\joel.caballero\Desktop\Cores-Sale\CSales\CSales.DataBase.Migration.Seed\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\joel.caballero\Desktop\Cores-Sale\CSales\CSales.DataBase.Migration.Seed\bin\Debug\FirebirdSql.Data.FirebirdClient.dll
+C:\Users\joel.caballero\Desktop\Cores-Sale\CSales\CSales.DataBase.Migration.Seed\bin\Debug\CSales.Database.pdb
+C:\Users\joel.caballero\Desktop\Cores-Sale\CSales\CSales.DataBase.Migration.Seed\bin\Debug\EntityFramework.xml
+C:\Users\joel.caballero\Desktop\Cores-Sale\CSales\CSales.DataBase.Migration.Seed\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\joel.caballero\Desktop\Cores-Sale\CSales\CSales.DataBase.Migration.Seed\bin\Debug\FirebirdSql.Data.FirebirdClient.pdb
+C:\Users\joel.caballero\Desktop\Cores-Sale\CSales\CSales.DataBase.Migration.Seed\obj\Debug\CSales.DataBase.Migration.Seed.csprojResolveAssemblyReference.cache
+C:\Users\joel.caballero\Desktop\Cores-Sale\CSales\CSales.DataBase.Migration.Seed\obj\Debug\CSales.DataBase.Migration.Seed.dll
+C:\Users\joel.caballero\Desktop\Cores-Sale\CSales\CSales.DataBase.Migration.Seed\obj\Debug\CSales.DataBase.Migration.Seed.pdb

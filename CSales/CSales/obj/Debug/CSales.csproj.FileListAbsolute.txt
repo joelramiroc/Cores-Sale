@@ -181,6 +181,9 @@ C:\Users\Joeru\Desktop\Cores-Sale\CSales\CSales\bin\Ninject.xml
 C:\Users\Joeru\Desktop\Cores-Sale\CSales\CSales\bin\Ninject.Web.Common.xml
 C:\Users\Joeru\Desktop\Cores-Sale\CSales\CSales\bin\Ninject.Web.Mvc.xml
 C:\Users\Joeru\Desktop\Cores-Sale\CSales\CSales\obj\Debug\CSales.csprojResolveAssemblyReference.cache
+C:\Users\Joeru\Desktop\Cores-Sale\CSales\CSales\bin\CSales.Database.dll
+C:\Users\Joeru\Desktop\Cores-Sale\CSales\CSales\bin\CSales.Database.pdb
+C:\Users\Joeru\Desktop\Cores-Sale\CSales\CSales\bin\CSales.Database.dll.config
 C:\Users\joel.caballero\Desktop\Cores-Sale\CSales\CSales\obj\Debug\CSales.csprojResolveAssemblyReference.cache
 C:\Users\joel.caballero\Desktop\Cores-Sale\CSales\CSales\bin\ApplicationInsights.config
 C:\Users\joel.caballero\Desktop\Cores-Sale\CSales\CSales\bin\roslyn\csc.exe
@@ -278,6 +281,3 @@ C:\Users\joel.caballero\Desktop\Cores-Sale\CSales\CSales\bin\Microsoft.Owin.Secu
 C:\Users\joel.caballero\Desktop\Cores-Sale\CSales\CSales\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\joel.caballero\Desktop\Cores-Sale\CSales\CSales\obj\Debug\CSales.dll
 C:\Users\joel.caballero\Desktop\Cores-Sale\CSales\CSales\obj\Debug\CSales.pdb
-C:\Users\Joeru\Desktop\Cores-Sale\CSales\CSales\bin\CSales.Database.dll
-C:\Users\Joeru\Desktop\Cores-Sale\CSales\CSales\bin\CSales.Database.pdb
-C:\Users\Joeru\Desktop\Cores-Sale\CSales\CSales\bin\CSales.Database.dll.config

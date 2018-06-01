@@ -13,11 +13,12 @@ namespace CSales.Database.Contexts
     using System.Web;
     using CSales.Database.Models;
     using FirebirdSql.Data.FirebirdClient;
+    using System.Configuration;
 
     public class MyContext : DbContext
     {
         public MyContext()
-            : base(new FbConnection(@"database=localhost:C:\BASE\TEST.FDB;user=SYSDBA;password=masterkey"), true)
+            : base(new FbConnection(ConfigurationManager.ConnectionStrings["CSalesDatabase"].ConnectionString), true)
         { }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

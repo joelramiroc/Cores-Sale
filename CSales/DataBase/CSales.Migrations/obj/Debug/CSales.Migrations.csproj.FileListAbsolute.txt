@@ -1,0 +1,9 @@
+C:\Users\joel.caballero\documents\visual studio 2015\Projects\CSales\CSales.Migrations\bin\Debug\CSales.Migrations.dll.config
+C:\Users\joel.caballero\documents\visual studio 2015\Projects\CSales\CSales.Migrations\bin\Debug\CSales.Migrations.dll
+C:\Users\joel.caballero\documents\visual studio 2015\Projects\CSales\CSales.Migrations\bin\Debug\CSales.Migrations.pdb
+C:\Users\joel.caballero\documents\visual studio 2015\Projects\CSales\CSales.Migrations\bin\Debug\EntityFramework.dll
+C:\Users\joel.caballero\documents\visual studio 2015\Projects\CSales\CSales.Migrations\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\joel.caballero\documents\visual studio 2015\Projects\CSales\CSales.Migrations\bin\Debug\EntityFramework.xml
+C:\Users\joel.caballero\documents\visual studio 2015\Projects\CSales\CSales.Migrations\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\joel.caballero\documents\visual studio 2015\Projects\CSales\CSales.Migrations\obj\Debug\CSales.Migrations.dll
+C:\Users\joel.caballero\documents\visual studio 2015\Projects\CSales\CSales.Migrations\obj\Debug\CSales.Migrations.pdb
