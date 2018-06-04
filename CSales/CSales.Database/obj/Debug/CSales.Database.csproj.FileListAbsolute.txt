@@ -12,6 +12,7 @@ C:\Users\Joeru\Desktop\Cores-Sale\CSales\CSales.Database\bin\Debug\Microsoft.Asp
 C:\Users\Joeru\Desktop\Cores-Sale\CSales\CSales.Database\obj\Debug\CSales.Database.csproj.CoreCompileInputs.cache
 C:\Users\Joeru\Desktop\Cores-Sale\CSales\CSales.Database\obj\Debug\CSales.Database.dll
 C:\Users\Joeru\Desktop\Cores-Sale\CSales\CSales.Database\obj\Debug\CSales.Database.pdb
+C:\Users\Joeru\Desktop\Cores-Sale\CSales\CSales.Database\obj\Debug\CSales.Database.csprojResolveAssemblyReference.cache
 C:\Users\joel.caballero\Desktop\Cores-Sale\CSales\CSales.Database\bin\Debug\CSales.Database.dll.config
 C:\Users\joel.caballero\Desktop\Cores-Sale\CSales\CSales.Database\bin\Debug\CSales.Database.dll
 C:\Users\joel.caballero\Desktop\Cores-Sale\CSales\CSales.Database\bin\Debug\CSales.Database.pdb
@@ -25,4 +26,3 @@ C:\Users\joel.caballero\Desktop\Cores-Sale\CSales\CSales.Database\bin\Debug\Fire
 C:\Users\joel.caballero\Desktop\Cores-Sale\CSales\CSales.Database\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\Users\joel.caballero\Desktop\Cores-Sale\CSales\CSales.Database\obj\Debug\CSales.Database.dll
 C:\Users\joel.caballero\Desktop\Cores-Sale\CSales\CSales.Database\obj\Debug\CSales.Database.pdb
-C:\Users\Joeru\Desktop\Cores-Sale\CSales\CSales.Database\obj\Debug\CSales.Database.csprojResolveAssemblyReference.cache

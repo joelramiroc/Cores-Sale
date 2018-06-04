@@ -10,6 +10,7 @@ namespace CSales.App_Start
     using Microsoft.Web.Infrastructure.DynamicModuleHelper;
     using Ninject;
     using Ninject.Web.Common;
+    using Database.Contexts;
 
     public static class NinjectWebCommon
     {
@@ -43,8 +44,8 @@ namespace CSales.App_Start
             try
             {
                 kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);
+                kernel.Bind<MyContext>().ToSelf().InRequestScope();
                 kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
-
                 kernel.Bind<IRepository<Address>>().To<AddressRepository>().InRequestScope();
                 kernel.Bind<IRepository<Bank>>().To<BankRepository>().InRequestScope();
                 kernel.Bind<IRepository<Bill>>().To<BillRepository>().InRequestScope();
@@ -57,7 +58,7 @@ namespace CSales.App_Start
                 kernel.Bind<IRepository<CostCenter>>().To<CostCenterRepository>().InRequestScope();
                 kernel.Bind<IRepository<CounterSale>>().To<CounterSaleRepository>().InRequestScope();
                 kernel.Bind<IRepository<CreditNote>>().To<CreditNoteRepository>().InRequestScope();
-                kernel.Bind<IRepository<CreditNoteType>>().To<CreditNoteTypeRepository>().InRequestScope();
+                //kernel.Bind<IRepository<CreditNoteType>>().To<CreditNoteTypeRepository>().InRequestScope();
                 kernel.Bind<IRepository<CurrentAccountDocumentType>>().To<CurrentAccountDocumentTypeRepository>().InRequestScope();
                 kernel.Bind<IRepository<CurrentAccountProvider>>().To<CurrentAccountProviderRepository>().InRequestScope();
                 kernel.Bind<IRepository<CustomerCheckingAccount>>().To<CustomerCheckingAccountRepository>().InRequestScope();
