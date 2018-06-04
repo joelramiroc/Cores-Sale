@@ -219,7 +219,6 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
-    <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
@@ -231,7 +230,6 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Address.cs" />
-    <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\Bank.cs" />
     <Compile Include="Models\Bill.cs" />
     <Compile Include="Models\Billofexchange.cs" />
@@ -256,7 +254,6 @@
     <Compile Include="Models\ExternalInventory.cs" />
     <Compile Include="Models\ExternalProduct.cs" />
     <Compile Include="Models\Fax.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\InternalInventory.cs" />
     <Compile Include="Models\InternalProduct.cs" />
     <Compile Include="Models\Kardex.cs" />

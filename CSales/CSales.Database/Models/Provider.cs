@@ -49,8 +49,6 @@ namespace CSales.Database.Models
         [Column("BUSINESSNAME")]
         public virtual BusinessName BusinessName { get; set; }
 
-        [Column("CREATEDBY")]
-        public virtual ApplicationUser CreatedBy { get; set; }
 
         [Column("CREATEDDATE")]
         public DateTime CreatedDate { get; set; }
