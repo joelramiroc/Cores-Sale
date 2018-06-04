@@ -1,16 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Net;
-using System.Web;
-using System.Web.Mvc;
-using CSales.Database.Contexts;
-using CSales.Database.Models;
+﻿// <copyright file="BanksController.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace ProjectSalesCore.Controllers
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Data.Entity;
+    using System.Linq;
+    using System.Net;
+    using System.Web;
+    using System.Web.Mvc;
+    using CSales.Database.Contexts;
+    using CSales.Database.Models;
+
     public class BanksController : Controller
     {
         private MyContext db = new MyContext();
