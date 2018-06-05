@@ -1,4 +1,4 @@
-﻿@model CSales.Database.Models.Bank
+﻿@model ProjectSalesCore.ViewModel.BankDetailViewModel
 
 @{
     ViewBag.Title = "Details";
@@ -28,7 +28,56 @@
 
     </dl>
 </div>
+<div>
+    <table class="table>
+        <tr>
+            <th>
+                Number
+            </th>
+            <th>
+                Description
+            </th>
+        </tr>
+
+        @foreach (var t in Model.Telephones)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => t.Number)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => t.Description)
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+<div>
+    <table class="table>
+        <tr>
+            <th>
+                Address
+            </th>
+            <th>
+                Description
+            </th>
+        </tr>
+
+        @foreach (var t in Model.Addresses)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => t.AddressName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => t.Description)
+                </td>
+            </tr>
+        }
+    </table>
+</div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.IdBank }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
+    

@@ -1,35 +1,30 @@
-﻿// <copyright file="Providers.cs" company="PlaceholderCompany">
+﻿// <copyright file="CreateProviderViewModel.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace CSales.Models
+namespace ProjectSalesCore.ViewModel.Provider
 {
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
+    using System.Web;
+    using CSales.Database.Models;
 
-    [Table("PROVIDER")]
-
-    public class Provider
+    public class CreateProviderViewModel
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("ID")]
         public long Id { get; set; }
 
-        [Column("NAME")]
-        public string Name { get; set; }
-
         [Column("ADDRESSES")]
-        public ICollection<Address> Addresses { get; set; }
+        public IEnumerable<Address> Addresses { get; set; }
 
         [Required]
         [Column("TELEP")]
-        public ICollection<Telephone> Telephones { get; set; }
+        public IEnumerable<Telephone> Telephones { get; set; }
 
         [Required]
         [Column("ISACTIVE")]
