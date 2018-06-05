@@ -17,7 +17,7 @@ namespace CSales.Database.Models
     public class RUC
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("IDRUC")]
         public long IdRUC { get; set; }
 

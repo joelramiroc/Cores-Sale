@@ -22,6 +22,6 @@ namespace CSales.Models
         public long IdProduct { get; set; }
 
         [Column("PRODUCTNAME")]
-        public long ProductName { get; set; }
+        public string ProductName { get; set; }
     }
 }

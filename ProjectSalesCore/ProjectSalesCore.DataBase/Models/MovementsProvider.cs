@@ -17,6 +17,8 @@ namespace CSales.Database.Models
     public class MovementsProvider
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Column("IDMPROVIDER")]
         public long IdMovementsProvider { get; set; }
 
         [ForeignKey(nameof(DocumentTypeProvider))]

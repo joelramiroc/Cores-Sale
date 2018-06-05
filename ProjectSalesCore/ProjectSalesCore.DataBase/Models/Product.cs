@@ -17,11 +17,11 @@ namespace CSales.Database.Models
     public class Product
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("ID")]
         public long IdProduct { get; set; }
 
         [Column("PRODUCTNAME")]
-        public long ProductName { get; set; }
+        public string ProductName { get; set; }
     }
 }

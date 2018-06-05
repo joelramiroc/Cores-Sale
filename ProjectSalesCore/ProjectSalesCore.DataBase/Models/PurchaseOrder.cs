@@ -17,7 +17,7 @@ namespace CSales.Database.Models
     public class PurchaseOrder
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("ID")]
         public int PurchaseNumber { get; set; }
 

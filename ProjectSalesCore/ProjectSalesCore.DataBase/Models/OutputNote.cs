@@ -17,7 +17,7 @@ namespace CSales.Database.Models
     public class OutputNote
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("IDONOTE")]
         public long IdOutputNote { get; set; }
 

@@ -50,6 +50,7 @@ namespace CSales.Models
         public virtual BusinessName BusinessName { get; set; }
 
         [Column("CREATEDDATE")]
+        [DataType(DataType.Date)]
         public DateTime CreatedDate { get; set; }
     }
 }

@@ -25,7 +25,7 @@ namespace CSales.Database.Models
         public virtual Client Client { get; set; }
 
         [ForeignKey(nameof(PaymentMethod))]
-        [Column("IDPAYm")]
+        [Column("IDPAYM")]
         public long IdPayM { get; set; }
 
         [Column("PAYMENTMETHOD")]
@@ -42,7 +42,7 @@ namespace CSales.Database.Models
         [Column("IDTDFS")]
         public long IdTypeDocumentForSale { get; set; }
 
-        [Column("TYPEOFSALEDOCUMENT")]
+        [Column("TYPESALEDOC")]
         public virtual TypeOfSaleDocument TypeOfSaleDocument { get; set; }
 
         [Column("IDDOCUMENT")]

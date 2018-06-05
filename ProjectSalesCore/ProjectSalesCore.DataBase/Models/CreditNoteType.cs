@@ -17,11 +17,11 @@ namespace CSales.Database.Models
     public class CreditNoteType
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("ID")]
         public long IdCreditNoteType { get; set; }
 
-        [Column("TYPECREDITNOTENAME")]
+        [Column("TYPENAME")]
         public string TypeCreditNoteName { get; set; }
     }
 }

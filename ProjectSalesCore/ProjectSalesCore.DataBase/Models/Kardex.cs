@@ -17,10 +17,12 @@ namespace CSales.Database.Models
     public class Kardex
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Column("IDKARDEX")]
         public long IdKardex { get; set; }
 
         [ForeignKey(nameof(MovementType))]
-        [Column("IDMOVEMENTTYPE")]
+        [Column("IDMOVETYPE")]
         public long IdMovementType { get; set; }
 
         [Column("MOVEMENTTYPE")]

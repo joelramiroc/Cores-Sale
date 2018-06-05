@@ -17,7 +17,7 @@ namespace CSales.Database.Models
     public class Check
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("IDCHECK")]
         public long IdCheck { get; set; }
 
