@@ -14,30 +14,46 @@ namespace ProjectSalesCore.Controllers
     using System.Web.Mvc;
     using CSales.Database.Contexts;
     using CSales.Database.Models;
+    using ProjectSalesCore.ViewModel;
 
     public class BanksController : Controller
     {
+
         private MyContext db = new MyContext();
 
         // GET: Banks
         public ActionResult Index()
         {
-            return View(db.Bank.ToList());
+            return View(this.db.Bank.ToList());
         }
 
         // GET: Banks/Details/5
         public ActionResult Details(long? id)
         {
             if (id == null)
+
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
             Bank bank = db.Bank.Find(id);
             if (bank == null)
             {
                 return HttpNotFound();
             }
-            return View(bank);
+
+              var listTelephone = bank.Telephones.Select(t => new CSales.Models.Telephone { Number = t.Number, Description = t.Description, Id = t.Id });
+              var listAddresses = bank.Addresses.Select(la => new CSales.Models.Address { Id = la.Id,AddressName =la.AddressName, Description = la.Description});
+
+            BankDetailViewModel bankDetailViewModel = new BankDetailViewModel
+            {
+                IdBank = bank.IdBank,
+                Addresses = listAddresses,
+                BankName = bank.BankName,
+                Description = bank.Description,
+                Telephones = listTelephone
+            };
+            return View(bankDetailViewModel);
         }
 
         // GET: Banks/Create
@@ -53,11 +69,11 @@ namespace ProjectSalesCore.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "IdBank,BankName,Description")] Bank bank)
         {
-            if (ModelState.IsValid)
+            if (this.ModelState.IsValid)
             {
-                db.Bank.Add(bank);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                this.db.Bank.Add(bank);
+                this.db.SaveChanges();
+                return this.RedirectToAction("Index");
             }
 
             return View(bank);
@@ -70,11 +86,13 @@ namespace ProjectSalesCore.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
             Bank bank = db.Bank.Find(id);
             if (bank == null)
             {
                 return HttpNotFound();
             }
+
             return View(bank);
         }
 
@@ -85,13 +103,14 @@ namespace ProjectSalesCore.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "IdBank,BankName,Description")] Bank bank)
         {
-            if (ModelState.IsValid)
+            if (this.ModelState.IsValid)
             {
-                db.Entry(bank).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                this.db.Entry(bank).State = EntityState.Modified;
+                this.db.SaveChanges();
+                return this.RedirectToAction("Index");
             }
-            return View(bank);
+
+            return this.View(bank);
         }
 
         // GET: Banks/Delete/5
@@ -101,12 +120,14 @@ namespace ProjectSalesCore.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Bank bank = db.Bank.Find(id);
+
+            Bank bank = this.db.Bank.Find(id);
             if (bank == null)
             {
-                return HttpNotFound();
+                return this.HttpNotFound();
             }
-            return View(bank);
+
+            return this.View(bank);
         }
 
         // POST: Banks/Delete/5
@@ -114,18 +135,33 @@ namespace ProjectSalesCore.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(long id)
         {
-            Bank bank = db.Bank.Find(id);
-            db.Bank.Remove(bank);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
+            Bank bank = this.db.Bank.Find(id);
+            var telephones = bank.Telephones.ToList();
+            for (int i = 0; i < telephones.Count; i++)
+            {
+                this.db.Telephone.Remove(telephones[i]);
+                this.db.SaveChanges();
+            }
+
+            var addresses = bank.Addresses.ToList();
+            for (int i = 0; i < addresses.Count; i++)
+            {
+                this.db.Address.Remove(addresses[i]);
+                this.db.SaveChanges();
+            }
+
+            this.db.Bank.Remove(bank);
+            this.db.SaveChanges();
+            return this.RedirectToAction("Index");
+            }
 
         protected override void Dispose(bool disposing)
         {
             if (disposing)
             {
-                db.Dispose();
+                this.db.Dispose();
             }
+
             base.Dispose(disposing);
         }
     }
