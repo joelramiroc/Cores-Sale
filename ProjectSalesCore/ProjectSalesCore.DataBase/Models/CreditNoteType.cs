@@ -21,7 +21,7 @@ namespace CSales.Database.Models
         [Column("ID")]
         public long IdCreditNoteType { get; set; }
 
-        [Column("TYPECREDITNOTENAME")]
+        [Column("TYPENAME")]
         public string TypeCreditNoteName { get; set; }
     }
 }

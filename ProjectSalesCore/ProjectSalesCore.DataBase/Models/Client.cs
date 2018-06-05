@@ -47,7 +47,7 @@ namespace CSales.Database.Models
         public virtual RUC RUC { get; set; }
 
         [ForeignKey(nameof(Employee))]
-        [Column("IDEMPLOYEE")]
+        [Column("IDEMP")]
         public long IdEmployee { get; set; }
 
         [Column("EMPLOYEE")]

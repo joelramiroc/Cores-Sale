@@ -22,7 +22,7 @@ namespace CSales.Database.Models
         public long IdCreditNote { get; set; }
 
         [ForeignKey(nameof(CreditNoteType))]
-        [Column("IdCNType")]
+        [Column("IDCNTYPE")]
         public long IdCreditNoteType { get; set; }
 
         [Column("CRNTYPE")]
@@ -46,7 +46,7 @@ namespace CSales.Database.Models
         public decimal Total { get; set; }
 
         [ForeignKey(nameof(TypeOfSaleDocument))]
-        [Column("IdTDFSale")]
+        [Column("IDTDFSALE")]
         public long IdTypeDocumentForSale { get; set; }
 
         [Column("TYPEOFSALEDOCUMENT")]

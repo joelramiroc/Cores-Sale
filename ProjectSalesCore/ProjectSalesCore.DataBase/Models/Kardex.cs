@@ -22,7 +22,7 @@ namespace CSales.Database.Models
         public long IdKardex { get; set; }
 
         [ForeignKey(nameof(MovementType))]
-        [Column("IDMOVEMENTTYPE")]
+        [Column("IDMOVETYPE")]
         public long IdMovementType { get; set; }
 
         [Column("MOVEMENTTYPE")]
