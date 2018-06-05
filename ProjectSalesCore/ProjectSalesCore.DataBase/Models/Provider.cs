@@ -21,6 +21,9 @@ namespace CSales.Database.Models
         [Column("ID")]
         public long Id { get; set; }
 
+        [Column("NAME")]
+        public string Name { get; set; }
+
         [Column("ADDRESSES")]
         public ICollection<Address> Addresses { get; set; }
 
