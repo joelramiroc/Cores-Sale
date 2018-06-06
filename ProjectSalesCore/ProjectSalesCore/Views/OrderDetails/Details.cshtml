@@ -1,0 +1,66 @@
+﻿@model CSales.Database.Models.OrderDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>OrderDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ExternalProduct.ProductDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExternalProduct.ProductDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SaleOrder.IdSaleOrder)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SaleOrder.IdSaleOrder)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UnitPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UnitPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiscountRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiscountRate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Total)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Total)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

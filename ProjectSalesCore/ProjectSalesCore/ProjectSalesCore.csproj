@@ -209,9 +209,14 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CurrentAccountProvidersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\OrderDetailsController.cs" />
+    <Compile Include="Controllers\PDocsController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\ProvidersController.cs" />
+    <Compile Include="Controllers\SaleOrdersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -328,6 +333,31 @@
     <Content Include="Views\Products\Details.cshtml" />
     <Content Include="Views\Products\Edit.cshtml" />
     <Content Include="Views\Products\Index.cshtml" />
+    <Content Include="Views\Providers\Create.cshtml" />
+    <Content Include="Views\Providers\Delete.cshtml" />
+    <Content Include="Views\Providers\Details.cshtml" />
+    <Content Include="Views\Providers\Edit.cshtml" />
+    <Content Include="Views\Providers\Index.cshtml" />
+    <Content Include="Views\SaleOrders\Create.cshtml" />
+    <Content Include="Views\SaleOrders\Delete.cshtml" />
+    <Content Include="Views\SaleOrders\Details.cshtml" />
+    <Content Include="Views\SaleOrders\Edit.cshtml" />
+    <Content Include="Views\SaleOrders\Index.cshtml" />
+    <Content Include="Views\OrderDetails\Create.cshtml" />
+    <Content Include="Views\OrderDetails\Delete.cshtml" />
+    <Content Include="Views\OrderDetails\Details.cshtml" />
+    <Content Include="Views\OrderDetails\Edit.cshtml" />
+    <Content Include="Views\OrderDetails\Index.cshtml" />
+    <Content Include="Views\PDocs\Create.cshtml" />
+    <Content Include="Views\PDocs\Delete.cshtml" />
+    <Content Include="Views\PDocs\Details.cshtml" />
+    <Content Include="Views\PDocs\Edit.cshtml" />
+    <Content Include="Views\PDocs\Index.cshtml" />
+    <Content Include="Views\CurrentAccountProviders\Create.cshtml" />
+    <Content Include="Views\CurrentAccountProviders\Delete.cshtml" />
+    <Content Include="Views\CurrentAccountProviders\Details.cshtml" />
+    <Content Include="Views\CurrentAccountProviders\Edit.cshtml" />
+    <Content Include="Views\CurrentAccountProviders\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
