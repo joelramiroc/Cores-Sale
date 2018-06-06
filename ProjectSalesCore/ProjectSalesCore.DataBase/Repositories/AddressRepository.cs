@@ -26,7 +26,9 @@ namespace CSales.Database.Repositories
 
         protected override Address MapNewValuesToOld(Address oldEntity, Address newEntity)
         {
-            throw new NotImplementedException();
+            oldEntity.AddressName = newEntity.AddressName;
+
+            return oldEntity;
         }
     }
 }

@@ -10,15 +10,22 @@
     using System.Web.Mvc;
     using CSales.Database.Contexts;
     using CSales.Database.Models;
+    using CSales.Database.Repositories;
 
     public class ProductsController : Controller
     {
-        private MyContext db = new MyContext();
+        private readonly IRepository<Product> productsRepository;
+
+        public ProductsController(IRepository<Product> productsRepository)
+        {
+            this.productsRepository = productsRepository;
+        }
+
 
         // GET: Products
         public ActionResult Index()
         {
-            return View(db.Product.ToList());
+            return View(this.productsRepository.All().ToList());
         }
 
         // GET: Products/Details/5
@@ -28,7 +35,7 @@
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Product product = db.Product.Find(id);
+            Product product = productsRepository.Find(id);
             if (product == null)
             {
                 return HttpNotFound();
@@ -51,8 +58,8 @@
         {
             if (ModelState.IsValid)
             {
-                db.Product.Add(product);
-                db.SaveChanges();
+                productsRepository.Create(product);
+                productsRepository.SaveChanges();
                 return RedirectToAction("Index");
             }
 
@@ -66,7 +73,7 @@
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Product product = db.Product.Find(id);
+            Product product = productsRepository.Find(id);
             if (product == null)
             {
                 return HttpNotFound();
@@ -83,8 +90,8 @@
         {
             if (ModelState.IsValid)
             {
-                db.Entry(product).State = EntityState.Modified;
-                db.SaveChanges();
+                productsRepository.Update(product);
+                productsRepository.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View(product);
@@ -97,7 +104,7 @@
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Product product = db.Product.Find(id);
+            Product product = productsRepository.Find(id);
             if (product == null)
             {
                 return HttpNotFound();
@@ -110,19 +117,10 @@
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(long id)
         {
-            Product product = db.Product.Find(id);
-            db.Product.Remove(product);
-            db.SaveChanges();
+            Product product = productsRepository.Find(id);
+            productsRepository.Delete(product);
+            productsRepository.SaveChanges();
             return RedirectToAction("Index");
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
         }
     }
 }
