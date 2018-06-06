@@ -12,19 +12,19 @@ namespace CSales.Database.Repositories
     using CSales.Database.Contexts;
     using CSales.Database.Models;
 
-    public class UnitOfMeasurementRepository : CSalesRepositoryBase<UnitOfMeasurement>
+    public class UnitOfMeasurementRepository : CSalesRepositoryBase<UOfMeasur>
     {
         public UnitOfMeasurementRepository(MyContext context)
             : base(context)
         {
         }
 
-        public override IQueryable<UnitOfMeasurement> All()
+        public override IQueryable<UOfMeasur> All()
         {
             return this.Context.UnitOfMeasurement;
         }
 
-        protected override UnitOfMeasurement MapNewValuesToOld(UnitOfMeasurement oldEntity, UnitOfMeasurement newEntity)
+        protected override UOfMeasur MapNewValuesToOld(UOfMeasur oldEntity, UOfMeasur newEntity)
         {
             throw new NotImplementedException();
         }

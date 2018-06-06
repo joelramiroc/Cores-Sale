@@ -12,19 +12,19 @@ namespace CSales.Database.Repositories
     using CSales.Database.Contexts;
     using CSales.Database.Models;
 
-    public class PaymentConditionRepository : CSalesRepositoryBase<PaymentCondition>
+    public class PaymentConditionRepository : CSalesRepositoryBase<PCondition>
     {
         public PaymentConditionRepository(MyContext context)
             : base(context)
         {
         }
 
-        public override IQueryable<PaymentCondition> All()
+        public override IQueryable<PCondition> All()
         {
             return this.Context.PaymentCondition;
         }
 
-        protected override PaymentCondition MapNewValuesToOld(PaymentCondition oldEntity, PaymentCondition newEntity)
+        protected override PCondition MapNewValuesToOld(PCondition oldEntity, PCondition newEntity)
         {
             throw new NotImplementedException();
         }

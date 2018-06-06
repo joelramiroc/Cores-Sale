@@ -45,11 +45,11 @@ namespace CSales.Database.Models
         [Column("TOTAL")]
         public decimal Total { get; set; }
 
-        [ForeignKey(nameof(TypeOfSaleDocument))]
+        [ForeignKey(nameof(TOSDoc))]
         [Column("IDTDFSALE")]
         public long IdTypeDocumentForSale { get; set; }
 
-        [Column("TYPEOFSALEDOCUMENT")]
-        public virtual TypeOfSaleDocument TypeOfSaleDocument { get; set; }
+        [Column("TOSDOC")]
+        public virtual TOSDoc TOSDoc { get; set; }
     }
 }

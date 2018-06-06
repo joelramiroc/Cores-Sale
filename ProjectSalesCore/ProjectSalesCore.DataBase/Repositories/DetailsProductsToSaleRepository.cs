@@ -9,19 +9,19 @@ namespace CSales.Database.Repositories
     using Contexts;
     using Models;
 
-    public class DetailsProductsToSaleRepository : CSalesRepositoryBase<DetailsProductsToSale>
+    public class DetailsProductsToSaleRepository : CSalesRepositoryBase<DPToSale>
     {
         public DetailsProductsToSaleRepository(MyContext context)
             : base(context)
         {
         }
 
-        public override IQueryable<DetailsProductsToSale> All()
+        public override IQueryable<DPToSale> All()
         {
             return this.Context.DetailsProductsToSale;
         }
 
-        protected override DetailsProductsToSale MapNewValuesToOld(DetailsProductsToSale oldEntity, DetailsProductsToSale newEntity)
+        protected override DPToSale MapNewValuesToOld(DPToSale oldEntity, DPToSale newEntity)
         {
             throw new NotImplementedException();
         }

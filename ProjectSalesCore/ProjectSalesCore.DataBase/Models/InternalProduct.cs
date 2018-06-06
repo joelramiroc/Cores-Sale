@@ -14,7 +14,7 @@ namespace CSales.Database.Models
 
     [Table("IPDCT")]
 
-    public class InternalProduct
+    public class IProduct
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -28,12 +28,12 @@ namespace CSales.Database.Models
         [Column("PRODUCT")]
         public virtual Product Product { get; set; }
 
-        [ForeignKey(nameof(UnitOfMeasurement))]
+        [ForeignKey(nameof(UOMeasur))]
         [Column("IDUM")]
         public long IdUnitOfMeasurement { get; set; }
 
-        [Column("UNITOFMEASUREMENT")]
-        public virtual UnitOfMeasurement UnitOfMeasurement { get; set; }
+        [Column("UOMEAUS")]
+        public virtual UOfMeasur UOMeasur { get; set; }
 
         [ForeignKey(nameof(ProductType))]
         [Column("IDDCT")]

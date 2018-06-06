@@ -38,12 +38,12 @@ namespace CSales.Database.Models
         [Column("BANK")]
         public virtual Bank Bank { get; set; }
 
-        [ForeignKey(nameof(TypeOfSaleDocument))]
+        [ForeignKey(nameof(TOSDoc))]
         [Column("IDTDFS")]
         public long IdTypeDocumentForSale { get; set; }
 
         [Column("TYPESALEDOC")]
-        public virtual TypeOfSaleDocument TypeOfSaleDocument { get; set; }
+        public virtual TOSDoc TOSDoc { get; set; }
 
         [Column("IDDOCUMENT")]
         public long IdDocument { get; set; }

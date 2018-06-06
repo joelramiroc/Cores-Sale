@@ -14,7 +14,7 @@ namespace CSales.Database.Models
 
     [Table("PORDER")]
 
-    public class PurchaseOrder
+    public class POrder
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -35,6 +35,6 @@ namespace CSales.Database.Models
         public DateTime CreatedDate { get; set; }
 
         [Column("DTS")]
-        public ICollection<DetailsProductsToSale> DPTales { get; set; }
+        public ICollection<DPToSale> DPTales { get; set; }
     }
 }

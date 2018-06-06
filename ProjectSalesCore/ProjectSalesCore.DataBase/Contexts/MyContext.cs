@@ -26,7 +26,7 @@ namespace CSales.Database.Contexts
 
         public DbSet<Bank> Bank { get; set; }
 
-        public DbSet<DetailsProductsToSale> DetailsProductsToSale { get; set; }
+        public DbSet<DPToSale> DetailsProductsToSale { get; set; }
 
         public DbSet<Bill> Bill { get; set; }
 
@@ -74,7 +74,7 @@ namespace CSales.Database.Contexts
 
         public DbSet<InternalInventory> InternalInventory { get; set; }
 
-        public DbSet<InternalProduct> InternalProduct { get; set; }
+        public DbSet<IProduct> InternalProduct { get; set; }
 
         public DbSet<Kardex> Kardex { get; set; }
 
@@ -86,7 +86,7 @@ namespace CSales.Database.Contexts
 
         public DbSet<OrderDetail> OrderDetail { get; set; }
 
-        public DbSet<PaymentCondition> PaymentCondition { get; set; }
+        public DbSet<PCondition> PaymentCondition { get; set; }
 
         public DbSet<PaymentMethod> PaymentMethod { get; set; }
 
@@ -98,7 +98,7 @@ namespace CSales.Database.Contexts
 
         public DbSet<PDoc> PurchaseDocument { get; set; }
 
-        public DbSet<PurchaseOrder> PurchaseOrder { get; set; }
+        public DbSet<POrder> PurchaseOrder { get; set; }
 
         public DbSet<ReasonNote> ReasonNote { get; set; }
 
@@ -116,11 +116,11 @@ namespace CSales.Database.Contexts
 
         public DbSet<Telephone> Telephone { get; set; }
 
-        public DbSet<TypeOfPurchaseDocument> TypeOfPurchaseDocument { get; set; }
+        public DbSet<TOPDoc> TypeOfPurchaseDocument { get; set; }
 
-        public DbSet<TypeOfSaleDocument> TypeOfSaleDocument { get; set; }
+        public DbSet<TOSDoc> TypeOfSaleDocument { get; set; }
 
-        public DbSet<UnitOfMeasurement> UnitOfMeasurement { get; set; }
+        public DbSet<UOfMeasur> UnitOfMeasurement { get; set; }
 
         public DbSet<Voucher> Voucher { get; set; }
 

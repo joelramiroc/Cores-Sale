@@ -12,19 +12,19 @@ namespace CSales.Database.Repositories
     using CSales.Database.Contexts;
     using CSales.Database.Models;
 
-    public class TypeOfSaleDocumentRepository : CSalesRepositoryBase<TypeOfSaleDocument>
+    public class TypeOfSaleDocumentRepository : CSalesRepositoryBase<TOSDoc>
     {
         public TypeOfSaleDocumentRepository(MyContext context)
             : base(context)
         {
         }
 
-        public override IQueryable<TypeOfSaleDocument> All()
+        public override IQueryable<TOSDoc> All()
         {
             return this.Context.TypeOfSaleDocument;
         }
 
-        protected override TypeOfSaleDocument MapNewValuesToOld(TypeOfSaleDocument oldEntity, TypeOfSaleDocument newEntity)
+        protected override TOSDoc MapNewValuesToOld(TOSDoc oldEntity, TOSDoc newEntity)
         {
             throw new NotImplementedException();
         }

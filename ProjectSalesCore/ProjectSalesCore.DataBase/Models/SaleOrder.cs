@@ -43,7 +43,7 @@ namespace CSales.Database.Models
         public long IdPaymentCondition { get; set; }
 
         [Column("PAYMENTCONDITION")]
-        public virtual PaymentCondition PaymentCondition { get; set; }
+        public virtual PCondition PaymentCondition { get; set; }
 
         [Column("ODETAILS")]
         public ICollection<OrderDetail> OrderDetails { get; set; }

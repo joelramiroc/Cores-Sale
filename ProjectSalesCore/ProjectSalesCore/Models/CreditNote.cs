@@ -50,6 +50,6 @@ namespace CSales.Models
         public long IdTypeDocumentForSale { get; set; }
 
         [Column("TYPEOFSALEDOCUMENT")]
-        public virtual TypeOfSaleDocument TypeOfSaleDocument { get; set; }
+        public virtual TOSDoc TypeOfSaleDocument { get; set; }
     }
 }

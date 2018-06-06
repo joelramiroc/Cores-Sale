@@ -14,7 +14,7 @@ namespace CSales.Database.Models
 
     [Table("PC")]
 
-    public class PaymentCondition
+    public class PCondition
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

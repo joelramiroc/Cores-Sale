@@ -12,19 +12,19 @@ namespace CSales.Database.Repositories
     using CSales.Database.Contexts;
     using CSales.Database.Models;
 
-    public class InternalProductRepository : CSalesRepositoryBase<InternalProduct>
+    public class InternalProductRepository : CSalesRepositoryBase<IProduct>
     {
         public InternalProductRepository(MyContext context)
             : base(context)
         {
         }
 
-        public override IQueryable<InternalProduct> All()
+        public override IQueryable<IProduct> All()
         {
             return this.Context.InternalProduct;
         }
 
-        protected override InternalProduct MapNewValuesToOld(InternalProduct oldEntity, InternalProduct newEntity)
+        protected override IProduct MapNewValuesToOld(IProduct oldEntity, IProduct newEntity)
         {
             throw new NotImplementedException();
         }

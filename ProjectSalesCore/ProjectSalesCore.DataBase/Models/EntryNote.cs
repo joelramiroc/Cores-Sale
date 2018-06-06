@@ -21,12 +21,12 @@ namespace CSales.Database.Models
         [Column("ID")]
         public long IdEntryNote { get; set; }
 
-        [ForeignKey(nameof(PurchaseOrder))]
+        [ForeignKey(nameof(POrder))]
         [Column("NPO")]
         public int NumberPurchaseOrder { get; set; }
 
-        [Column("PURCHASEORDER")]
-        public virtual PurchaseOrder PurchaseOrder { get; set; }
+        [Column("PORDER")]
+        public virtual POrder POrder { get; set; }
 
         [ForeignKey(nameof(EntryNoteStatus))]
         [Column("IDENST")]
@@ -44,7 +44,7 @@ namespace CSales.Database.Models
 
         [ForeignKey(nameof(PDoc))]
         [Column("IDPDOC")]
-        public long IdPurchaseDocument { get; set; }
+        public long IdPDoc { get; set; }
 
         [Column("PDOC")]
         public virtual PDoc PDoc { get; set; }

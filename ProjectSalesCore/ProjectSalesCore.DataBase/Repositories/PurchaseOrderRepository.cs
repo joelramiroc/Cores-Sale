@@ -12,19 +12,19 @@ namespace CSales.Database.Repositories
     using CSales.Database.Contexts;
     using CSales.Database.Models;
 
-    public class PurchaseOrderRepository : CSalesRepositoryBase<PurchaseOrder>
+    public class PurchaseOrderRepository : CSalesRepositoryBase<POrder>
     {
         public PurchaseOrderRepository(MyContext context)
             : base(context)
         {
         }
 
-        public override IQueryable<PurchaseOrder> All()
+        public override IQueryable<POrder> All()
         {
             return this.Context.PurchaseOrder;
         }
 
-        protected override PurchaseOrder MapNewValuesToOld(PurchaseOrder oldEntity, PurchaseOrder newEntity)
+        protected override POrder MapNewValuesToOld(POrder oldEntity, POrder newEntity)
         {
             throw new NotImplementedException();
         }

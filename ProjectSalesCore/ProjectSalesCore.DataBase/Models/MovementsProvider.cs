@@ -21,12 +21,12 @@ namespace CSales.Database.Models
         [Column("IDMPROVIDER")]
         public long IdMovementsProvider { get; set; }
 
-        [ForeignKey(nameof(DocumentTypeProvider))]
+        [ForeignKey(nameof(DTProvdr))]
         [Column("IDDTPE")]
         public long IdDocumentType { get; set; }
 
-        [Column("DOCUMENTTYPEPROVIDER")]
-        public virtual TypeOfPurchaseDocument DocumentTypeProvider { get; set; }
+        [Column("DTYPEPROV")]
+        public virtual TOPDoc DTProvdr { get; set; }
 
         [Column("DOCUMENTID")]
         public long DocumentId { get; set; }

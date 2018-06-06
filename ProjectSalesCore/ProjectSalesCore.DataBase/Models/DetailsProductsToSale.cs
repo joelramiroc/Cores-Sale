@@ -14,7 +14,7 @@ namespace CSales.Database.Models
 
     [Table("DPTOSALE")]
 
-    public class DetailsProductsToSale
+    public class DPToSale
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -40,18 +40,18 @@ namespace CSales.Database.Models
         [Column("TOTALAMOUNT")]
         public decimal TotalAmount { get; set; }
 
-        [ForeignKey(nameof(PaymentCondition))]
+        [ForeignKey(nameof(PCondition))]
         [Column("IDPC")]
         public long IdPaymentCondition { get; set; }
 
-        [Column("PAYMENTCONDITION")]
-        public virtual PaymentCondition PaymentCondition { get; set; }
+        [Column("PCOND")]
+        public virtual PCondition PCondition { get; set; }
 
-        [ForeignKey(nameof(PurchaseOrder))]
+        [ForeignKey(nameof(POrder))]
         [Column("PO")]
         public int PurchaseNumber { get; set; }
 
-        [Column("PURCHASEORDER")]
-        public virtual PurchaseOrder PurchaseOrder { get; set; }
+        [Column("PORDER")]
+        public virtual POrder POrder { get; set; }
     }
 }

@@ -14,7 +14,7 @@ namespace CSales.Database.Models
 
     [Table("TOPDOC")]
 
-    public class TypeOfPurchaseDocument
+    public class TOPDoc
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

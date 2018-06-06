@@ -33,7 +33,7 @@ namespace CSales.Database.Models
         public long IdUnitOfMeasurement { get; set; }
 
         [Column("UNITOFMEASUREMENT")]
-        public virtual UnitOfMeasurement UnitOfMeasurement { get; set; }
+        public virtual UOfMeasur UnitOfMeasurement { get; set; }
 
         [ForeignKey(nameof(ProductType))]
         [Column("IDPT")]

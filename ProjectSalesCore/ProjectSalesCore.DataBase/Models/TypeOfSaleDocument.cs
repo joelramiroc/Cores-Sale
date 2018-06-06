@@ -14,7 +14,7 @@ namespace CSales.Database.Models
 
     [Table("TOSDOC")]
 
-    public class TypeOfSaleDocument
+    public class TOSDoc
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

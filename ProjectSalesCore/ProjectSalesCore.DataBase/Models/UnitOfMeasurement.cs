@@ -14,7 +14,7 @@ namespace CSales.Database.Models
 
     [Table("UNIT")]
 
-    public class UnitOfMeasurement
+    public class UOfMeasur
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

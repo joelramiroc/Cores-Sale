@@ -40,13 +40,13 @@ namespace CSales.Database.Models
         public int NumberPurchaseOrder { get; set; }
 
         [Column("PURCHASEORDER")]
-        public virtual PurchaseOrder PurchaseOrder { get; set; }
+        public virtual POrder PurchaseOrder { get; set; }
 
         [Column("CREATEDDATE")]
         public DateTime CreatedDate { get; set; }
 
         [Column("DP")]
-        public ICollection<DetailsProductsToSale> DPTSales { get; set; }
+        public ICollection<DPToSale> DPTSales { get; set; }
 
         [Column("TOTALAMOUNT")]
         public decimal TotalAmount { get; set; }

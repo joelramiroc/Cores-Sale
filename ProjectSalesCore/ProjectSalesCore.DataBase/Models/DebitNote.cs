@@ -35,12 +35,12 @@ namespace CSales.Database.Models
         [Column("EMPLOYEE")]
         public virtual Employee Employee { get; set; }
 
-        [ForeignKey(nameof(TypeOfSaleDocument))]
+        [ForeignKey(nameof(TOSDoc))]
         [Column("IDDOCFORSALE")]
-        public long IdTypeDocumentForSale { get; set; }
+        public long IdTOSDoc { get; set; }
 
         [Column("IDTDFORSALE")]
-        public virtual TypeOfSaleDocument TypeOfSaleDocument { get; set; }
+        public virtual TOSDoc TOSDoc { get; set; }
 
         [Column("IDDOCUMENT")]
         public long IdDocument { get; set; }
