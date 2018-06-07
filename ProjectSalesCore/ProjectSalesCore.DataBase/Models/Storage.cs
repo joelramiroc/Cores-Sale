@@ -24,18 +24,6 @@ namespace CSales.Database.Models
         [Column("STORAGENAME")]
         public string StorageName { get; set; }
 
-        [ForeignKey(nameof(Address))]
-        [Column("IDADDRESS")]
-        public long IdAddress { get; set; }
-
-        [Column("ADDRESSS")]
-        public virtual Address Address { get; set; }
-
-        [Column("CLS")]
-        public ICollection<Telephone> Telephones { get; set; }
-
-        [Column("CREATEDDATE")]
         public DateTime CreatedDate { get; set; }
-
     }
 }

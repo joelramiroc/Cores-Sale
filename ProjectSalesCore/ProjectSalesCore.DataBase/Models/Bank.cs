@@ -26,11 +26,5 @@ namespace CSales.Database.Models
 
         [Column("DESCRIPTION")]
         public string Description { get; set; }
-
-        [Column("TELEPHONES")]
-        public ICollection<Telephone> Telephones { get; set; }
-
-        [Column("ADDRESSES")]
-        public ICollection<Address> Addresses { get; set; }
     }
 }

@@ -4,6 +4,7 @@
 
 namespace CSales.Database.Models
 {
+    using ProjectSalesCore.DataBase.Models;
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
@@ -25,11 +26,11 @@ namespace CSales.Database.Models
         public string Name { get; set; }
 
         [Column("ADDRESSES")]
-        public ICollection<Address> Addresses { get; set; }
+        public ICollection<AddressProvider> Addresses { get; set; }
 
         [Required]
         [Column("TELEP")]
-        public ICollection<Telephone> Telephones { get; set; }
+        public ICollection<TelephoneProvider> Telephones { get; set; }
 
         [Required]
         [Column("ISACTIVE")]

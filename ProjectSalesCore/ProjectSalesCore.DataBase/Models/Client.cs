@@ -4,6 +4,7 @@
 
 namespace CSales.Database.Models
 {
+    using ProjectSalesCore.DataBase.Models;
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
@@ -25,19 +26,19 @@ namespace CSales.Database.Models
         public string Name { get; set; }
 
         [Column("ADDRESSES")]
-        public ICollection<Address> Addresses { get; set; }
+        public ICollection<AddressClient> Addresses { get; set; }
 
         [Column("CITIES")]
         public ICollection<CityDistrict> CitiesDistricts { get; set; }
 
         [Column("TELEPHONES")]
-        public ICollection<Telephone> Telephones { get; set; }
+        public ICollection<TelephoneClient> Telephones { get; set; }
 
         [Column("FAX")]
         public ICollection<Fax> Faxs { get; set; }
 
         [Column("EMAILS")]
-        public ICollection<Email> Emails { get; set; }
+        public ICollection<EmailClient> Emails { get; set; }
 
         [ForeignKey(nameof(RUC))]
         [Column("IDRUC")]

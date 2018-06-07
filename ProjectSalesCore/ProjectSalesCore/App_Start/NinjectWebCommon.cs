@@ -48,7 +48,6 @@ namespace ProjectSalesCore.App_Start
                 kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);
                 kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
                 kernel.Bind<MyContext>().ToSelf().InRequestScope();
-                kernel.Bind<IRepository<Address>>().To<AddressRepository>().InRequestScope();
                 kernel.Bind<IRepository<Bank>>().To<BankRepository>().InRequestScope();
                 kernel.Bind<IRepository<Bill>>().To<BillRepository>().InRequestScope();
                 kernel.Bind<IRepository<BillOfExchange>>().To<BillOfExchangeRepository>().InRequestScope();
@@ -67,7 +66,6 @@ namespace ProjectSalesCore.App_Start
                 kernel.Bind<IRepository<DebitNote>>().To<DebitNoteRepository>().InRequestScope();
                 kernel.Bind<IRepository<DetailEntryNote>>().To<DetailEntryNoteRepository>().InRequestScope();
                 kernel.Bind<IRepository<DPToSale>>().To<DetailsProductsToSaleRepository>().InRequestScope();
-                kernel.Bind<IRepository<Email>>().To<EmailRepository>().InRequestScope();
                 kernel.Bind<IRepository<Employee>>().To<EmployeeRepository>().InRequestScope();
                 kernel.Bind<IRepository<EntryNote>>().To<EntryNoteRepository>().InRequestScope();
                 kernel.Bind<IRepository<ExternalInventory>>().To<ExternalInventoryRepository>().InRequestScope();
@@ -94,7 +92,6 @@ namespace ProjectSalesCore.App_Start
                 kernel.Bind<IRepository<SaByDisp>>().To<SalesByDispatchRepository>().InRequestScope();
                 kernel.Bind<IRepository<StatusNote>>().To<StatusNoteRepository>().InRequestScope();
                 kernel.Bind<IRepository<Storage>>().To<StorageRepository>().InRequestScope();
-                kernel.Bind<IRepository<Telephone>>().To<TelephoneRepository>().InRequestScope();
                 kernel.Bind<IRepository<TOPDoc>>().To<TypeOfPuchaseDocumentRepository>().InRequestScope();
                 kernel.Bind<IRepository<TOSDoc>>().To<TypeOfSaleDocumentRepository>().InRequestScope();
                 kernel.Bind<IRepository<UOfMeasur>>().To<UnitOfMeasurementRepository>().InRequestScope();

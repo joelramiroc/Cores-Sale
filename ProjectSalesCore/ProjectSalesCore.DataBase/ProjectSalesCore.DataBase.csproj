@@ -66,7 +66,9 @@
       <DependentUpon>201806040131323_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Address.cs" />
+    <Compile Include="Models\AddressClient.cs" />
+    <Compile Include="Models\AddressEmployee.cs" />
+    <Compile Include="Models\AddressProvider.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\Bank.cs" />
     <Compile Include="Models\Bill.cs" />
@@ -86,7 +88,9 @@
     <Compile Include="Models\DebitNote.cs" />
     <Compile Include="Models\DetailEntryNote.cs" />
     <Compile Include="Models\DetailsProductsToSale.cs" />
-    <Compile Include="Models\Email.cs" />
+    <Compile Include="Models\EmailClient.cs" />
+    <Compile Include="Models\EmailEmployee.cs" />
+    <Compile Include="Models\EmailProvider.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\EntryNote.cs" />
     <Compile Include="Models\ExternalInventory.cs" />
@@ -114,13 +118,14 @@
     <Compile Include="Models\SalesByDispatch.cs" />
     <Compile Include="Models\StatusNote.cs" />
     <Compile Include="Models\Storage.cs" />
-    <Compile Include="Models\Telephone.cs" />
+    <Compile Include="Models\TelephoneClient.cs" />
+    <Compile Include="Models\TelephoneEmployee.cs" />
+    <Compile Include="Models\TelephoneProvider.cs" />
     <Compile Include="Models\TypeOfPurchaseDocument.cs" />
     <Compile Include="Models\TypeOfSaleDocument.cs" />
     <Compile Include="Models\UnitOfMeasurement.cs" />
     <Compile Include="Models\Voucher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\AddressRepository.cs" />
     <Compile Include="Repositories\BankRepository.cs" />
     <Compile Include="Repositories\BillOfExchangeRepository.cs" />
     <Compile Include="Repositories\BillRepository.cs" />
@@ -140,7 +145,6 @@
     <Compile Include="Repositories\DebitNoteRepository.cs" />
     <Compile Include="Repositories\DetailEntryNoteRepository.cs" />
     <Compile Include="Repositories\DetailsProductsToSaleRepository.cs" />
-    <Compile Include="Repositories\EmailRepository.cs" />
     <Compile Include="Repositories\EmployeeRepository.cs" />
     <Compile Include="Repositories\EntryNoteRepository.cs" />
     <Compile Include="Repositories\ExternalInventoryRepository.cs" />
@@ -170,7 +174,6 @@
     <Compile Include="Repositories\SalesByDispatchRepository.cs" />
     <Compile Include="Repositories\StatusNoteRepository.cs" />
     <Compile Include="Repositories\StorageRepository.cs" />
-    <Compile Include="Repositories\TelephoneRepository.cs" />
     <Compile Include="Repositories\TypeOfPuchaseDocumentRepository.cs" />
     <Compile Include="Repositories\TypeOfSaleDocumentRepository.cs" />
     <Compile Include="Repositories\UnitOfMeasurementRepository.cs" />

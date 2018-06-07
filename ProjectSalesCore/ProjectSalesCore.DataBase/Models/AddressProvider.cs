@@ -1,20 +1,15 @@
-﻿// <copyright file="Address.cs" company="PlaceholderCompany">
+﻿// <copyright file="AddressProvider.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace CSales.Database.Models
+namespace ProjectSalesCore.DataBase.Models
 {
-    using System;
-    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
+    using CSales.Database.Models;
 
-    [Table("ADDRESS")]
-
-    public class Address
+    [Table("APRV")]
+    public class AddressProvider
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -26,5 +21,12 @@ namespace CSales.Database.Models
 
         [Column("DESCRIPTION")]
         public string Description { get; set; }
+
+        [ForeignKey(nameof(Provider))]
+        [Column("IDPRV")]
+        public long IdPRV { get; set; }
+
+        [Column("PRV")]
+        public virtual Provider Provider { get; set; }
     }
 }

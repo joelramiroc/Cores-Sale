@@ -8,6 +8,7 @@ namespace CSales.Database.Contexts
     using System.Data.Entity;
     using CSales.Database.Models;
     using FirebirdSql.Data.FirebirdClient;
+    using ProjectSalesCore.DataBase.Models;
 
     public class MyContext : DbContext
     {
@@ -22,7 +23,12 @@ namespace CSales.Database.Contexts
 
         public DbSet<Provider> Provider { get; set; }
 
-        public DbSet<Address> Address { get; set; }
+        public DbSet<AddressClient> AddressClient { get; set; }
+
+        public DbSet<AddressProvider> AddressProvider { get; set; }
+
+        public DbSet<AddressEmployee> AddressEmployee { get; set; }
+
 
         public DbSet<Bank> Bank { get; set; }
 
@@ -59,8 +65,12 @@ namespace CSales.Database.Contexts
         public DbSet<CustomerCheckingAccount> CustomerCheckingAccount { get; set; }
 
         public DbSet<DebitNote> DebitNote { get; set; }
-        
-        public DbSet<Email> Email { get; set; }
+
+        public DbSet<EmailClient> EmailClient { get; set; }
+
+        public DbSet<EmailProvider> EmailProvider { get; set; }
+
+        public DbSet<EmailEmployee> EmailEmployee { get; set; }
 
         public DbSet<Employee> Employee { get; set; }
 
@@ -114,7 +124,11 @@ namespace CSales.Database.Contexts
 
         public DbSet<Storage> Storage { get; set; }
 
-        public DbSet<Telephone> Telephone { get; set; }
+        public DbSet<TelephoneClient> TelephoneClient { get; set; }
+
+        public DbSet<TelephoneProvider> TelephoneProvider { get; set; }
+
+        public DbSet<TelephoneEmployee> TelephoneEmployee { get; set; }
 
         public DbSet<TOPDoc> TypeOfPurchaseDocument { get; set; }
 

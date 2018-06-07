@@ -1,20 +1,15 @@
-﻿// <copyright file="Telephone.cs" company="PlaceholderCompany">
+﻿// <copyright file="TelephoneClient.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace CSales.Database.Models
+namespace ProjectSalesCore.DataBase.Models
 {
-    using System;
-    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
+    using CSales.Database.Models;
 
-    [Table("TEL")]
-
-    public class Telephone
+    [Table("TELC")]
+    public class TelephoneClient
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -26,5 +21,12 @@ namespace CSales.Database.Models
 
         [Column("DESCRIPTION")]
         public string Description { get; set; }
+
+        [ForeignKey(nameof(Client))]
+        [Column("IDC")]
+        public long IdClient { get; set; }
+
+        [Column("CLIENT")]
+        public virtual Client Client { get; set; }
     }
 }

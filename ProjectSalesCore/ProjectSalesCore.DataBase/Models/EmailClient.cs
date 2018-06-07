@@ -1,5 +1,10 @@
-﻿namespace CSales.Database.Models
+﻿// <copyright file="EmailClient.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace ProjectSalesCore.DataBase.Models
 {
+    using CSales.Database.Models;
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
@@ -8,9 +13,8 @@
     using System.Text;
     using System.Threading.Tasks;
 
-    [Table("EMAIL")]
-
-    public class Email
+    [Table("EMAILC")]
+    public class EmailClient
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -19,5 +23,12 @@
 
         [Column("EMAILL")]
         public string Emaill { get; set; }
+
+        [ForeignKey(nameof(Client))]
+        [Column("IDC")]
+        public long IdClient { get; set; }
+
+        [Column("CLIENT")]
+        public virtual Client Client { get; set; }
     }
 }

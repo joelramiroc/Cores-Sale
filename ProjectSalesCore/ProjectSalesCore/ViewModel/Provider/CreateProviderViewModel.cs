@@ -11,6 +11,7 @@ namespace ProjectSalesCore.ViewModel.Provider
     using System.Linq;
     using System.Web;
     using CSales.Database.Models;
+    using ProjectSalesCore.DataBase.Models;
 
     public class CreateProviderViewModel
     {
@@ -20,11 +21,11 @@ namespace ProjectSalesCore.ViewModel.Provider
         public long Id { get; set; }
 
         [Column("ADDRESSES")]
-        public IEnumerable<Address> Addresses { get; set; }
+        public IEnumerable<AddressProvider> Addresses { get; set; }
 
         [Required]
         [Column("TELEP")]
-        public IEnumerable<Telephone> Telephones { get; set; }
+        public IEnumerable<TelephoneProvider> Telephones { get; set; }
 
         [Required]
         [Column("ISACTIVE")]
