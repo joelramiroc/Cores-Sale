@@ -278,8 +278,17 @@
     <Compile Include="Models\Voucher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModel\CurrentAccountProvider\CreateCurrentAccountProviderViewModel.cs" />
+    <Compile Include="ViewModel\CurrentAccountProvider\EditCurrentAccountProviderViewModel.cs" />
     <Compile Include="ViewModel\BankDetailViewModel.cs" />
+    <Compile Include="ViewModel\OrderDetail\CreateOrderDetailViewModel.cs" />
+    <Compile Include="ViewModel\OrderDetail\EditOrderDetailViewModel.cs" />
+    <Compile Include="ViewModel\PDocs\CreatePDocViewModel.cs" />
+    <Compile Include="ViewModel\PDocs\EditPDocViewModel.cs" />
+    <Compile Include="ViewModel\Provider\EditProviderViewModel.cs" />
     <Compile Include="ViewModel\Provider\CreateProviderViewModel.cs" />
+    <Compile Include="ViewModel\SaleOrder\CreateSaleOrderViewModel.cs" />
+    <Compile Include="ViewModel\SaleOrder\EditSaleOrderViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -328,11 +337,6 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Products\Create.cshtml" />
-    <Content Include="Views\Products\Delete.cshtml" />
-    <Content Include="Views\Products\Details.cshtml" />
-    <Content Include="Views\Products\Edit.cshtml" />
-    <Content Include="Views\Products\Index.cshtml" />
     <Content Include="Views\Providers\Create.cshtml" />
     <Content Include="Views\Providers\Delete.cshtml" />
     <Content Include="Views\Providers\Details.cshtml" />
@@ -358,6 +362,11 @@
     <Content Include="Views\CurrentAccountProviders\Details.cshtml" />
     <Content Include="Views\CurrentAccountProviders\Edit.cshtml" />
     <Content Include="Views\CurrentAccountProviders\Index.cshtml" />
+    <Content Include="Views\Products\Create.cshtml" />
+    <Content Include="Views\Products\Delete.cshtml" />
+    <Content Include="Views\Products\Details.cshtml" />
+    <Content Include="Views\Products\Edit.cshtml" />
+    <Content Include="Views\Products\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

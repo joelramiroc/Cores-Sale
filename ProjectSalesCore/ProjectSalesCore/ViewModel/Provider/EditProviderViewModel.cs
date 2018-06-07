@@ -1,8 +1,4 @@
-﻿// <copyright file="CreateProviderViewModel.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-namespace ProjectSalesCore.ViewModel.Provider
+﻿namespace ProjectSalesCore.ViewModel.Provider
 {
     using System;
     using System.Collections.Generic;
@@ -13,7 +9,7 @@ namespace ProjectSalesCore.ViewModel.Provider
     using CSales.Database.Models;
     using ProjectSalesCore.DataBase.Models;
 
-    public class CreateProviderViewModel
+    public class EditProviderViewModel
     {
         public long Id { get; set; }
 
