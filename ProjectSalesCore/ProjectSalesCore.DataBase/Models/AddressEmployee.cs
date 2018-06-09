@@ -19,7 +19,7 @@ namespace ProjectSalesCore.DataBase.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("ID")]
-        public long Id { get; set; }
+        public int Id { get; set; }
 
         [Column("ADDRESSNAME")]
         public string AddressName { get; set; }
@@ -29,7 +29,7 @@ namespace ProjectSalesCore.DataBase.Models
 
         [ForeignKey(nameof(Employee))]
         [Column("IDEMP")]
-        public long IdEMP { get; set; }
+        public int IdEMP { get; set; }
 
         [Column("EMP")]
         public virtual Employee Employee { get; set; }

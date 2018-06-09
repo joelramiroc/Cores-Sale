@@ -19,11 +19,11 @@ namespace CSales.Database.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("ID")]
-        public long IdCurrentAccountProvider { get; set; }
+        public int IdCurrentAccountProvider { get; set; }
 
         [ForeignKey(nameof(Provider))]
         [Column("IDP")]
-        public long IdProvider { get; set; }
+        public int IdProvider { get; set; }
 
         [Column("PROVIDER")]
         public virtual Provider Provider { get; set; }

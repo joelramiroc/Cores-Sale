@@ -19,18 +19,18 @@ namespace CSales.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("ID")]
-        public long Id { get; set; }
+        public int Id { get; set; }
 
         [ForeignKey(nameof(Provider))]
         [Column("PROVIDER")]
-        public long IdProvider { get; set; }
+        public int IdProvider { get; set; }
 
         [Column("PROVIDER")]
         public virtual Provider Provider { get; set; }
 
         [ForeignKey(nameof(CurrentAccountDocumentType))]
         [Column("IDDT")]
-        public long IdCurrentAccountDocumentType { get; set; }
+        public int IdCurrentAccountDocumentType { get; set; }
 
         [Column("CURRENTACCOUNTDOCUMENTTYPE")]
         public virtual CurrentAccountDocumentType CurrentAccountDocumentType { get; set; }

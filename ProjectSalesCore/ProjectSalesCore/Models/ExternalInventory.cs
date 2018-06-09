@@ -19,18 +19,18 @@ namespace CSales.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("ID")]
-        public long IdExternalInventory { get; set; }
+        public int IdExternalInventory { get; set; }
 
         [ForeignKey(nameof(ExternalProduct))]
         [Column("IDEP")]
-        public long IdExternalProduct { get; set; }
+        public int IdExternalProduct { get; set; }
 
         [Column("EXTERNALPRODUCT")]
         public virtual EProduct ExternalProduct { get; set; }
 
         [ForeignKey(nameof(Storage))]
         [Column("IDSTORAGE")]
-        public long IdStorage { get; set; }
+        public int IdStorage { get; set; }
 
         [Column("STORAGE")]
         public virtual Storage Storage { get; set; }

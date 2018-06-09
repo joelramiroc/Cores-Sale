@@ -61,11 +61,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contexts\MyContext.cs" />
-    <Compile Include="Migrations\201806040131323_Initial.cs" />
-    <Compile Include="Migrations\201806040131323_Initial.Designer.cs">
-      <DependentUpon>201806040131323_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AddressClient.cs" />
     <Compile Include="Models\AddressEmployee.cs" />
     <Compile Include="Models\AddressProvider.cs" />
@@ -75,7 +70,8 @@
     <Compile Include="Models\Billofexchange.cs" />
     <Compile Include="Models\BusinessName.cs" />
     <Compile Include="Models\Check.cs" />
-    <Compile Include="Models\CityDistrict.cs" />
+    <Compile Include="Models\CityClient.cs" />
+    <Compile Include="Models\CityProvider.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\Collection.cs" />
     <Compile Include="Models\CostCenter.cs" />
@@ -121,6 +117,7 @@
     <Compile Include="Models\TelephoneClient.cs" />
     <Compile Include="Models\TelephoneEmployee.cs" />
     <Compile Include="Models\TelephoneProvider.cs" />
+    <Compile Include="Models\TestDate.cs" />
     <Compile Include="Models\TypeOfPurchaseDocument.cs" />
     <Compile Include="Models\TypeOfSaleDocument.cs" />
     <Compile Include="Models\UnitOfMeasurement.cs" />
@@ -131,7 +128,6 @@
     <Compile Include="Repositories\BillRepository.cs" />
     <Compile Include="Repositories\BusinessNameRepository.cs" />
     <Compile Include="Repositories\ChekRepository.cs" />
-    <Compile Include="Repositories\CityDistrictRepository.cs" />
     <Compile Include="Repositories\ClientRepository.cs" />
     <Compile Include="Repositories\CollectionRepository.cs" />
     <Compile Include="Repositories\CostCenterRepository.cs" />
@@ -190,11 +186,6 @@
   <ItemGroup>
     <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.2\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
     <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.2\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201806040131323_Initial.resx">
-      <DependentUpon>201806040131323_Initial.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

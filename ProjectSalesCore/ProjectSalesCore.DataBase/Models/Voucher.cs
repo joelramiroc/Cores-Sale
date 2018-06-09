@@ -19,25 +19,25 @@ namespace CSales.Database.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("ID")]
-        public long IdVoucher { get; set; }
+        public int IdVoucher { get; set; }
 
         [ForeignKey(nameof(Client))]
         [Column("IDCLIENT")]
-        public long IdClient { get; set; }
+        public int IdClient { get; set; }
 
         [Column("CLIENT")]
         public virtual Client Client { get; set; }
 
         [ForeignKey(nameof(Employee))]
         [Column("IDEMPLOYEE")]
-        public long IdEmployee { get; set; }
+        public int IdEmployee { get; set; }
 
         [Column("EMPLOYEE")]
         public virtual Employee Employee { get; set; }
 
         [ForeignKey(nameof(TypeOfSaleDocument))]
         [Column("IDTDSALE")]
-        public long IdTypeDocumentForSale { get; set; }
+        public int IdTypeDocumentForSale { get; set; }
 
         [Column("TYPEOFSALEDOCUMENT")]
         public virtual TOSDoc TypeOfSaleDocument { get; set; }

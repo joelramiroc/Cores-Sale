@@ -19,7 +19,7 @@ namespace CSales.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("ID")]
-        public long IdMovimentType { get; set; }
+        public int IdMovimentType { get; set; }
 
         [Column("MOVIMENTNAME")]
         public string MovimentName { get; set; }

@@ -15,41 +15,25 @@ namespace ProjectSalesCore.ViewModel.Provider
 
     public class CreateProviderViewModel
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        [Column("ID")]
-        public long Id { get; set; }
+        public string Name { get; set; }
 
-        [Column("ADDRESSES")]
-        public IEnumerable<AddressProvider> Addresses { get; set; }
+        public IEnumerable<string> Addresses { get; set; }
 
-        [Required]
-        [Column("TELEP")]
-        public IEnumerable<TelephoneProvider> Telephones { get; set; }
+        public IEnumerable<string> Telephones { get; set; }
 
-        [Required]
-        [Column("ISACTIVE")]
         public bool IsActive { get; set; }
 
-        [Column("CITIESDISTRICTS")]
-        public ICollection<CityDistrict> CitiesDistricts { get; set; }
+        public IEnumerable<CityProvider> CitiesDistricts { get; set; }
 
-        [Column("CONTACT")]
         public string Contact { get; set; }
 
-        [Required]
-        [Column("ISFOREIGNPROVIDER")]
         public bool IsForeignProvider { get; set; }
 
         [ForeignKey(nameof(BusinessName))]
         [Column("BUSINESSNAME")]
-        public long IdBusinessName { get; set; }
+        public int IdBusinessName { get; set; }
 
         [Column("BUSINESSNAME")]
         public virtual BusinessName BusinessName { get; set; }
-
-        [Column("CREATEDDATE")]
-        [DataType(DataType.Date)]
-        public DateTime CreatedDate { get; set; }
     }
 }

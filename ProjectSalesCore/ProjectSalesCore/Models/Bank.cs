@@ -19,7 +19,7 @@ namespace CSales.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("IDBANK")]
-        public long IdBank { get; set; }
+        public int IdBank { get; set; }
 
         [Column("BANKNAME")]
         public string BankName { get; set; }

@@ -11,13 +11,13 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.ADDRESS",
                 c => new
                     {
-                        ID = c.Long(nullable: false),
+                        ID = c.int(nullable: false),
                         ADDRESSNAME = c.String(),
                         DESCRIPTION = c.String(),
-                        Bank_IdBank = c.Long(),
-                        Client_Id = c.Long(),
-                        Employee_Id = c.Long(),
-                        Provider_Id = c.Long(),
+                        Bank_IdBank = c.int(),
+                        Client_Id = c.int(),
+                        Employee_Id = c.int(),
+                        Provider_Id = c.int(),
                     })
                 .PrimaryKey(t => t.ID)
                 .ForeignKey("dbo.BANK", t => t.Bank_IdBank)
@@ -33,7 +33,7 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.BANK",
                 c => new
                     {
-                        IDBANK = c.Long(nullable: false),
+                        IDBANK = c.int(nullable: false),
                         BANKNAME = c.String(),
                         DESCRIPTION = c.String(),
                     })
@@ -43,14 +43,14 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.TEL",
                 c => new
                     {
-                        ID = c.Long(nullable: false),
+                        ID = c.int(nullable: false),
                         NUMBER = c.String(),
                         DESCRIPTION = c.String(),
-                        Bank_IdBank = c.Long(),
-                        Employee_Id = c.Long(),
-                        Client_Id = c.Long(),
-                        Provider_Id = c.Long(),
-                        Storage_IdStorage = c.Long(),
+                        Bank_IdBank = c.int(),
+                        Employee_Id = c.int(),
+                        Client_Id = c.int(),
+                        Provider_Id = c.int(),
+                        Storage_IdStorage = c.int(),
                     })
                 .PrimaryKey(t => t.ID)
                 .ForeignKey("dbo.BANK", t => t.Bank_IdBank)
@@ -68,12 +68,12 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.BILL",
                 c => new
                     {
-                        ID = c.Long(nullable: false),
-                        IDCLIENT = c.Long(nullable: false),
-                        IDEMPLOYEE = c.Long(nullable: false),
+                        ID = c.int(nullable: false),
+                        IDCLIENT = c.int(nullable: false),
+                        IDEMPLOYEE = c.int(nullable: false),
                         CREATEDDATE = c.DateTime(nullable: false),
                         TOTAL = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        SaByDisp_Id = c.Long(),
+                        SaByDisp_Id = c.int(),
                     })
                 .PrimaryKey(t => t.ID)
                 .ForeignKey("dbo.CLIENT", t => t.IDCLIENT, cascadeDelete: true)
@@ -87,10 +87,10 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.CLIENT",
                 c => new
                     {
-                        ID = c.Long(nullable: false),
+                        ID = c.int(nullable: false),
                         NAME = c.String(),
-                        IDRUC = c.Long(nullable: false),
-                        IDEMPLOYEE = c.Long(nullable: false),
+                        IDRUC = c.int(nullable: false),
+                        IDEMPLOYEE = c.int(nullable: false),
                     })
                 .PrimaryKey(t => t.ID)
                 .ForeignKey("dbo.EMP", t => t.IDEMPLOYEE, cascadeDelete: true)
@@ -102,11 +102,11 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.CITY",
                 c => new
                     {
-                        ID = c.Long(nullable: false),
+                        ID = c.int(nullable: false),
                         NAME = c.String(),
                         DESCRIPTION = c.String(),
-                        Client_Id = c.Long(),
-                        Provider_Id = c.Long(),
+                        Client_Id = c.int(),
+                        Provider_Id = c.int(),
                     })
                 .PrimaryKey(t => t.ID)
                 .ForeignKey("dbo.CLIENT", t => t.Client_Id)
@@ -118,9 +118,9 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.EMAIL",
                 c => new
                     {
-                        IDEMAIL = c.Long(nullable: false),
+                        IDEMAIL = c.int(nullable: false),
                         EMAILL = c.String(),
-                        Client_Id = c.Long(),
+                        Client_Id = c.int(),
                     })
                 .PrimaryKey(t => t.IDEMAIL)
                 .ForeignKey("dbo.CLIENT", t => t.Client_Id)
@@ -130,7 +130,7 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.EMP",
                 c => new
                     {
-                        ID = c.Long(nullable: false),
+                        ID = c.int(nullable: false),
                         NAME = c.String(),
                         HIREDATE = c.DateTime(nullable: false),
                         SALARY = c.Decimal(nullable: false, precision: 18, scale: 2),
@@ -141,9 +141,9 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.FAX",
                 c => new
                     {
-                        IDFAX = c.Long(nullable: false),
+                        IDFAX = c.int(nullable: false),
                         FAXX = c.String(),
-                        Client_Id = c.Long(),
+                        Client_Id = c.int(),
                     })
                 .PrimaryKey(t => t.IDFAX)
                 .ForeignKey("dbo.CLIENT", t => t.Client_Id)
@@ -153,7 +153,7 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.RUC",
                 c => new
                     {
-                        IDRUC = c.Long(nullable: false),
+                        IDRUC = c.int(nullable: false),
                         RUCNAME = c.String(),
                     })
                 .PrimaryKey(t => t.IDRUC);
@@ -162,13 +162,13 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.ODETAIL",
                 c => new
                     {
-                        IDXP = c.Long(nullable: false),
-                        IDSORDER = c.Long(nullable: false),
+                        IDXP = c.int(nullable: false),
+                        IDSORDER = c.int(nullable: false),
                         QUANTITY = c.Int(nullable: false),
                         UNITPRICE = c.Decimal(nullable: false, precision: 18, scale: 2),
                         DISCOUNTRATE = c.Int(nullable: false),
                         TOTAL = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        Bill_IdBill = c.Long(),
+                        Bill_IdBill = c.int(),
                     })
                 .PrimaryKey(t => new { t.IDXP, t.IDSORDER })
                 .ForeignKey("dbo.EPRODUCT", t => t.IDXP, cascadeDelete: true)
@@ -182,11 +182,11 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.EPRODUCT",
                 c => new
                     {
-                        ID = c.Long(nullable: false),
-                        IDPRODUCT = c.Long(nullable: false),
-                        IDM = c.Long(nullable: false),
-                        IDPT = c.Long(nullable: false),
-                        IDPL = c.Long(nullable: false),
+                        ID = c.int(nullable: false),
+                        IDPRODUCT = c.int(nullable: false),
+                        IDM = c.int(nullable: false),
+                        IDPT = c.int(nullable: false),
+                        IDPL = c.int(nullable: false),
                         PRODUCTDESCRIPTION = c.String(),
                         QUANTITY = c.Int(nullable: false),
                         ACTIVE = c.Boolean(nullable: false),
@@ -205,8 +205,8 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.PDTO",
                 c => new
                     {
-                        ID = c.Long(nullable: false),
-                        PRODUCTNAME = c.Long(nullable: false),
+                        ID = c.int(nullable: false),
+                        PRODUCTNAME = c.int(nullable: false),
                     })
                 .PrimaryKey(t => t.ID);
             
@@ -214,7 +214,7 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.PLINE",
                 c => new
                     {
-                        ID = c.Long(nullable: false),
+                        ID = c.int(nullable: false),
                         LINENAME = c.String(),
                     })
                 .PrimaryKey(t => t.ID);
@@ -223,7 +223,7 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.PTYPE",
                 c => new
                     {
-                        ID = c.Long(nullable: false),
+                        ID = c.int(nullable: false),
                         TYPENAME = c.String(),
                     })
                 .PrimaryKey(t => t.ID);
@@ -232,7 +232,7 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.UNIT",
                 c => new
                     {
-                        ID = c.Long(nullable: false),
+                        ID = c.int(nullable: false),
                         UNITNAME = c.String(),
                     })
                 .PrimaryKey(t => t.ID);
@@ -241,11 +241,11 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.SOR",
                 c => new
                     {
-                        ID = c.Long(nullable: false),
+                        ID = c.int(nullable: false),
                         CREATEDDATE = c.DateTime(nullable: false),
-                        IDCLIENT = c.Long(nullable: false),
-                        IDEMPLOYEE = c.Long(nullable: false),
-                        IDPCONDITION = c.Long(nullable: false),
+                        IDCLIENT = c.int(nullable: false),
+                        IDEMPLOYEE = c.int(nullable: false),
+                        IDPCONDITION = c.int(nullable: false),
                     })
                 .PrimaryKey(t => t.ID)
                 .ForeignKey("dbo.CLIENT", t => t.IDCLIENT, cascadeDelete: true)
@@ -259,7 +259,7 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.PC",
                 c => new
                     {
-                        ID = c.Long(nullable: false),
+                        ID = c.int(nullable: false),
                         CONDITIONNAME = c.String(),
                     })
                 .PrimaryKey(t => t.ID);
@@ -268,9 +268,9 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.BOEX",
                 c => new
                     {
-                        ID = c.Long(nullable: false),
-                        IDCLIENT = c.Long(nullable: false),
-                        IDEMPLOYEE = c.Long(nullable: false),
+                        ID = c.int(nullable: false),
+                        IDCLIENT = c.int(nullable: false),
+                        IDEMPLOYEE = c.int(nullable: false),
                         PAYMENTDATE = c.DateTime(nullable: false),
                         TOTAL = c.Decimal(nullable: false, precision: 18, scale: 2),
                     })
@@ -284,7 +284,7 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.BNAME",
                 c => new
                     {
-                        ID = c.Long(nullable: false),
+                        ID = c.int(nullable: false),
                         NAME = c.String(),
                     })
                 .PrimaryKey(t => t.ID);
@@ -293,10 +293,10 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.CHECK",
                 c => new
                     {
-                        IDCHECK = c.Long(nullable: false),
+                        IDCHECK = c.int(nullable: false),
                         CHECKNUMBER = c.Int(nullable: false),
                         DESCRIPTION = c.String(),
-                        IDCLIENT = c.Long(nullable: false),
+                        IDCLIENT = c.int(nullable: false),
                         PAYMENTDATE = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.IDCHECK)
@@ -307,12 +307,12 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.COLLECTION",
                 c => new
                     {
-                        IDCLIENT = c.Long(nullable: false),
-                        IDCHECK = c.Long(nullable: false),
-                        IDPAYm = c.Long(nullable: false),
-                        IDBANK = c.Long(nullable: false),
-                        IDTDFS = c.Long(nullable: false),
-                        IDDOCUMENT = c.Long(nullable: false),
+                        IDCLIENT = c.int(nullable: false),
+                        IDCHECK = c.int(nullable: false),
+                        IDPAYm = c.int(nullable: false),
+                        IDBANK = c.int(nullable: false),
+                        IDTDFS = c.int(nullable: false),
+                        IDDOCUMENT = c.int(nullable: false),
                     })
                 .PrimaryKey(t => new { t.IDCLIENT, t.IDCHECK })
                 .ForeignKey("dbo.BANK", t => t.IDBANK, cascadeDelete: true)
@@ -330,7 +330,7 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.PMETHOD",
                 c => new
                     {
-                        ID = c.Long(nullable: false),
+                        ID = c.int(nullable: false),
                         METHODNAME = c.String(),
                     })
                 .PrimaryKey(t => t.ID);
@@ -339,7 +339,7 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.TOSDOC",
                 c => new
                     {
-                        ID = c.Long(nullable: false),
+                        ID = c.int(nullable: false),
                         NAMEDOCUMENT = c.String(),
                     })
                 .PrimaryKey(t => t.ID);
@@ -348,7 +348,7 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.CCENTER",
                 c => new
                     {
-                        ID = c.Long(nullable: false),
+                        ID = c.int(nullable: false),
                         COSTNAME = c.String(),
                     })
                 .PrimaryKey(t => t.ID);
@@ -357,8 +357,8 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.CSALE",
                 c => new
                     {
-                        ID = c.Long(nullable: false),
-                        IDBILL = c.Long(nullable: false),
+                        ID = c.int(nullable: false),
+                        IDBILL = c.int(nullable: false),
                     })
                 .PrimaryKey(t => t.ID)
                 .ForeignKey("dbo.BILL", t => t.IDBILL, cascadeDelete: true)
@@ -368,12 +368,12 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.CNOTE",
                 c => new
                     {
-                        ID = c.Long(nullable: false),
-                        IdCNType = c.Long(nullable: false),
-                        IDCLIENT = c.Long(nullable: false),
-                        IDEMPLOYEE = c.Long(nullable: false),
+                        ID = c.int(nullable: false),
+                        IdCNType = c.int(nullable: false),
+                        IDCLIENT = c.int(nullable: false),
+                        IDEMPLOYEE = c.int(nullable: false),
                         TOTAL = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        IdTDFSale = c.Long(nullable: false),
+                        IdTDFSale = c.int(nullable: false),
                     })
                 .PrimaryKey(t => t.ID)
                 .ForeignKey("dbo.CLIENT", t => t.IDCLIENT, cascadeDelete: true)
@@ -389,7 +389,7 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.CNTYPE",
                 c => new
                     {
-                        ID = c.Long(nullable: false),
+                        ID = c.int(nullable: false),
                         TYPECREDITNOTENAME = c.String(),
                     })
                 .PrimaryKey(t => t.ID);
@@ -398,7 +398,7 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.CADTYPE",
                 c => new
                     {
-                        ID = c.Long(nullable: false),
+                        ID = c.int(nullable: false),
                         TYPENAME = c.String(),
                     })
                 .PrimaryKey(t => t.ID);
@@ -407,8 +407,8 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.CADP",
                 c => new
                     {
-                        ID = c.Long(nullable: false),
-                        IDP = c.Long(nullable: false),
+                        ID = c.int(nullable: false),
+                        IDP = c.int(nullable: false),
                         TOTALDEBT = c.Decimal(nullable: false, precision: 18, scale: 2),
                         CREATEDDATE = c.DateTime(nullable: false),
                     })
@@ -420,11 +420,11 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.PROVIDER",
                 c => new
                     {
-                        ID = c.Long(nullable: false),
+                        ID = c.int(nullable: false),
                         ISACTIVE = c.Boolean(nullable: false),
                         CONTACT = c.String(),
                         ISFOREIGNPROVIDER = c.Boolean(nullable: false),
-                        BUSINESSNAME = c.Long(nullable: false),
+                        BUSINESSNAME = c.int(nullable: false),
                         CREATEDDATE = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.ID)
@@ -435,8 +435,8 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.CCACOUNT",
                 c => new
                     {
-                        ID = c.Long(nullable: false),
-                        IDC = c.Long(nullable: false),
+                        ID = c.int(nullable: false),
+                        IDC = c.int(nullable: false),
                         TOTALDEBT = c.Decimal(nullable: false, precision: 18, scale: 2),
                         CREATEDDATE = c.DateTime(nullable: false),
                     })
@@ -448,11 +448,11 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.DNOTE",
                 c => new
                     {
-                        ID = c.Long(nullable: false),
-                        IDCLIENT = c.Long(nullable: false),
-                        IDEMPLOYEE = c.Long(nullable: false),
-                        IDDOCFORSALE = c.Long(nullable: false),
-                        IDDOCUMENT = c.Long(nullable: false),
+                        ID = c.int(nullable: false),
+                        IDCLIENT = c.int(nullable: false),
+                        IDEMPLOYEE = c.int(nullable: false),
+                        IDDOCFORSALE = c.int(nullable: false),
+                        IDDOCUMENT = c.int(nullable: false),
                         TOTAL = c.Decimal(nullable: false, precision: 18, scale: 2),
                     })
                 .PrimaryKey(t => t.ID)
@@ -467,10 +467,10 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.DENOTE",
                 c => new
                     {
-                        IDENTRYNOTE = c.Long(nullable: false),
-                        IDPRODUCT = c.Long(nullable: false),
-                        IDRNOTE = c.Long(nullable: false),
-                        ENSTATUS = c.Long(nullable: false),
+                        IDENTRYNOTE = c.int(nullable: false),
+                        IDPRODUCT = c.int(nullable: false),
+                        IDRNOTE = c.int(nullable: false),
+                        ENSTATUS = c.int(nullable: false),
                         QUANTITY = c.Int(nullable: false),
                         UNITEPRICE = c.Decimal(nullable: false, precision: 18, scale: 2),
                         TOTAL = c.Decimal(nullable: false, precision: 18, scale: 2),
@@ -490,11 +490,11 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.ENOTE",
                 c => new
                     {
-                        ID = c.Long(nullable: false),
+                        ID = c.int(nullable: false),
                         NPO = c.Int(nullable: false),
-                        IDENST = c.Long(nullable: false),
-                        IDRNOTE = c.Long(nullable: false),
-                        IDPDOC = c.Long(nullable: false),
+                        IDENST = c.int(nullable: false),
+                        IDRNOTE = c.int(nullable: false),
+                        IDPDOC = c.int(nullable: false),
                     })
                 .PrimaryKey(t => t.ID)
                 .ForeignKey("dbo.SNOTE", t => t.IDENST, cascadeDelete: true)
@@ -510,7 +510,7 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.SNOTE",
                 c => new
                     {
-                        ID = c.Long(nullable: false),
+                        ID = c.int(nullable: false),
                         STATUSNAME = c.String(),
                     })
                 .PrimaryKey(t => t.ID);
@@ -519,9 +519,9 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.PDOC",
                 c => new
                     {
-                        ID = c.Long(nullable: false),
-                        PROVIDER = c.Long(nullable: false),
-                        IDDT = c.Long(nullable: false),
+                        ID = c.int(nullable: false),
+                        PROVIDER = c.int(nullable: false),
+                        IDDT = c.int(nullable: false),
                         NPORDER = c.Int(nullable: false),
                         CREATEDDATE = c.DateTime(nullable: false),
                         TOTALAMOUNT = c.Decimal(nullable: false, precision: 18, scale: 2),
@@ -538,15 +538,15 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.DPTOSALE",
                 c => new
                     {
-                        ID = c.Long(nullable: false),
-                        IDP = c.Long(nullable: false),
+                        ID = c.int(nullable: false),
+                        IDP = c.int(nullable: false),
                         QUANTITY = c.Int(nullable: false),
                         UNITPRICE = c.Decimal(nullable: false, precision: 18, scale: 2),
                         DISCOUNT = c.Decimal(precision: 18, scale: 2),
                         TOTALAMOUNT = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        IDPC = c.Long(nullable: false),
+                        IDPC = c.int(nullable: false),
                         PO = c.Int(nullable: false),
-                        PDoc_Id = c.Long(),
+                        PDoc_Id = c.int(),
                     })
                 .PrimaryKey(t => t.ID)
                 .ForeignKey("dbo.PC", t => t.IDPC, cascadeDelete: true)
@@ -564,7 +564,7 @@ namespace ProjectSalesCore.DataBase.Migrations
                     {
                         ID = c.Int(nullable: false),
                         PLACEOFENTRY = c.String(),
-                        IDPROVIDER = c.Long(nullable: false),
+                        IDPROVIDER = c.int(nullable: false),
                         CREATEDDATE = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.ID)
@@ -575,7 +575,7 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.RNOTE",
                 c => new
                     {
-                        ID = c.Long(nullable: false),
+                        ID = c.int(nullable: false),
                         REASONNAME = c.String(),
                     })
                 .PrimaryKey(t => t.ID);
@@ -584,9 +584,9 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.EXTINV",
                 c => new
                     {
-                        ID = c.Long(nullable: false),
-                        IDEP = c.Long(nullable: false),
-                        IDSTORAGE = c.Long(nullable: false),
+                        ID = c.int(nullable: false),
+                        IDEP = c.int(nullable: false),
+                        IDSTORAGE = c.int(nullable: false),
                         PRODUCTDESCRIPTION = c.String(),
                         QUANTITY = c.Int(nullable: false),
                         UNITPRICE = c.Decimal(nullable: false, precision: 18, scale: 2),
@@ -604,9 +604,9 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.STOR",
                 c => new
                     {
-                        ID = c.Long(nullable: false),
+                        ID = c.int(nullable: false),
                         STORAGENAME = c.String(),
-                        IDADDRESS = c.Long(nullable: false),
+                        IDADDRESS = c.int(nullable: false),
                         CREATEDDATE = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.ID)
@@ -617,9 +617,9 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.IINV",
                 c => new
                     {
-                        ID = c.Long(nullable: false),
-                        IDSTORAGE = c.Long(nullable: false),
-                        IDIP = c.Long(nullable: false),
+                        ID = c.int(nullable: false),
+                        IDSTORAGE = c.int(nullable: false),
+                        IDIP = c.int(nullable: false),
                         PRODUCTDESCRIPTION = c.String(),
                         QUANTITY = c.Int(nullable: false),
                     })
@@ -633,12 +633,12 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.IPDCT",
                 c => new
                     {
-                        ID = c.Long(nullable: false),
-                        IDPRODUCT = c.Long(nullable: false),
-                        IDUM = c.Long(nullable: false),
-                        IDDCT = c.Long(nullable: false),
-                        IDCC = c.Long(nullable: false),
-                        IDPL = c.Long(nullable: false),
+                        ID = c.int(nullable: false),
+                        IDPRODUCT = c.int(nullable: false),
+                        IDUM = c.int(nullable: false),
+                        IDDCT = c.int(nullable: false),
+                        IDCC = c.int(nullable: false),
+                        IDPL = c.int(nullable: false),
                         PRODUCTDESCRIPTION = c.String(),
                         QUANTITY = c.Int(nullable: false),
                         ACTIVE = c.Boolean(nullable: false),
@@ -659,14 +659,14 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.KARDEX",
                 c => new
                     {
-                        IdKardex = c.Long(nullable: false, identity: true),
-                        IDMOVEMENTTYPE = c.Long(nullable: false),
-                        IDPRODUCT = c.Long(nullable: false),
+                        IdKardex = c.int(nullable: false, identity: true),
+                        IDMOVEMENTTYPE = c.int(nullable: false),
+                        IDPRODUCT = c.int(nullable: false),
                         QUANTITY = c.Int(nullable: false),
                         UNITPRICE = c.Decimal(nullable: false, precision: 18, scale: 2),
                         DISCOUNTRATE = c.Int(nullable: false),
                         TOTAL = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        IDSTORAGE = c.Long(nullable: false),
+                        IDSTORAGE = c.int(nullable: false),
                         MOVEMENTDATE = c.DateTime(nullable: false),
                         PREVIOUSBALANCE = c.Decimal(nullable: false, precision: 18, scale: 2),
                         NEWBALANCE = c.Decimal(nullable: false, precision: 18, scale: 2),
@@ -685,7 +685,7 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.MTYPE",
                 c => new
                     {
-                        ID = c.Long(nullable: false),
+                        ID = c.int(nullable: false),
                         MOVIMENTNAME = c.String(),
                     })
                 .PrimaryKey(t => t.ID);
@@ -694,9 +694,9 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.MPROVIDER",
                 c => new
                     {
-                        IdMovementsProvider = c.Long(nullable: false, identity: true),
-                        IDDTPE = c.Long(nullable: false),
-                        DOCUMENTID = c.Long(nullable: false),
+                        IdMovementsProvider = c.int(nullable: false, identity: true),
+                        IDDTPE = c.int(nullable: false),
+                        DOCUMENTID = c.int(nullable: false),
                         INGRESOS = c.Decimal(nullable: false, precision: 18, scale: 2),
                         EGRESOS = c.Decimal(nullable: false, precision: 18, scale: 2),
                         CREATEDDATE = c.DateTime(nullable: false),
@@ -709,7 +709,7 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.TOPDOC",
                 c => new
                     {
-                        ID = c.Long(nullable: false),
+                        ID = c.int(nullable: false),
                         NAMEDOCUMENT = c.String(),
                     })
                 .PrimaryKey(t => t.ID);
@@ -718,11 +718,11 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.ONOTE",
                 c => new
                     {
-                        IDONOTE = c.Long(nullable: false),
-                        IDSALEORDER = c.Long(nullable: false),
-                        IDONSTATUS = c.Long(nullable: false),
-                        IDRNOTE = c.Long(nullable: false),
-                        IDBILL = c.Long(nullable: false),
+                        IDONOTE = c.int(nullable: false),
+                        IDSALEORDER = c.int(nullable: false),
+                        IDONSTATUS = c.int(nullable: false),
+                        IDRNOTE = c.int(nullable: false),
+                        IDBILL = c.int(nullable: false),
                     })
                 .PrimaryKey(t => t.IDONOTE)
                 .ForeignKey("dbo.BILL", t => t.IDBILL, cascadeDelete: true)
@@ -738,11 +738,11 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.SALE",
                 c => new
                     {
-                        IDSALE = c.Long(nullable: false),
-                        IDSALEORDER = c.Long(nullable: false),
-                        IDCLIENT = c.Long(nullable: false),
-                        IDEMPLOYEE = c.Long(nullable: false),
-                        IDNOTEOUTPUT = c.Long(nullable: false),
+                        IDSALE = c.int(nullable: false),
+                        IDSALEORDER = c.int(nullable: false),
+                        IDCLIENT = c.int(nullable: false),
+                        IDEMPLOYEE = c.int(nullable: false),
+                        IDNOTEOUTPUT = c.int(nullable: false),
                         CREATEDDATE = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.IDSALE)
@@ -759,7 +759,7 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.SBDISPATCH",
                 c => new
                     {
-                        ID = c.Long(nullable: false),
+                        ID = c.int(nullable: false),
                     })
                 .PrimaryKey(t => t.ID);
             
@@ -767,10 +767,10 @@ namespace ProjectSalesCore.DataBase.Migrations
                 "dbo.VOUCHER",
                 c => new
                     {
-                        ID = c.Long(nullable: false),
-                        IDCLIENT = c.Long(nullable: false),
-                        IDEMPLOYEE = c.Long(nullable: false),
-                        IDTDSALE = c.Long(nullable: false),
+                        ID = c.int(nullable: false),
+                        IDCLIENT = c.int(nullable: false),
+                        IDEMPLOYEE = c.int(nullable: false),
+                        IDTDSALE = c.int(nullable: false),
                         TOTAL = c.Decimal(nullable: false, precision: 18, scale: 2),
                     })
                 .PrimaryKey(t => t.ID)

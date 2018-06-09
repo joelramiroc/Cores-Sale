@@ -19,7 +19,7 @@ namespace CSales.Database.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("ID")]
-        public long IdReasonEntryNote { get; set; }
+        public int IdReasonEntryNote { get; set; }
 
         [Column("REASONNAME")]
         public string ReasonName { get; set; }

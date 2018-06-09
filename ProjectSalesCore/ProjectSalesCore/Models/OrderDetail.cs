@@ -19,7 +19,7 @@ namespace CSales.Models
         [Key]
         [ForeignKey(nameof(ExternalProduct))]
         [Column("IDXP",Order =0)]
-        public long IdExternalProduct { get; set; }
+        public int IdExternalProduct { get; set; }
 
         [Column("EXTERNALPRODUCT")]
         public EProduct ExternalProduct { get; set; }
@@ -27,7 +27,7 @@ namespace CSales.Models
         [Key]
         [ForeignKey(nameof(SaleOrder))]
         [Column("IDSORDER",Order =1)]
-        public long IdSaleOrder { get; set; }
+        public int IdSaleOrder { get; set; }
 
         [Column("SALEORDER")]
         public SaleOrder SaleOrder { get; set; }

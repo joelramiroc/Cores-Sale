@@ -53,7 +53,7 @@ namespace ProjectSalesCore.App_Start
                 kernel.Bind<IRepository<BillOfExchange>>().To<BillOfExchangeRepository>().InRequestScope();
                 kernel.Bind<IRepository<BusinessName>>().To<BusinessNameRepository>().InRequestScope();
                 kernel.Bind<IRepository<Check>>().To<ChekRepository>().InRequestScope();
-                kernel.Bind<IRepository<CityDistrict>>().To<CityDistrictRepository>().InRequestScope();
+                //kernel.Bind<IRepository<CityDistrict>>().To<CityDistrictRepository>().InRequestScope();
                 kernel.Bind<IRepository<Client>>().To<ClientRepository>().InRequestScope();
                 kernel.Bind<IRepository<Collection>>().To<CollectionRepository>().InRequestScope();
                 kernel.Bind<IRepository<CostCenter>>().To<CostCenterRepository>().InRequestScope();

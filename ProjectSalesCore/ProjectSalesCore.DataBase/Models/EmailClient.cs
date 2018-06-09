@@ -4,7 +4,6 @@
 
 namespace ProjectSalesCore.DataBase.Models
 {
-    using CSales.Database.Models;
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
@@ -12,6 +11,7 @@ namespace ProjectSalesCore.DataBase.Models
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
+    using CSales.Database.Models;
 
     [Table("EMAILC")]
     public class EmailClient
@@ -19,14 +19,14 @@ namespace ProjectSalesCore.DataBase.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("IDEMAIL")]
-        public long IdEmail { get; set; }
+        public int IdEmail { get; set; }
 
         [Column("EMAILL")]
         public string Emaill { get; set; }
 
         [ForeignKey(nameof(Client))]
         [Column("IDC")]
-        public long IdClient { get; set; }
+        public int IdClient { get; set; }
 
         [Column("CLIENT")]
         public virtual Client Client { get; set; }

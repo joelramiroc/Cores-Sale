@@ -6,6 +6,7 @@ namespace CSales.Database.Contexts
 {
     using System.Configuration;
     using System.Data.Entity;
+    using System.Diagnostics;
     using CSales.Database.Models;
     using FirebirdSql.Data.FirebirdClient;
     using ProjectSalesCore.DataBase.Models;
@@ -14,13 +15,16 @@ namespace CSales.Database.Contexts
     {
         public MyContext()
             : base(ConfigurationManager.ConnectionStrings["CSalesDatabase"].ConnectionString)
-        { }
+        {
+            this.Database.Log = s => Debug.Write(s);
+        }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
         }
 
+        public DbSet<TestDate> TestDate { get; set; }
         public DbSet<Provider> Provider { get; set; }
 
         public DbSet<AddressClient> AddressClient { get; set; }
@@ -44,7 +48,9 @@ namespace CSales.Database.Contexts
 
         public DbSet<DetailEntryNote> DetailEntryNote { get; set; }
 
-        public DbSet<CityDistrict> CityDistrict { get; set; }
+        public DbSet<CityClient> CityClient { get; set; }
+
+        public DbSet<CityProvider> CityProvider { get; set; }
 
         public DbSet<Client> Client { get; set; }
 

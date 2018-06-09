@@ -14,7 +14,7 @@ namespace ProjectSalesCore.DataBase.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("ID")]
-        public long Id { get; set; }
+        public int Id { get; set; }
 
         [Column("ADDRESSNAME")]
         public string AddressName { get; set; }
@@ -24,7 +24,7 @@ namespace ProjectSalesCore.DataBase.Models
 
         [ForeignKey(nameof(Provider))]
         [Column("IDPRV")]
-        public long IdPRV { get; set; }
+        public int IdPRV { get; set; }
 
         [Column("PRV")]
         public virtual Provider Provider { get; set; }

@@ -15,7 +15,7 @@
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("ID")]
-        public long IdCurrentAccountDocumentType { get; set; }
+        public int IdCurrentAccountDocumentType { get; set; }
 
         [Column("TYPENAME")]
         public string TypeName { get; set; }

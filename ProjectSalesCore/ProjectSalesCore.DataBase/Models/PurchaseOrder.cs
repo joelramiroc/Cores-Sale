@@ -26,7 +26,7 @@ namespace CSales.Database.Models
 
         [ForeignKey(nameof(Provider))]
         [Column("IDPROVIDER")]
-        public long IdProvider { get; set; }
+        public int IdProvider { get; set; }
 
         [Column("PROVIDER")]
         public virtual Provider Provider { get; set; }

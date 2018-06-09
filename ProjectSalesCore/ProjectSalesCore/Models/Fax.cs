@@ -19,7 +19,7 @@ namespace CSales.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("IDFAX")]
-        public long IdFax { get; set; }
+        public int IdFax { get; set; }
 
         [Column("FAXX")]
         public string Faxx { get; set; }

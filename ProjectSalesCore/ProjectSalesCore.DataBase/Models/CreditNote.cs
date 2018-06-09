@@ -19,25 +19,25 @@ namespace CSales.Database.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("ID")]
-        public long IdCreditNote { get; set; }
+        public int IdCreditNote { get; set; }
 
         [ForeignKey(nameof(CreditNoteType))]
         [Column("IDCNTYPE")]
-        public long IdCreditNoteType { get; set; }
+        public int IdCreditNoteType { get; set; }
 
         [Column("CRNTYPE")]
         public virtual CreditNoteType CreditNoteType { get; set; }
 
         [ForeignKey(nameof(Client))]
         [Column("IDCLIENT")]
-        public long IdClient { get; set; }
+        public int IdClient { get; set; }
 
         [Column("CLIENT")]
         public virtual Client Client { get; set; }
 
         [ForeignKey(nameof(Employee))]
         [Column("IDEMPLOYEE")]
-        public long IdEmployee { get; set; }
+        public int IdEmployee { get; set; }
 
         [Column("EMPLOYEE")]
         public virtual Employee Employee { get; set; }
@@ -47,7 +47,7 @@ namespace CSales.Database.Models
 
         [ForeignKey(nameof(TOSDoc))]
         [Column("IDTDFSALE")]
-        public long IdTypeDocumentForSale { get; set; }
+        public int IdTypeDocumentForSale { get; set; }
 
         [Column("TOSDOC")]
         public virtual TOSDoc TOSDoc { get; set; }

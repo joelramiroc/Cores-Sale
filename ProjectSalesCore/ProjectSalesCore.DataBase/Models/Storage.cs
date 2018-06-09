@@ -19,7 +19,7 @@ namespace CSales.Database.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("ID")]
-        public long IdStorage { get; set; }
+        public int IdStorage { get; set; }
 
         [Column("STORAGENAME")]
         public string StorageName { get; set; }

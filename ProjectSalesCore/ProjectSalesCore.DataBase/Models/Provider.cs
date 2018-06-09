@@ -20,7 +20,7 @@ namespace CSales.Database.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("ID")]
-        public long Id { get; set; }
+        public int Id { get; set; }
 
         [Column("NAME")]
         public string Name { get; set; }
@@ -28,7 +28,6 @@ namespace CSales.Database.Models
         [Column("ADDRESSES")]
         public ICollection<AddressProvider> Addresses { get; set; }
 
-        [Required]
         [Column("TELEP")]
         public ICollection<TelephoneProvider> Telephones { get; set; }
 
@@ -37,7 +36,7 @@ namespace CSales.Database.Models
         public bool IsActive { get; set; }
 
         [Column("CITIESDISTRICTS")]
-        public ICollection<CityDistrict> CitiesDistricts { get; set; }
+        public ICollection<CityProvider> CitiesDistricts { get; set; }
 
         [Column("CONTACT")]
         public string Contact { get; set; }
@@ -48,12 +47,12 @@ namespace CSales.Database.Models
 
         [ForeignKey(nameof(BusinessName))]
         [Column("BUSINESSNAME")]
-        public long IdBusinessName { get; set; }
+        public int? IdBusinessName { get; set; }
 
         [Column("BUSINESSNAME")]
         public virtual BusinessName BusinessName { get; set; }
 
         [Column("CREATEDDATE")]
-        public DateTime CreatedDate { get; set; }
+        public DateTime? CreatedDate { get; set; }
     }
 }

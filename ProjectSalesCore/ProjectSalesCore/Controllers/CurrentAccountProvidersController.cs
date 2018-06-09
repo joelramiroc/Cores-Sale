@@ -23,7 +23,7 @@ namespace ProjectSalesCore.Controllers
         }
 
         // GET: CurrentAccountProviders/Details/5
-        public ActionResult Details(long? id)
+        public ActionResult Details(int? id)
         {
             if (id == null)
             {
@@ -63,7 +63,7 @@ namespace ProjectSalesCore.Controllers
         }
 
         // GET: CurrentAccountProviders/Edit/5
-        public ActionResult Edit(long? id)
+        public ActionResult Edit(int? id)
         {
             if (id == null)
             {
@@ -96,7 +96,7 @@ namespace ProjectSalesCore.Controllers
         }
 
         // GET: CurrentAccountProviders/Delete/5
-        public ActionResult Delete(long? id)
+        public ActionResult Delete(int? id)
         {
             if (id == null)
             {
@@ -113,7 +113,7 @@ namespace ProjectSalesCore.Controllers
         // POST: CurrentAccountProviders/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(long id)
+        public ActionResult DeleteConfirmed(int id)
         {
             CurrentAccountProvider currentAccountProvider = db.CurrentAcountProvider.Find(id);
             db.CurrentAcountProvider.Remove(currentAccountProvider);

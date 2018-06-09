@@ -1,4 +1,4 @@
-﻿@model CSales.Database.Models.Provider
+﻿@model ProjectSalesCore.ViewModel.Provider.DetailsProviderViewModel
 
 @{
     ViewBag.Title = "Details";
@@ -56,10 +56,41 @@
 
         <dd>
             @Html.DisplayFor(model => model.CreatedDate)
-        </dd>
-
+        </dd>        
     </dl>
 </div>
+
+<div>
+    <table>
+        @foreach (var item in Model.Addresses)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AddressName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+<div>
+    <table>
+        @foreach (var item in Model.Telephones)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Number)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
     @Html.ActionLink("Back to List", "Index")

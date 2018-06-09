@@ -19,39 +19,39 @@ namespace CSales.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("ID")]
-        public long IdInternalProduct { get; set; }
+        public int IdInternalProduct { get; set; }
 
         [ForeignKey(nameof(Product))]
         [Column("IDPRODUCT")]
-        public long IdProduct { get; set; }
+        public int IdProduct { get; set; }
 
         [Column("PRODUCT")]
         public virtual Product Product { get; set; }
 
         [ForeignKey(nameof(UnitOfMeasurement))]
         [Column("IDUM")]
-        public long IdUnitOfMeasurement { get; set; }
+        public int IdUnitOfMeasurement { get; set; }
 
         [Column("UNITOFMEASUREMENT")]
         public virtual UnitOfMeasurement UnitOfMeasurement { get; set; }
 
         [ForeignKey(nameof(ProductType))]
         [Column("IDDCT")]
-        public long IdProductType { get; set; }
+        public int IdProductType { get; set; }
 
         [Column("PRODUCTTYPE")]
         public virtual ProductType ProductType { get; set; }
 
         [ForeignKey(nameof(CostCenter))]
         [Column("IDCC")]
-        public long IdCostCenter { get; set; }
+        public int IdCostCenter { get; set; }
 
         [Column("COSTCENTER")]
         public virtual CostCenter CostCenter { get; set; }
 
         [ForeignKey(nameof(ProductLine))]
         [Column("IDPL")]
-        public long IdProductLine { get; set; }
+        public int IdProductLine { get; set; }
 
         [Column("PRODUCTLINE")]
         public virtual ProductLine ProductLine { get; set; }

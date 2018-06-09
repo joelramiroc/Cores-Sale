@@ -19,11 +19,11 @@ namespace CSales.Database.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("ID")]
-        public long Id { get; set; }
+        public int Id { get; set; }
 
         [ForeignKey(nameof(Bill))]
         [Column("IDBILL")]
-        public long IdBill { get; set; }
+        public int IdBill { get; set; }
 
         [Column("BILL")]
         public virtual Bill Bill { get; set; }

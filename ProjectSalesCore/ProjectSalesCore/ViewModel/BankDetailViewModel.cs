@@ -9,7 +9,7 @@ namespace ProjectSalesCore.ViewModel
 
     public class BankDetailViewModel
     {
-        public long IdBank { get; set; }
+        public int IdBank { get; set; }
 
         public string BankName { get; set; }
 

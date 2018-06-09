@@ -19,11 +19,11 @@ namespace CSales.Database.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("ID")]
-        public long Id { get; set; }
+        public int Id { get; set; }
 
         [ForeignKey(nameof(Product))]
         [Column("IDP")]
-        public long IdProduct { get; set; }
+        public int IdProduct { get; set; }
 
         [Column("PRODUCT")]
         public virtual Product Product { get; set; }
@@ -42,7 +42,7 @@ namespace CSales.Database.Models
 
         [ForeignKey(nameof(PCondition))]
         [Column("IDPC")]
-        public long IdPaymentCondition { get; set; }
+        public int IdPaymentCondition { get; set; }
 
         [Column("PCOND")]
         public virtual PCondition PCondition { get; set; }

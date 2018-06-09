@@ -19,39 +19,39 @@ namespace CSales.Models
         [Key]
         [ForeignKey(nameof(Client))]
         [Column("IDCLIENT",Order =0)]
-        public long IdClient { get; set; }
+        public int IdClient { get; set; }
 
         [Column("CLIENT")]
         public virtual Client Client { get; set; }
 
         [ForeignKey(nameof(PaymentMethod))]
         [Column("IDPAYm")]
-        public long IdPayM { get; set; }
+        public int IdPayM { get; set; }
 
         [Column("PAYMENTMETHOD")]
         public virtual PaymentMethod PaymentMethod { get; set; }
 
         [ForeignKey(nameof(Bank))]
         [Column("IDBANK")]
-        public long IdBank { get; set; }
+        public int IdBank { get; set; }
 
         [Column("BANK")]
         public virtual Bank Bank { get; set; }
 
         [ForeignKey(nameof(TypeOfSaleDocument))]
         [Column("IDTDFS")]
-        public long IdTypeDocumentForSale { get; set; }
+        public int IdTypeDocumentForSale { get; set; }
 
         [Column("TYPEOFSALEDOCUMENT")]
         public virtual TOSDoc TypeOfSaleDocument { get; set; }
 
         [Column("IDDOCUMENT")]
-        public long IdDocument { get; set; }
+        public int IdDocument { get; set; }
 
         [Key]
         [ForeignKey(nameof(Check))]
         [Column("IDCHECK",Order =1)]
-        public long IdCheck { get; set; }
+        public int IdCheck { get; set; }
 
         [Column("CHECK")]
         public virtual Check Check { get; set; }

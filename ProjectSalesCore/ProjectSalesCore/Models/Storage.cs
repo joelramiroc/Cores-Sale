@@ -19,14 +19,14 @@ namespace CSales.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("ID")]
-        public long IdStorage { get; set; }
+        public int IdStorage { get; set; }
 
         [Column("STORAGENAME")]
         public string StorageName { get; set; }
 
         [ForeignKey(nameof(Address))]
         [Column("IDADDRESS")]
-        public long IdAddress { get; set; }
+        public int IdAddress { get; set; }
 
         [Column("ADDRESSS")]
         public virtual Address Address { get; set; }

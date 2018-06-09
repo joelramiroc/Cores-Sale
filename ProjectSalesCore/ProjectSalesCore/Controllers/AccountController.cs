@@ -1,4 +1,8 @@
-﻿namespace CSales.Controllers
+﻿// <copyright file="AccountController.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace CSales.Controllers
 {
     using System;
     using System.Globalization;

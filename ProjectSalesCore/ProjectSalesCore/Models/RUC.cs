@@ -19,7 +19,7 @@ namespace CSales.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("IDRUC")]
-        public long IdRUC { get; set; }
+        public int IdRUC { get; set; }
 
         [Column("RUCNAME")]
         public string RUCName { get; set; }

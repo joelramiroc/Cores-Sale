@@ -19,7 +19,7 @@ namespace CSales.Database.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("ID")]
-        public long IdUnitOfMeasurement { get; set; }
+        public int IdUnitOfMeasurement { get; set; }
 
         [Column("UNITNAME")]
         public string UnitName { get; set; }

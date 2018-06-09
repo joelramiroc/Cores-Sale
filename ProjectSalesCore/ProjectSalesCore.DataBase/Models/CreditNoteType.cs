@@ -19,7 +19,7 @@ namespace CSales.Database.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("ID")]
-        public long IdCreditNoteType { get; set; }
+        public int IdCreditNoteType { get; set; }
 
         [Column("TYPENAME")]
         public string TypeCreditNoteName { get; set; }

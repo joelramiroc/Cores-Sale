@@ -19,7 +19,7 @@ namespace CSales.Database.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("ID")]
-        public long IdDocumentTypeProvider { get; set; }
+        public int IdDocumentTypeProvider { get; set; }
 
         [Column("NAMEDOCUMENT")]
         public string NameDocument { get; set; }

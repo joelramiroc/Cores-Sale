@@ -19,14 +19,14 @@ namespace ProjectSalesCore.DataBase.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("IDEMAIL")]
-        public long IdEmail { get; set; }
+        public int IdEmail { get; set; }
 
         [Column("EMAILL")]
         public string Emaill { get; set; }
 
         [ForeignKey(nameof(Employee))]
         [Column("IDEMP")]
-        public long IdEMP { get; set; }
+        public int IdEMP { get; set; }
 
         [Column("EMP")]
         public virtual Employee Employee { get; set; }

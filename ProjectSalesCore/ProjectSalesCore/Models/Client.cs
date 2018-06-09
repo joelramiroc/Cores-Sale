@@ -19,7 +19,7 @@ namespace CSales.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("ID")]
-        public long Id { get; set; }
+        public int Id { get; set; }
 
         [Column("NAME")]
         public string Name { get; set; }
@@ -41,14 +41,14 @@ namespace CSales.Models
 
         [ForeignKey(nameof(RUC))]
         [Column("IDRUC")]
-        public long IdRUC { get; set; }
+        public int IdRUC { get; set; }
 
         [Column("RUC")]
         public virtual RUC RUC { get; set; }
 
         [ForeignKey(nameof(Employee))]
         [Column("IDEMPLOYEE")]
-        public long IdEmployee { get; set; }
+        public int IdEmployee { get; set; }
 
         [Column("EMPLOYEE")]
         public virtual Employee Employee { get; set; }

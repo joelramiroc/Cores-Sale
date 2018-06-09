@@ -4,7 +4,6 @@
 
 namespace CSales.Database.Models
 {
-    using ProjectSalesCore.DataBase.Models;
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
@@ -12,6 +11,7 @@ namespace CSales.Database.Models
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
+    using ProjectSalesCore.DataBase.Models;
 
     [Table("CLIENT")]
 
@@ -20,7 +20,7 @@ namespace CSales.Database.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("ID")]
-        public long Id { get; set; }
+        public int Id { get; set; }
 
         [Column("NAME")]
         public string Name { get; set; }
@@ -29,7 +29,7 @@ namespace CSales.Database.Models
         public ICollection<AddressClient> Addresses { get; set; }
 
         [Column("CITIES")]
-        public ICollection<CityDistrict> CitiesDistricts { get; set; }
+        public ICollection<CityClient> CitiesDistricts { get; set; }
 
         [Column("TELEPHONES")]
         public ICollection<TelephoneClient> Telephones { get; set; }
@@ -42,14 +42,14 @@ namespace CSales.Database.Models
 
         [ForeignKey(nameof(RUC))]
         [Column("IDRUC")]
-        public long IdRUC { get; set; }
+        public int IdRUC { get; set; }
 
         [Column("RUC")]
         public virtual RUC RUC { get; set; }
 
         [ForeignKey(nameof(Employee))]
         [Column("IDEMP")]
-        public long IdEmployee { get; set; }
+        public int IdEmployee { get; set; }
 
         [Column("EMPLOYEE")]
         public virtual Employee Employee { get; set; }

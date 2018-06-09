@@ -19,7 +19,7 @@ namespace CSales.Database.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("ID")]
-        public long IdEntryNote { get; set; }
+        public int IdEntryNote { get; set; }
 
         [ForeignKey(nameof(POrder))]
         [Column("NPO")]
@@ -30,21 +30,21 @@ namespace CSales.Database.Models
 
         [ForeignKey(nameof(EntryNoteStatus))]
         [Column("IDENST")]
-        public long IdEntryNoteStatus { get; set; }
+        public int IdEntryNoteStatus { get; set; }
 
         [Column("ENTRYNOTESTATUS")]
         public virtual StatusNote EntryNoteStatus { get; set; }
 
         [ForeignKey(nameof(ReasonNote))]
         [Column("IDRNOTE")]
-        public long IdReasonNote { get; set; }
+        public int IdReasonNote { get; set; }
 
         [Column("REASONNOTE")]
         public virtual ReasonNote ReasonNote { get; set; }
 
         [ForeignKey(nameof(PDoc))]
         [Column("IDPDOC")]
-        public long IdPDoc { get; set; }
+        public int IdPDoc { get; set; }
 
         [Column("PDOC")]
         public virtual PDoc PDoc { get; set; }

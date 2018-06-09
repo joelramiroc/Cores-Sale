@@ -19,18 +19,18 @@ namespace CSales.Database.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("IDKARDEX")]
-        public long IdKardex { get; set; }
+        public int IdKardex { get; set; }
 
         [ForeignKey(nameof(MovementType))]
         [Column("IDMOVETYPE")]
-        public long IdMovementType { get; set; }
+        public int IdMovementType { get; set; }
 
         [Column("MOVEMENTTYPE")]
         public virtual MovementType MovementType { get; set; }
 
         [ForeignKey(nameof(Product))]
         [Column("IDPRODUCT")]
-        public long IdProduct { get; set; }
+        public int IdProduct { get; set; }
 
         [Column("PRODUCT")]
         public virtual Product Product { get; set; }
@@ -49,7 +49,7 @@ namespace CSales.Database.Models
 
         [ForeignKey(nameof(Storage))]
         [Column("IDSTORAGE")]
-        public long IdStorage { get; set; }
+        public int IdStorage { get; set; }
 
         [Column("STORAGE")]
         public virtual Storage Storage { get; set; }

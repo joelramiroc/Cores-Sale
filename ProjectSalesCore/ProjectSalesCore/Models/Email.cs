@@ -15,7 +15,7 @@
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("IDEMAIL")]
-        public long IdEmail { get; set; }
+        public int IdEmail { get; set; }
 
         [Column("EMAILL")]
         public string Emaill { get; set; }

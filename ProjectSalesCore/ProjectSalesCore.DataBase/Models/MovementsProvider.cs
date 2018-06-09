@@ -19,17 +19,17 @@ namespace CSales.Database.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("IDMPROVIDER")]
-        public long IdMovementsProvider { get; set; }
+        public int IdMovementsProvider { get; set; }
 
         [ForeignKey(nameof(DTProvdr))]
         [Column("IDDTPE")]
-        public long IdDocumentType { get; set; }
+        public int IdDocumentType { get; set; }
 
         [Column("DTYPEPROV")]
         public virtual TOPDoc DTProvdr { get; set; }
 
         [Column("DOCUMENTID")]
-        public long DocumentId { get; set; }
+        public int DocumentId { get; set; }
 
         [Column("INGRESOS")]
         public decimal Ingresos { get; set; }

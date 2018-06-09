@@ -19,7 +19,7 @@ namespace CSales.Database.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("ID")]
-        public long IdProductType { get; set; }
+        public int IdProductType { get; set; }
 
         [Column("TYPENAME")]
         public string TypeName { get; set; }

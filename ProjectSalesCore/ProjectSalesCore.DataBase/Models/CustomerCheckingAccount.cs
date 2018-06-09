@@ -19,11 +19,11 @@ namespace CSales.Database.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("ID")]
-        public long IdCustomerCheckingAccount { get; set; }
+        public int IdCustomerCheckingAccount { get; set; }
 
         [ForeignKey(nameof(Client))]
         [Column("IDC")]
-        public long IdClient { get; set; }
+        public int IdClient { get; set; }
 
         [Column("CLIENT")]
         public virtual Client Client { get; set; }

@@ -19,7 +19,7 @@ namespace CSales.Database.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("IDCHECK")]
-        public long IdCheck { get; set; }
+        public int IdCheck { get; set; }
 
         [Column("CHECKNUMBER")]
         public int ChekNumber { get; set; }
@@ -29,7 +29,7 @@ namespace CSales.Database.Models
 
         [ForeignKey(nameof(Client))]
         [Column("IDCLIENT")]
-        public long IdClient { get; set; }
+        public int IdClient { get; set; }
 
         [Column("CLIENT")]
         public virtual Client Client { get; set; }

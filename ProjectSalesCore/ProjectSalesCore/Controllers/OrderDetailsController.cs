@@ -23,7 +23,7 @@ namespace ProjectSalesCore.Controllers
         }
 
         // GET: OrderDetails/Details/5
-        public ActionResult Details(long? id)
+        public ActionResult Details(int? id)
         {
             if (id == null)
             {
@@ -65,7 +65,7 @@ namespace ProjectSalesCore.Controllers
         }
 
         // GET: OrderDetails/Edit/5
-        public ActionResult Edit(long? id)
+        public ActionResult Edit(int? id)
         {
             if (id == null)
             {
@@ -100,7 +100,7 @@ namespace ProjectSalesCore.Controllers
         }
 
         // GET: OrderDetails/Delete/5
-        public ActionResult Delete(long? id)
+        public ActionResult Delete(int? id)
         {
             if (id == null)
             {
@@ -117,7 +117,7 @@ namespace ProjectSalesCore.Controllers
         // POST: OrderDetails/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(long id)
+        public ActionResult DeleteConfirmed(int id)
         {
             OrderDetail orderDetail = db.OrderDetail.Find(id);
             db.OrderDetail.Remove(orderDetail);

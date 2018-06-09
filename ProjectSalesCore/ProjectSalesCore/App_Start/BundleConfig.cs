@@ -25,7 +25,22 @@ namespace ProjectSalesCore
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css"//,
+                      //"~/Content/vendor/bootstrap/css/bootstrap.min.css",
+                      //"~/Content/vendor/font-awesome/css/font-awesome.min.css",
+                      //"~/Content/vendor/datatables/dataTables.bootstrap4.css",
+                      //"~/Content/css/sb-admin.css"
+
+                      ));
+
+            bundles.Add(new ScriptBundle("~/bundles/table").Include(
+                      "~/Content/vendor/jquery-easing/jquery.easing.min.js",
+                      "~/Content/vendor/datatables/jquery.dataTables.js",
+                      "~/Content/vendor/datatables/dataTables.bootstrap4.js",
+                      "~/Content/js/sb-admin.min.js",
+                      "~/Content/js/sb-admin-datatables.min.js"
+                      ));
+            
         }
     }
 }

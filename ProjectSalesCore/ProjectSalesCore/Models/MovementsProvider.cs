@@ -17,17 +17,17 @@ namespace CSales.Models
     public class MovementsProvider
     {
         [Key]
-        public long IdMovementsProvider { get; set; }
+        public int IdMovementsProvider { get; set; }
 
         [ForeignKey(nameof(DocumentTypeProvider))]
         [Column("IDDTPE")]
-        public long IdDocumentType { get; set; }
+        public int IdDocumentType { get; set; }
 
         [Column("DOCUMENTTYPEPROVIDER")]
         public virtual TypeOfPurchaseDocument DocumentTypeProvider { get; set; }
 
         [Column("DOCUMENTID")]
-        public long DocumentId { get; set; }
+        public int DocumentId { get; set; }
 
         [Column("INGRESOS")]
         public decimal Ingresos { get; set; }

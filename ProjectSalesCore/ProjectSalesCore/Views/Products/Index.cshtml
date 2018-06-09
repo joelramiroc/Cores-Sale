@@ -3,31 +3,61 @@
 @{
     ViewBag.Title = "Index";
 }
+@section scripts
+{
+    @Scripts.Render("~/bundles/table")
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#dataTable').DataTable();
+        });
+    </script>
+}
 
 <h2>Index</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
+
+
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ProductName)
-        </th>
-        <th></th>
-    </tr>
+<div class="content-wrapper">
+    <div class="container-fluid">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="fa fa-table"></i> Data Table Example
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.ProductName)
+                                </th>
+                                <th>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ProductName)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IdProduct }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IdProduct }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IdProduct })
-        </td>
-    </tr>
-}
-
-</table>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ProductName)
+                                    </td>
+                                    <td>
+                                        @Html.ActionLink("Edit", "Edit", new { id = item.IdProduct }) |
+                                        @Html.ActionLink("Details", "Details", new { id = item.IdProduct }) |
+                                        @Html.ActionLink("Delete", "Delete", new { id = item.IdProduct })
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+</div>

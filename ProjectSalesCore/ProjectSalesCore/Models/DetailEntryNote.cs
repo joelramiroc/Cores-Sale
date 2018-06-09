@@ -19,28 +19,28 @@ namespace CSales.Models
         [Key]
         [ForeignKey(nameof(EntryNote))]
         [Column("IDENTRYNOTE")]
-        public long IdEntryNote { get; set; }
+        public int IdEntryNote { get; set; }
 
         [Column("ENTRYNOTE")]
         public virtual EntryNote EntryNote { get; set; }
 
         [ForeignKey(nameof(Product))]
         [Column("IDPRODUCT")]
-        public long IdProduct { get; set; }
+        public int IdProduct { get; set; }
 
         [Column("PRODUCT")]
         public virtual Product Product { get; set; }
 
         [ForeignKey(nameof(ReasonEntryNote))]
         [Column("IDRNOTE")]
-        public long IdReasonEntryNote { get; set; }
+        public int IdReasonEntryNote { get; set; }
 
         [Column("REASONENTRYNOTE")]
         public virtual ReasonNote ReasonEntryNote { get; set; }
 
         [ForeignKey(nameof(EntryNoteStatus))]
         [Column("ENSTATUS")]
-        public long IdEntryNoteStatus { get; set; }
+        public int IdEntryNoteStatus { get; set; }
 
         [Column("ENTRYNOTESTATUS")]
         public virtual StatusNote EntryNoteStatus { get; set; }

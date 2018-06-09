@@ -19,7 +19,7 @@ namespace CSales.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("ID")]
-        public long IdPaymentCondition { get; set; }
+        public int IdPaymentCondition { get; set; }
 
         [Column("CONDITIONNAME")]
         public string ConditionName { get; set; }

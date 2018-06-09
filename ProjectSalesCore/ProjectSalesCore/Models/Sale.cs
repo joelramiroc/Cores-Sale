@@ -19,32 +19,32 @@ namespace CSales.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("IDSALE")]
-        public long IdSale { get; set; }
+        public int IdSale { get; set; }
 
         [ForeignKey(nameof(SaleOrder))]
         [Column("IDSALEORDER")]
-        public long IdSaleOrder { get; set; }
+        public int IdSaleOrder { get; set; }
 
         [Column("SALEORDER")]
         public virtual SaleOrder SaleOrder { get; set; }
 
         [ForeignKey(nameof(Client))]
         [Column("IDCLIENT")]
-        public long IdClient { get; set; }
+        public int IdClient { get; set; }
 
         [Column("CLIENT")]
         public virtual Client Client { get; set; }
 
         [ForeignKey(nameof(Employee))]
         [Column("IDEMPLOYEE")]
-        public long IdEmployee { get; set; }
+        public int IdEmployee { get; set; }
 
         [Column("EMPLOYEE")]
         public virtual Employee Employee { get; set; }
 
         [ForeignKey(nameof(OutputNote))]
         [Column("IDNOTEOUTPUT")]
-        public long IdNoteOutput { get; set; }
+        public int IdNoteOutput { get; set; }
 
         [Column("OUTPUTNOTE")]
         public OutputNote OutputNote { get; set; }
