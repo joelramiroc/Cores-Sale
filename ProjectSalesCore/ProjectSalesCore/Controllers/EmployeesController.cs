@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using CSales.Database.Contexts;
 using CSales.Database.Models;
+using ProjectSalesCore.ViewModel.Employee;
 
 namespace ProjectSalesCore.Controllers
 {
@@ -39,7 +40,7 @@ namespace ProjectSalesCore.Controllers
         // GET: Employees/Create
         public ActionResult Create()
         {
-            return View();
+            return View(new CreateEmployeeViewModel());
         }
 
         // POST: Employees/Create
@@ -47,12 +48,30 @@ namespace ProjectSalesCore.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,HireDate,Salary")] Employee employee)
+        public ActionResult Create(CreateEmployeeViewModel employee)
         {
             if (ModelState.IsValid)
             {
-                db.Employee.Add(employee);
+                var e = new Employee
+                {
+                    HireDate = employee.HireDate,
+                    Name = employee.Name,
+                    Salary = employee.Salary
+                };
+
+                var ne = db.Employee.Add(e);
                 db.SaveChanges();
+
+                for (int i = 0; i < employee.Addresses.Count(); i++)
+                {
+                    this.db.Database.ExecuteSqlCommand(@"INSERT INTO AEMP(ADDRESSNAME,DESCRIPTION,IDEMP) values ({0},{1},{2})", employee.Addresses.ElementAt(i), "Descripcion default", ne.Id);
+                }
+
+                for (int i = 0; i < employee.Telephones.Count(); i++)
+                {
+                    this.db.Database.ExecuteSqlCommand(@"INSERT INTO TELEMP(NUMBER,DESCRIPTION,IDEMP) values ({0},{1},{2})", employee.Telephones.ElementAt(i), "Descripcion default", ne.Id);
+                }
+
                 return RedirectToAction("Index");
             }
 
