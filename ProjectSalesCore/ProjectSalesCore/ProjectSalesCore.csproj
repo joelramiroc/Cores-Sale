@@ -216,9 +216,11 @@
     <Compile Include="Controllers\EmployeesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\OrderDetailsController.cs" />
+    <Compile Include="Controllers\PConditionsController.cs" />
     <Compile Include="Controllers\PDocsController.cs" />
+    <Compile Include="Controllers\ProductLinesController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\ProductTypesController.cs" />
     <Compile Include="Controllers\ProvidersController.cs" />
     <Compile Include="Controllers\RUCsController.cs" />
     <Compile Include="Controllers\SaleOrdersController.cs" />
@@ -261,7 +263,6 @@
     <Compile Include="Models\MovementType.cs" />
     <Compile Include="Models\OrderDetail.cs" />
     <Compile Include="Models\OutputNote.cs" />
-    <Compile Include="Models\PaymentCondition.cs" />
     <Compile Include="Models\PaymentMethod.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductLine.cs" />
@@ -284,6 +285,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModel\BankDetailViewModel.cs" />
+    <Compile Include="ViewModel\Client\CreateClientViewModel.cs" />
     <Compile Include="ViewModel\Employee\CreateEmployeeViewModel.cs" />
     <Compile Include="ViewModel\Provider\CreateProviderViewModel.cs" />
     <Compile Include="ViewModel\Provider\DetailsProviderViewModel.cs" />
@@ -439,11 +441,6 @@
     <Content Include="Views\SaleOrders\Details.cshtml" />
     <Content Include="Views\SaleOrders\Edit.cshtml" />
     <Content Include="Views\SaleOrders\Index.cshtml" />
-    <Content Include="Views\OrderDetails\Create.cshtml" />
-    <Content Include="Views\OrderDetails\Delete.cshtml" />
-    <Content Include="Views\OrderDetails\Details.cshtml" />
-    <Content Include="Views\OrderDetails\Edit.cshtml" />
-    <Content Include="Views\OrderDetails\Index.cshtml" />
     <Content Include="Views\PDocs\Create.cshtml" />
     <Content Include="Views\PDocs\Delete.cshtml" />
     <Content Include="Views\PDocs\Details.cshtml" />
@@ -515,6 +512,21 @@
     <Content Include="Views\BusinessNames\Details.cshtml" />
     <Content Include="Views\BusinessNames\Edit.cshtml" />
     <Content Include="Views\BusinessNames\Index.cshtml" />
+    <Content Include="Views\ProductLines\Create.cshtml" />
+    <Content Include="Views\ProductLines\Delete.cshtml" />
+    <Content Include="Views\ProductLines\Details.cshtml" />
+    <Content Include="Views\ProductLines\Edit.cshtml" />
+    <Content Include="Views\ProductLines\Index.cshtml" />
+    <Content Include="Views\ProductTypes\Create.cshtml" />
+    <Content Include="Views\ProductTypes\Delete.cshtml" />
+    <Content Include="Views\ProductTypes\Details.cshtml" />
+    <Content Include="Views\ProductTypes\Edit.cshtml" />
+    <Content Include="Views\ProductTypes\Index.cshtml" />
+    <Content Include="Views\PConditions\Create.cshtml" />
+    <Content Include="Views\PConditions\Delete.cshtml" />
+    <Content Include="Views\PConditions\Details.cshtml" />
+    <Content Include="Views\PConditions\Edit.cshtml" />
+    <Content Include="Views\PConditions\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -67,7 +67,7 @@ C:\Users\JoelCaballero\Desktop\Cores-Sale\ProjectSalesCore\ProjectSalesCore.Data
 C:\Users\JoelCaballero\Desktop\Cores-Sale\ProjectSalesCore\ProjectSalesCore.DataBase\bin\Debug\EntityFramework.Firebird.pdb
 C:\Users\JoelCaballero\Desktop\Cores-Sale\ProjectSalesCore\ProjectSalesCore.DataBase\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\JoelCaballero\Desktop\Cores-Sale\ProjectSalesCore\ProjectSalesCore.DataBase\bin\Debug\FirebirdSql.Data.FirebirdClient.pdb
+C:\Users\JoelCaballero\Desktop\Cores-Sale\ProjectSalesCore\ProjectSalesCore.DataBase\obj\Debug\ProjectSalesCore.DataBase.csprojResolveAssemblyReference.cache
 C:\Users\JoelCaballero\Desktop\Cores-Sale\ProjectSalesCore\ProjectSalesCore.DataBase\obj\Debug\ProjectSalesCore.DataBase.csproj.CoreCompileInputs.cache
 C:\Users\JoelCaballero\Desktop\Cores-Sale\ProjectSalesCore\ProjectSalesCore.DataBase\obj\Debug\ProjectSalesCore.DataBase.dll
 C:\Users\JoelCaballero\Desktop\Cores-Sale\ProjectSalesCore\ProjectSalesCore.DataBase\obj\Debug\ProjectSalesCore.DataBase.pdb
-C:\Users\JoelCaballero\Desktop\Cores-Sale\ProjectSalesCore\ProjectSalesCore.DataBase\obj\Debug\ProjectSalesCore.DataBase.csprojResolveAssemblyReference.cache

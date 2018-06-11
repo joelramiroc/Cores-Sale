@@ -75,7 +75,6 @@ namespace ProjectSalesCore.App_Start
                 kernel.Bind<IRepository<Kardex>>().To<KardexRepository>().InRequestScope();
                 kernel.Bind<IRepository<MovementsProvider>>().To<MovementsProviderepository>().InRequestScope();
                 kernel.Bind<IRepository<MovementType>>().To<MovementsTypeRepository>().InRequestScope();
-                kernel.Bind<IRepository<OrderDetail>>().To<OrderDetailRepository>().InRequestScope();
                 kernel.Bind<IRepository<OutputNote>>().To<OutputNoteRepository>().InRequestScope();
                 kernel.Bind<IRepository<PCondition>>().To<PaymentConditionRepository>().InRequestScope();
                 kernel.Bind<IRepository<PaymentMethod>>().To<PaymentMethodRepository>().InRequestScope();

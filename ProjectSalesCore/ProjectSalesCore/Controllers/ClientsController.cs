@@ -8,6 +8,8 @@ using System.Web;
 using System.Web.Mvc;
 using CSales.Database.Contexts;
 using CSales.Database.Models;
+using ProjectSalesCore.DataBase.Models;
+using ProjectSalesCore.ViewModel.Client;
 
 namespace ProjectSalesCore.Controllers
 {
@@ -42,7 +44,7 @@ namespace ProjectSalesCore.Controllers
         {
             ViewBag.IdEmployee = new SelectList(db.Employee, "Id", "Name");
             ViewBag.IdRUC = new SelectList(db.RUC, "IdRUC", "RUCName");
-            return View();
+            return View(new CreateClientViewModel());
         }
 
         // POST: Clients/Create
@@ -50,12 +52,56 @@ namespace ProjectSalesCore.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,IdRUC,IdEmployee")] Client client)
+        public ActionResult Create(CreateClientViewModel client)
         {
             if (ModelState.IsValid)
             {
-                db.Client.Add(client);
-                db.SaveChanges();
+                var nc = new Client
+                {
+                    IdEmployee = client.IdEmployee,
+                    IdRUC = client.IdRUC,
+                    Name = client.Name
+                };
+
+                var newc = this.db.Client.Add(nc);
+                this.db.SaveChanges();
+
+                for (int i = 0; i < client.Addresses.Count(); i++)
+                {
+                    var na = new AddressClient
+                    {
+                        AddressName = client.Addresses.ElementAt(i),
+                        IdClient = newc.Id,
+                        Description = "Default description"
+                    };
+
+                    this.db.AddressClient.Add(na);
+                    this.db.SaveChanges();
+                }
+
+                for (int i = 0; i < client.Telephones.Count(); i++)
+                {
+                    var nt = new TelephoneClient
+                    {
+                        Description = "Default description",
+                        IdClient = newc.Id,
+                        Number = client.Telephones.ElementAt(i)
+                    };
+
+                    this.db.TelephoneClient.Add(nt);
+                    this.db.SaveChanges();
+                }
+
+                for (int i = 0; i < client.Emails.Count(); i++)
+                {
+                    var ne = new EmailClient
+                    {
+                        IdClient = newc.Id,
+                        Emaill = client.Emails.ElementAt(i)
+                    };
+                    this.db.EmailClient.Add(ne);
+                    this.db.SaveChanges();
+                }
                 return RedirectToAction("Index");
             }
 

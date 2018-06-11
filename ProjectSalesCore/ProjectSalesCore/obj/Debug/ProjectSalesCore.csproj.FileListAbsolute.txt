@@ -251,9 +251,6 @@ C:\Users\pablo\Documents\Clases\TBD1\Core-Sales\ProjectSalesCore\ProjectSalesCor
 C:\Users\pablo\Documents\Clases\TBD1\Core-Sales\ProjectSalesCore\ProjectSalesCore\obj\Debug\ProjectSalesCore.csprojResolveAssemblyReference.cache
 C:\Users\pablo\Documents\Clases\TBD1\Core-Sales\ProjectSalesCore\ProjectSalesCore\obj\Debug\ProjectSalesCore.dll
 C:\Users\pablo\Documents\Clases\TBD1\Core-Sales\ProjectSalesCore\ProjectSalesCore\obj\Debug\ProjectSalesCore.pdb
-C:\Users\JoelCaballero\Desktop\Cores-Sale\ProjectSalesCore\ProjectSalesCore\bin\EntityFramework.xml
-C:\Users\JoelCaballero\Desktop\Cores-Sale\ProjectSalesCore\ProjectSalesCore\obj\Debug\ProjectSalesCore.csprojResolveAssemblyReference.cache
-C:\Users\JoelCaballero\Desktop\Cores-Sale\ProjectSalesCore\ProjectSalesCore\obj\Debug\ProjectSalesCore.csproj.CoreCompileInputs.cache
 C:\Users\JoelCaballero\Desktop\Cores-Sale\ProjectSalesCore\ProjectSalesCore\bin\ApplicationInsights.config
 C:\Users\JoelCaballero\Desktop\Cores-Sale\ProjectSalesCore\ProjectSalesCore\bin\ProjectSalesCore.dll.config
 C:\Users\JoelCaballero\Desktop\Cores-Sale\ProjectSalesCore\ProjectSalesCore\bin\ProjectSalesCore.dll
@@ -316,6 +313,7 @@ C:\Users\JoelCaballero\Desktop\Cores-Sale\ProjectSalesCore\ProjectSalesCore\bin\
 C:\Users\JoelCaballero\Desktop\Cores-Sale\ProjectSalesCore\ProjectSalesCore\bin\System.Web.WebPages.Razor.xml
 C:\Users\JoelCaballero\Desktop\Cores-Sale\ProjectSalesCore\ProjectSalesCore\bin\Antlr3.Runtime.pdb
 C:\Users\JoelCaballero\Desktop\Cores-Sale\ProjectSalesCore\ProjectSalesCore\bin\Newtonsoft.Json.xml
+C:\Users\JoelCaballero\Desktop\Cores-Sale\ProjectSalesCore\ProjectSalesCore\bin\EntityFramework.xml
 C:\Users\JoelCaballero\Desktop\Cores-Sale\ProjectSalesCore\ProjectSalesCore\bin\EntityFramework.SqlServer.xml
 C:\Users\JoelCaballero\Desktop\Cores-Sale\ProjectSalesCore\ProjectSalesCore\bin\Microsoft.AspNet.Identity.Core.xml
 C:\Users\JoelCaballero\Desktop\Cores-Sale\ProjectSalesCore\ProjectSalesCore\bin\Microsoft.AspNet.Identity.Owin.xml
@@ -334,5 +332,7 @@ C:\Users\JoelCaballero\Desktop\Cores-Sale\ProjectSalesCore\ProjectSalesCore\bin\
 C:\Users\JoelCaballero\Desktop\Cores-Sale\ProjectSalesCore\ProjectSalesCore\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\JoelCaballero\Desktop\Cores-Sale\ProjectSalesCore\ProjectSalesCore\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\JoelCaballero\Desktop\Cores-Sale\ProjectSalesCore\ProjectSalesCore\bin\Microsoft.AI.Web.xml
+C:\Users\JoelCaballero\Desktop\Cores-Sale\ProjectSalesCore\ProjectSalesCore\obj\Debug\ProjectSalesCore.csprojResolveAssemblyReference.cache
+C:\Users\JoelCaballero\Desktop\Cores-Sale\ProjectSalesCore\ProjectSalesCore\obj\Debug\ProjectSalesCore.csproj.CoreCompileInputs.cache
 C:\Users\JoelCaballero\Desktop\Cores-Sale\ProjectSalesCore\ProjectSalesCore\obj\Debug\ProjectSalesCore.dll
 C:\Users\JoelCaballero\Desktop\Cores-Sale\ProjectSalesCore\ProjectSalesCore\obj\Debug\ProjectSalesCore.pdb

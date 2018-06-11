@@ -11,6 +11,7 @@ namespace CSales.Models
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
+    using CSales.Database.Models;
 
     [Table("SOR")]
 
@@ -43,7 +44,7 @@ namespace CSales.Models
         public int IdPaymentCondition { get; set; }
 
         [Column("PAYMENTCONDITION")]
-        public virtual PaymentCondition PaymentCondition { get; set; }
+        public virtual PCondition PaymentCondition { get; set; }
 
         [Column("ODETAILS")]
         public ICollection<OrderDetail> OrderDetails { get; set; }

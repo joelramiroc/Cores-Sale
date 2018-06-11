@@ -14,9 +14,9 @@ namespace ProjectSalesCore.ViewModel.Employee
     {
         public string Name { get; set; }
 
-        public IEnumerable<TelephoneEmployee> Telephones { get; set; }
+        public IEnumerable<string> Telephones { get; set; }
 
-        public IEnumerable<AddressEmployee> Addresses { get; set; }
+        public IEnumerable<string> Addresses { get; set; }
 
         public DateTime HireDate { get; set; }
 

@@ -97,7 +97,8 @@
     <Compile Include="Models\Kardex.cs" />
     <Compile Include="Models\MovementsProvider.cs" />
     <Compile Include="Models\MovementType.cs" />
-    <Compile Include="Models\OrderDetail.cs" />
+    <Compile Include="Models\OrderDetailsCompras.cs" />
+    <Compile Include="Models\OrderDetailsVentas.cs" />
     <Compile Include="Models\OutputNote.cs" />
     <Compile Include="Models\PaymentCondition.cs" />
     <Compile Include="Models\PaymentMethod.cs" />
@@ -152,7 +153,6 @@
     <Compile Include="Repositories\KardexRepository.cs" />
     <Compile Include="Repositories\MovementsProviderepository.cs" />
     <Compile Include="Repositories\MovementsTypeRepository.cs" />
-    <Compile Include="Repositories\OrderDetailRepository.cs" />
     <Compile Include="Repositories\OutputNoteRepository.cs" />
     <Compile Include="Repositories\PaymentConditionRepository.cs" />
     <Compile Include="Repositories\PaymentMethodRepository.cs" />

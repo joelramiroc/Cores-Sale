@@ -11,6 +11,7 @@ namespace CSales.Models
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
+    using CSales.Database.Models;
 
     [Table("DPTOSALE")]
 
@@ -45,7 +46,7 @@ namespace CSales.Models
         public int IdPaymentCondition { get; set; }
 
         [Column("PAYMENTCONDITION")]
-        public virtual PaymentCondition PaymentCondition { get; set; }
+        public virtual PCondition PaymentCondition { get; set; }
 
         [ForeignKey(nameof(PurchaseOrder))]
         [Column("PO")]
