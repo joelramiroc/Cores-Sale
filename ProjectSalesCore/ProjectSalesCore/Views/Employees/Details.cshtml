@@ -1,4 +1,4 @@
-﻿@model CSales.Database.Models.Employee
+﻿@model ProjectSalesCore.ViewModel.Employee.DetailEmployeeViewModel
 
 @{
     ViewBag.Title = "Details";
@@ -36,6 +36,43 @@
 
     </dl>
 </div>
+
+<div>
+    <table>
+
+        @foreach (var item in Model.Addresses)
+            {
+            <tr>
+                <td>Address:</td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AddressName)
+                </td>
+                <td>Description:</td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+<div>
+    <table>
+        @foreach (var item in Model.Telephones)
+            {
+            <tr>
+                <td>Number:</td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Number)
+                </td>
+                <td>Description:</td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
     @Html.ActionLink("Back to List", "Index")

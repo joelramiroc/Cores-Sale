@@ -22,6 +22,7 @@ namespace CSales.Database.Contexts
         {
             base.OnModelCreating(modelBuilder);
         }
+        
         public DbSet<Provider> Provider { get; set; }
 
         public DbSet<AddressClient> AddressClient { get; set; }
@@ -97,7 +98,9 @@ namespace CSales.Database.Contexts
 
         public DbSet<OutputNote> OuputNote { get; set; }
 
-        public DbSet<OrderDetail> OrderDetail { get; set; }
+        public DbSet<OrderDetailsCompras> OrderDetailsCompras { get; set; }
+
+        public DbSet<OrderDetailsVentas> OrderDetailsVentas { get; set; }
 
         public DbSet<PCondition> PaymentCondition { get; set; }
 
@@ -141,6 +144,7 @@ namespace CSales.Database.Contexts
 
         public DbSet<Voucher> Voucher { get; set; }
 
-    // public DbSet<>  { get; set; }
+
+        // public DbSet<>  { get; set; }
     }
 }

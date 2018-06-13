@@ -1,4 +1,4 @@
-﻿// <copyright file="CreateEmployeeViewModel.cs" company="PlaceholderCompany">
+﻿// <copyright file="DetailEmployeeViewModel.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
@@ -10,18 +10,17 @@ namespace ProjectSalesCore.ViewModel.Employee
     using System.Web;
     using ProjectSalesCore.DataBase.Models;
 
-    public class CreateEmployeeViewModel
+    public class DetailEmployeeViewModel
     {
-
+        public int Id { get; set; }
         public string Name { get; set; }
 
-        public IEnumerable<string> Telephones { get; set; }
+        public IEnumerable<TelephoneEmployee> Telephones { get; set; }
 
-        public IEnumerable<string> Addresses { get; set; }
+        public IEnumerable<AddressEmployee> Addresses { get; set; }
 
         public DateTime HireDate { get; set; }
 
         public decimal Salary { get; set; }
-
     }
 }

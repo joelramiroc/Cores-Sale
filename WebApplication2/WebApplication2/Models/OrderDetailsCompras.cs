@@ -1,8 +1,8 @@
-﻿// <copyright file="DetailsPurchaseOrder.cs" company="PlaceholderCompany">
+﻿// <copyright file="OrderDetailsCompras.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace CSales.Models
+namespace ProjectSalesCore.DataBase.Models
 {
     using System;
     using System.Collections.Generic;
@@ -13,12 +13,11 @@ namespace CSales.Models
     using System.Threading.Tasks;
     using CSales.Database.Models;
 
-    [Table("DPTOSALE")]
-
-    public class DetailsProductsToSale
+    [Table("ODCO")]
+    public class OrderDetailsCompras
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("ID")]
         public int Id { get; set; }
 
@@ -41,18 +40,18 @@ namespace CSales.Models
         [Column("TOTALAMOUNT")]
         public decimal TotalAmount { get; set; }
 
-        [ForeignKey(nameof(PaymentCondition))]
+        [ForeignKey(nameof(PCondition))]
         [Column("IDPC")]
         public int IdPaymentCondition { get; set; }
 
-        [Column("PAYMENTCONDITION")]
-        public virtual PCondition PaymentCondition { get; set; }
+        [Column("PCOND")]
+        public virtual PCondition PCondition { get; set; }
 
-        [ForeignKey(nameof(PurchaseOrder))]
+        [ForeignKey(nameof(POrder))]
         [Column("PO")]
         public int PurchaseNumber { get; set; }
 
-        [Column("PURCHASEORDER")]
-        public virtual POrder PurchaseOrder { get; set; }
+        [Column("PORDER")]
+        public virtual POrder POrder { get; set; }
     }
 }

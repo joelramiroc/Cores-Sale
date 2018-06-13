@@ -11,6 +11,7 @@ namespace CSales.Database.Models
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
+    using ProjectSalesCore.DataBase.Models;
 
     [Table("BILL")]
 
@@ -39,7 +40,7 @@ namespace CSales.Database.Models
         public DateTime CreatedDate { get; set; }
 
         [Column("ORDERSDETAIL")]
-        public ICollection<OrderDetail> OrdersDetail { get; set; }
+        public ICollection<OrderDetailsVentas> OrdersDetail { get; set; }
 
         [Column("TOTAL")]
         public decimal Total { get; set; }

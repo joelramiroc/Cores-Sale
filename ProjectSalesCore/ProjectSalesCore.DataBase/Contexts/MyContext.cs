@@ -146,7 +146,6 @@ namespace CSales.Database.Contexts
 
         public DbSet<Voucher> Voucher { get; set; }
 
-
         // public DbSet<>  { get; set; }
     }
 }

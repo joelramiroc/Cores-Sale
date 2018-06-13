@@ -31,12 +31,29 @@ namespace ProjectSalesCore.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
             Client client = db.Client.Find(id);
+
             if (client == null)
             {
                 return HttpNotFound();
             }
-            return View(client);
+
+            var nc = new DetailClientViewModel
+            {
+                Addresses = this.db.AddressClient.Where(a => a.IdClient == client.Id).ToList(),
+                Emails = this.db.EmailClient.Where(e => e.IdClient == client.Id),
+                IdRUC = client.IdRUC,
+                Id = client.Id,
+                CitiesDistricts = this.db.CityClient.Where(c => c.IdClient == client.Id),
+                Telephones = this.db.TelephoneClient.Where(t => t.IdClient == client.Id),
+                Name = client.Name,
+                IdEmployee = client.IdEmployee,
+                Employee = this.db.Employee.Find(client.IdEmployee),
+                RUC = this.db.RUC.Find(client.IdRUC)
+            };
+
+            return View(nc);
         }
 
         // GET: Clients/Create

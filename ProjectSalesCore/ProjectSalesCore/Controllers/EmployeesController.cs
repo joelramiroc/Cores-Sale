@@ -29,12 +29,24 @@ namespace ProjectSalesCore.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
             Employee employee = db.Employee.Find(id);
+
             if (employee == null)
             {
                 return HttpNotFound();
             }
-            return View(employee);
+
+            var ne = new DetailEmployeeViewModel {
+                Id = employee.Id,
+                Addresses = this.db.AddressEmployee.Where(a=>a.IdEMP == employee.Id),
+                HireDate = employee.HireDate,
+                Name = employee.Name,
+                Salary = employee.Salary,
+                Telephones = this.db.TelephoneEmployee.Where(t => t.IdEMP == employee.Id)
+            };
+
+            return View(ne);
         }
 
         // GET: Employees/Create

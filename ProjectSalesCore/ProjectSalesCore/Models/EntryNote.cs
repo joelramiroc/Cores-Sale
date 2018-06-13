@@ -11,6 +11,7 @@ namespace CSales.Models
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
+    using CSales.Database.Models;
 
     [Table("ENOTE")]
 
@@ -26,7 +27,7 @@ namespace CSales.Models
         public int NumberPurchaseOrder { get; set; }
 
         [Column("PURCHASEORDER")]
-        public virtual PurchaseOrder PurchaseOrder { get; set; }
+        public virtual POrder PurchaseOrder { get; set; }
 
         [ForeignKey(nameof(EntryNoteStatus))]
         [Column("IDENST")]

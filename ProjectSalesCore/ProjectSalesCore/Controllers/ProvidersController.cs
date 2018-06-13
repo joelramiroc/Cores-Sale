@@ -60,6 +60,7 @@ namespace ProjectSalesCore.Controllers
                 IsForeignProvider = provider.IsForeignProvider,
                 Name = provider.Name,
                 Telephones = this.db.TelephoneProvider.Where(t => t.IdPRV == provider.Id),
+                Addresses = this.db.AddressProvider.Where(a => a.IdPRV == provider.Id)
             };
             return View(prov);
         }

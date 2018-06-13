@@ -62,12 +62,15 @@
 
 <div>
     <table>
+
         @foreach (var item in Model.Addresses)
             {
             <tr>
+                <td>Address:</td>
                 <td>
                     @Html.DisplayFor(modelItem => item.AddressName)
                 </td>
+                <td>Description:</td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Description)
                 </td>
@@ -80,9 +83,29 @@
         @foreach (var item in Model.Telephones)
             {
             <tr>
+                <td>Number:</td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Number)
                 </td>
+                <td>Description:</td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+
+<div>
+    <table>
+        @foreach (var item in Model.CitiesDistricts)
+            {
+            <tr>
+                <td>Number:</td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>Description:</td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Description)
                 </td>

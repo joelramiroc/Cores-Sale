@@ -1,32 +1,28 @@
-﻿// <copyright file="OrderDetail.cs" company="PlaceholderCompany">
+﻿// <copyright file="OrderDetailsVentas.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace CSales.Database.Models
+namespace ProjectSalesCore.DataBase.Models
 {
-    using System;
-    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
+    using CSales.Database.Models;
 
-    [Table("ODETAIL")]
+    [Table("ODVNTS")]
 
-    public class OrderDetail
+    public class OrderDetailsVentas
     {
         [Key]
-        [ForeignKey(nameof(ExternalProduct))]
-        [Column("IDXP",Order =0)]
+        [ForeignKey(nameof(EProdct))]
+        [Column("IDXP", Order = 0)]
         public int IdExternalProduct { get; set; }
 
-        [Column("EXTERNALPRODUCT")]
-        public EProduct ExternalProduct { get; set; }
+        [Column("EPRDCT")]
+        public EProduct EProdct { get; set; }
 
         [Key]
         [ForeignKey(nameof(SaleOrder))]
-        [Column("IDSORDER",Order =1)]
+        [Column("IDSORDER", Order = 1)]
         public int IdSaleOrder { get; set; }
 
         [Column("SALEORDER")]

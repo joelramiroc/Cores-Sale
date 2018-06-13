@@ -47,12 +47,12 @@ namespace CSales.Database.Models
 
         [ForeignKey(nameof(BusinessName))]
         [Column("BUSINESSNAME")]
-        public int IdBusinessName { get; set; }
+        public int? IdBusinessName { get; set; }
 
         [Column("BUSINESSNAME")]
         public virtual BusinessName BusinessName { get; set; }
 
         [Column("CREATEDDATE")]
-        public DateTime CreatedDate { get; set; }
+        public DateTime? CreatedDate { get; set; }
     }
 }

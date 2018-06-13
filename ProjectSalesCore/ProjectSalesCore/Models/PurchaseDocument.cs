@@ -11,6 +11,7 @@ namespace CSales.Models
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
+    using CSales.Database.Models;
 
     [Table("PDOC")]
 
@@ -40,7 +41,7 @@ namespace CSales.Models
         public int NumberPurchaseOrder { get; set; }
 
         [Column("PURCHASEORDER")]
-        public virtual PurchaseOrder PurchaseOrder { get; set; }
+        public virtual POrder PurchaseOrder { get; set; }
 
         [Column("CREATEDDATE")]
         public DateTime CreatedDate { get; set; }

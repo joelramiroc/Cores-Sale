@@ -218,12 +218,12 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PConditionsController.cs" />
     <Compile Include="Controllers\PDocsController.cs" />
+    <Compile Include="Controllers\POrdersController.cs" />
     <Compile Include="Controllers\ProductLinesController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\ProductTypesController.cs" />
     <Compile Include="Controllers\ProvidersController.cs" />
     <Compile Include="Controllers\RUCsController.cs" />
-    <Compile Include="Controllers\SaleOrdersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -269,7 +269,6 @@
     <Compile Include="Models\ProductType.cs" />
     <Compile Include="Models\Provider.cs" />
     <Compile Include="Models\PurchaseDocument.cs" />
-    <Compile Include="Models\PurchaseOrder.cs" />
     <Compile Include="Models\ReasonNote.cs" />
     <Compile Include="Models\RUC.cs" />
     <Compile Include="Models\Sale.cs" />
@@ -286,10 +285,14 @@
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModel\BankDetailViewModel.cs" />
     <Compile Include="ViewModel\Client\CreateClientViewModel.cs" />
+    <Compile Include="ViewModel\Client\DetailClientViewModel.cs" />
     <Compile Include="ViewModel\Employee\CreateEmployeeViewModel.cs" />
+    <Compile Include="ViewModel\Employee\DetailEmployeeViewModel.cs" />
     <Compile Include="ViewModel\Provider\CreateProviderViewModel.cs" />
     <Compile Include="ViewModel\Provider\DetailsProviderViewModel.cs" />
     <Compile Include="ViewModel\Provider\EditProviderViewModel.cs" />
+    <Compile Include="ViewModel\PurchaseOrder\CreatePurchaseOrderViewModel.cs" />
+    <Compile Include="ViewModel\PurchaseOrder\OrderDetailsComprasViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -392,12 +395,12 @@
     <Content Include="startbootstrap-sb-admin-gh-pages\forgot-password.html" />
     <Content Include="startbootstrap-sb-admin-gh-pages\gulpfile.js" />
     <Content Include="startbootstrap-sb-admin-gh-pages\index.html" />
-    <Content Include="startbootstrap-sb-admin-gh-pages\js\sb-admin-charts.js" />
-    <Content Include="startbootstrap-sb-admin-gh-pages\js\sb-admin-charts.min.js" />
-    <Content Include="startbootstrap-sb-admin-gh-pages\js\sb-admin-datatables.js" />
-    <Content Include="startbootstrap-sb-admin-gh-pages\js\sb-admin-datatables.min.js" />
-    <Content Include="startbootstrap-sb-admin-gh-pages\js\sb-admin.js" />
-    <Content Include="startbootstrap-sb-admin-gh-pages\js\sb-admin.min.js" />
+    <Content Include="Scripts\js\sb-admin-charts.js" />
+    <Content Include="Scripts\js\sb-admin-charts.min.js" />
+    <Content Include="Scripts\js\sb-admin-datatables.js" />
+    <Content Include="Scripts\js\sb-admin-datatables.min.js" />
+    <Content Include="Scripts\js\sb-admin.js" />
+    <Content Include="Scripts\js\sb-admin.min.js" />
     <Content Include="startbootstrap-sb-admin-gh-pages\login.html" />
     <Content Include="startbootstrap-sb-admin-gh-pages\navbar.html" />
     <Content Include="startbootstrap-sb-admin-gh-pages\register.html" />
@@ -436,11 +439,6 @@
     <Content Include="Views\Providers\Details.cshtml" />
     <Content Include="Views\Providers\Edit.cshtml" />
     <Content Include="Views\Providers\Index.cshtml" />
-    <Content Include="Views\SaleOrders\Create.cshtml" />
-    <Content Include="Views\SaleOrders\Delete.cshtml" />
-    <Content Include="Views\SaleOrders\Details.cshtml" />
-    <Content Include="Views\SaleOrders\Edit.cshtml" />
-    <Content Include="Views\SaleOrders\Index.cshtml" />
     <Content Include="Views\PDocs\Create.cshtml" />
     <Content Include="Views\PDocs\Delete.cshtml" />
     <Content Include="Views\PDocs\Details.cshtml" />
@@ -527,6 +525,13 @@
     <Content Include="Views\PConditions\Details.cshtml" />
     <Content Include="Views\PConditions\Edit.cshtml" />
     <Content Include="Views\PConditions\Index.cshtml" />
+    <Content Include="Views\POrders\Create.cshtml" />
+    <Content Include="Views\POrders\Delete.cshtml" />
+    <Content Include="Views\POrders\Details.cshtml" />
+    <Content Include="Views\POrders\Edit.cshtml" />
+    <Content Include="Views\POrders\Index.cshtml" />
+    <Content Include="Views\POrders\GiftEditorRow.cshtml" />
+    <Content Include="Views\POrders\CreateOrderDetailView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

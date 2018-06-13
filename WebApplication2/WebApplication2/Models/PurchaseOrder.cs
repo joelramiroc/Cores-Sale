@@ -11,6 +11,7 @@ namespace CSales.Database.Models
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
+    using ProjectSalesCore.DataBase.Models;
 
     [Table("PORDER")]
 
@@ -35,6 +36,6 @@ namespace CSales.Database.Models
         public DateTime CreatedDate { get; set; }
 
         [Column("DTS")]
-        public ICollection<DPToSale> DPTales { get; set; }
+        public ICollection<OrderDetailsCompras> OrderDetailsCompras { get; set; }
     }
 }

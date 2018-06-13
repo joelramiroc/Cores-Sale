@@ -1,0 +1,136 @@
+﻿@model ProjectSalesCore.ViewModel.PurchaseOrder.CreatePurchaseOrderViewModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap.min.js"></script>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>POrder</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.PlaceOfEntry, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PlaceOfEntry, new { htmlAttributes = new { @class = "form-control" } })
+                @*                @Html.ValidationMessageFor(model => model.PlaceOfEntry, "", new { @class = "text-danger" })*@
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.IdProvider, "IdProvider", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("IdProvider", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.IdProvider, "", new { @class = "text-danger" })
+            </div>
+            <div>
+            </div>
+            <div>
+                <div id="editorRows">
+                    @foreach (var item in Model.OrderDetailsCompras)
+                    {
+                        Html.RenderPartial("GiftEditorRow", item);
+                    }
+                </div>
+            </div>
+            <div>
+                <a href="#" class="btn-primary" data-toggle="modal" data-target="#myModal">Create New Detail</a>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <a href="#" class="close" data-dismiss="modal">&times;</a>
+                        <h3 class="modal-title">Create</h3>
+                    </div>
+                    <div class="modal-body">
+
+                        <form id="myForm">
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.IdProvider, "IdProvider", htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @*@Html.DropDownList("IdProvider", null, htmlAttributes: new { @class = "form-control" })*@
+                                    @Html.DropDownListFor(m => Model.IdProduct, new SelectList(Model.Products, "IdProduct", "ProductName"), htmlAttributes: new { @class = "control-label col-md-2" })
+                                    @Html.ValidationMessageFor(model => model.IdProduct, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.OrderDetailsComprasViewModel.Quantity, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.OrderDetailsComprasViewModel.Quantity, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.OrderDetailsComprasViewModel.Quantity, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.OrderDetailsComprasViewModel.UnitPrice, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.OrderDetailsComprasViewModel.UnitPrice, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.OrderDetailsComprasViewModel.UnitPrice, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.OrderDetailsComprasViewModel.Discount, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.OrderDetailsComprasViewModel.Discount, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.OrderDetailsComprasViewModel.Discount, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="reset" value="Submit" class="btn btn-success" id="btnSubmit" />
+                    <a href="#" class="btn-default">Cancel</a>
+                    <a href="#" onclick="SaveForm()">Save</a>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<script>
+    $(document).ready(function () {
+        $("#btnSubmit").click(function () {
+            debugger;
+            var myFormData = $("#myForm").serialize();
+            var prop2 = $("#model").serialize();
+                $.ajax({
+                    type: "POST",
+                    url:"Create",
+                    data: {prop2},
+                    success: function ()
+                    {
+                        $("#myModal").modal("hide");
+                    }
+                })
+        })
+
+        var saveForm = function () {
+
+        }
+    });
+
+</script>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

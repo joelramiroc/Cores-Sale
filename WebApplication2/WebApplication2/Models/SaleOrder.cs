@@ -11,6 +11,7 @@ namespace CSales.Database.Models
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
+    using ProjectSalesCore.DataBase.Models;
 
     [Table("SOR")]
 
@@ -46,6 +47,6 @@ namespace CSales.Database.Models
         public virtual PCondition PaymentCondition { get; set; }
 
         [Column("ODETAILS")]
-        public ICollection<OrderDetail> OrderDetails { get; set; }
+        public ICollection<OrderDetailsVentas> OrderDetails { get; set; }
     }
 }

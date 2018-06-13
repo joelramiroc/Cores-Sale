@@ -12,14 +12,14 @@ namespace CSales.Database.Models
     using System.Text;
     using System.Threading.Tasks;
 
-    [Table("EPRODUCT")]
+    [Table("EP")]
 
     public class EProduct
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("ID")]
-        public int IdExternalProduct { get; set; }
+        public int Id { get; set; }
 
         [ForeignKey(nameof(Product))]
         [Column("IDPRODUCT")]

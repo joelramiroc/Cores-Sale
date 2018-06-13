@@ -13,12 +13,12 @@ namespace ProjectSalesCore.DataBase.Models
     public class OrderDetailsVentas
     {
         [Key]
-        [ForeignKey(nameof(ExternalProduct))]
+        [ForeignKey(nameof(EProdct))]
         [Column("IDXP", Order = 0)]
         public int IdExternalProduct { get; set; }
 
-        [Column("EXTERNALPRODUCT")]
-        public EProduct ExternalProduct { get; set; }
+        [Column("EPRDCT")]
+        public EProduct EProdct { get; set; }
 
         [Key]
         [ForeignKey(nameof(SaleOrder))]
