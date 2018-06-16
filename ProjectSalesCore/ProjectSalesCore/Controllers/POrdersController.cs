@@ -135,20 +135,22 @@ namespace ProjectSalesCore.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            POrder pOrder = db.PurchaseOrder.Find(id);
+
+            POrder pOrder = this.db.PurchaseOrder.Find(id);
             if (pOrder == null)
             {
-                return HttpNotFound();
-            }
-            if(pOrder.StatusOrder.IdStatusOrder ==2)
-            {
-                return View("Index");
+                return this.HttpNotFound();
             }
 
-            ViewBag.IdProvider = new SelectList(db.Provider, "Id", "Name", pOrder.IdProvider);
-            ViewBag.IdPaymentCondition = new SelectList(db.PaymentCondition, "IdPaymentCondition", "ConditionName");
-            ViewBag.IdStatusOrder = new SelectList(db.StatusOrder, "IdStatusOrder", "StatusName");
-            return View(pOrder);
+            if (pOrder.StatusOrder.StatusName.Equals("DISTRIBUIDO"))
+            {
+                return this.View("Index", this.db.PurchaseOrder.ToList());
+            }
+
+            this.ViewBag.IdProvider = new SelectList(db.Provider, "Id", "Name", pOrder.IdProvider);
+            this.ViewBag.IdPaymentCondition = new SelectList(db.PaymentCondition, "IdPaymentCondition", "ConditionName");
+            this.ViewBag.IdStatusOrder = new SelectList(db.StatusOrder, "IdStatusOrder", "StatusName");
+            return this.View(pOrder);
         }
 
         // POST: POrders/Edit/5
@@ -156,7 +158,7 @@ namespace ProjectSalesCore.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "PurchaseNumber,PlaceOfEntry,IdProvider,CreatedDate")] POrder pOrder)
+        public ActionResult Edit(POrder pOrder)
         {
             if (ModelState.IsValid)
             {

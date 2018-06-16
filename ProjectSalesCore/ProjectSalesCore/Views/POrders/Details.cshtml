@@ -52,6 +52,11 @@
     @Html.DisplayFor(model =>model.TotalAmount);
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.PurchaseNumber }) |
+    @if (!Model.StatusOrder.Equals("DISTRIBUIDO"))
+    {
+        @Html.ActionLink("Edit", "Edit", new { id = Model.PurchaseNumber })
+        <as> | </as>
+    }
+
     @Html.ActionLink("Back to List", "Index")
 </p>
