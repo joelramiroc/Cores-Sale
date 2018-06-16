@@ -1,4 +1,4 @@
-﻿@model CSales.Database.Models.POrder
+﻿@model ProjectSalesCore.ViewModel.PurchaseOrder.POrderDetail
 
 @{
     ViewBag.Title = "Details";
@@ -11,30 +11,45 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Provider.Name)
+            @Html.DisplayNameFor(model => model.ProviderName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Provider.Name)
+            @Html.DisplayFor(model => model.PaymentCondition)
         </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PlaceOfEntry)
-        </dt>
 
         <dd>
             @Html.DisplayFor(model => model.PlaceOfEntry)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CreatedDate)
-        </dt>
-
+        <dd>
+            @Html.DisplayFor(model => model.StatusOrder)
+        </dd>
         <dd>
             @Html.DisplayFor(model => model.CreatedDate)
         </dd>
 
     </dl>
+</div>
+<div>
+    <table>
+        @foreach (var item in Model.DetailsOrderDetailViewModels)
+        {
+            <tr>
+                <td>@item.ProductName</td>
+                <td>@item.Quantity</td>
+                <td>@item.UnitPrice</td>
+                <td>@item.Discount</td>
+                <td>@item.TotalAmount</td>
+            </tr>
+        }
+    </table>
+</div>
+<div>
+    Total:
+</div>
+<div>
+    @Html.DisplayFor(model =>model.TotalAmount);
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.PurchaseNumber }) |

@@ -7,7 +7,7 @@ namespace CSales.Database.Contexts
     using System.Configuration;
     using System.Data.Entity;
     using System.Diagnostics;
-    using CSales.Database.Models;
+    using CSales.Database.Models;    
     using ProjectSalesCore.DataBase.Models;
 
     public class MyContext : DbContext
@@ -22,7 +22,7 @@ namespace CSales.Database.Contexts
         {
             base.OnModelCreating(modelBuilder);
         }
-        
+
         public DbSet<Provider> Provider { get; set; }
 
         public DbSet<AddressClient> AddressClient { get; set; }
@@ -31,6 +31,7 @@ namespace CSales.Database.Contexts
 
         public DbSet<AddressEmployee> AddressEmployee { get; set; }
 
+        public DbSet<StatusOrder> StatusOrder { get; set; }
 
         public DbSet<Bank> Bank { get; set; }
 
@@ -143,7 +144,6 @@ namespace CSales.Database.Contexts
         public DbSet<UOfMeasur> UnitOfMeasurement { get; set; }
 
         public DbSet<Voucher> Voucher { get; set; }
-
 
         // public DbSet<>  { get; set; }
     }

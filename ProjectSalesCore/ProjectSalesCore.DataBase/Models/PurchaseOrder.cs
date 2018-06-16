@@ -37,5 +37,19 @@ namespace CSales.Database.Models
 
         [Column("DTS")]
         public ICollection<OrderDetailsCompras> OrderDetailsCompras { get; set; }
+
+        [ForeignKey(nameof(PCondition))]
+        [Column("IDPC")]
+        public int IdPaymentCondition { get; set; }
+
+        [Column("PCOND")]
+        public virtual PCondition PCondition { get; set; }
+
+        [ForeignKey(nameof(StatusOrder))]
+        [Column("IDSO")]
+        public int IdStatusOrder { get; set; }
+
+        [Column("SORDER")]
+        public virtual StatusOrder StatusOrder { get; set; }
     }
 }

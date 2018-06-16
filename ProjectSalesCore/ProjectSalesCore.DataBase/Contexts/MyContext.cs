@@ -25,6 +25,7 @@ namespace CSales.Database.Contexts
         }
 
         public DbSet<TestDate> TestDate { get; set; }
+
         public DbSet<Provider> Provider { get; set; }
 
         public DbSet<AddressClient> AddressClient { get; set; }
@@ -33,6 +34,7 @@ namespace CSales.Database.Contexts
 
         public DbSet<AddressEmployee> AddressEmployee { get; set; }
 
+        public DbSet<StatusOrder> StatusOrder { get; set; }
 
         public DbSet<Bank> Bank { get; set; }
 

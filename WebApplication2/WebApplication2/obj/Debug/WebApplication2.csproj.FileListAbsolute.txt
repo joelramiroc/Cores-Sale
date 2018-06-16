@@ -210,3 +210,4 @@ C:\Users\JoelCaballero\Desktop\Cores-Sale\WebApplication2\WebApplication2\bin\Mi
 C:\Users\JoelCaballero\Desktop\Cores-Sale\WebApplication2\WebApplication2\bin\Microsoft.AI.Web.xml
 C:\Users\JoelCaballero\Desktop\Cores-Sale\WebApplication2\WebApplication2\obj\Debug\WebApplication2.dll
 C:\Users\JoelCaballero\Desktop\Cores-Sale\WebApplication2\WebApplication2\obj\Debug\WebApplication2.pdb
+C:\Users\JoelCaballero\Desktop\Cores-Sale\WebApplication2\WebApplication2\obj\Debug\WebApplication2.csprojResolveAssemblyReference.cache

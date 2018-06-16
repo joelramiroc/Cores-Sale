@@ -16,7 +16,6 @@ namespace ProjectSalesCore.ViewModel.PurchaseOrder
         public CreatePurchaseOrderViewModel()
         {
             this.OrderDetailsCompras = new List<OrderDetailsComprasViewModel>();
-            this.OrderDetailsComprasViewModel = new OrderDetailsComprasViewModel();
         }
 
         public int PurchaseNumber { get; set; }
@@ -35,12 +34,14 @@ namespace ProjectSalesCore.ViewModel.PurchaseOrder
 
         public int IdPaymentCondition { get; set; }
 
-        public virtual PCondition PCondition { get; set; }
+        public int IdStatusOrder { get; set; }
+
+        public IEnumerable<PCondition> PConditions { get; set; }
 
         public IEnumerable<OrderDetailsComprasViewModel> OrderDetailsCompras { get; set; }
 
         public IEnumerable<Product> Products { get; set; }
 
-        public OrderDetailsComprasViewModel OrderDetailsComprasViewModel { get; set; }
+        public int IdPCondition { get; set; }
     }
 }

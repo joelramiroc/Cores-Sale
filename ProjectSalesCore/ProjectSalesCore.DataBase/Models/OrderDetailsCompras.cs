@@ -40,13 +40,6 @@ namespace ProjectSalesCore.DataBase.Models
         [Column("TOTALAMOUNT")]
         public decimal TotalAmount { get; set; }
 
-        [ForeignKey(nameof(PCondition))]
-        [Column("IDPC")]
-        public int IdPaymentCondition { get; set; }
-
-        [Column("PCOND")]
-        public virtual PCondition PCondition { get; set; }
-
         [ForeignKey(nameof(POrder))]
         [Column("PO")]
         public int PurchaseNumber { get; set; }

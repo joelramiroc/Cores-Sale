@@ -224,6 +224,7 @@
     <Compile Include="Controllers\ProductTypesController.cs" />
     <Compile Include="Controllers\ProvidersController.cs" />
     <Compile Include="Controllers\RUCsController.cs" />
+    <Compile Include="Controllers\StatusOrdersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -292,7 +293,9 @@
     <Compile Include="ViewModel\Provider\DetailsProviderViewModel.cs" />
     <Compile Include="ViewModel\Provider\EditProviderViewModel.cs" />
     <Compile Include="ViewModel\PurchaseOrder\CreatePurchaseOrderViewModel.cs" />
+    <Compile Include="ViewModel\PurchaseOrder\DetailsOrderDetailViewModel.cs" />
     <Compile Include="ViewModel\PurchaseOrder\OrderDetailsComprasViewModel.cs" />
+    <Compile Include="ViewModel\PurchaseOrder\POrderDetail.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -532,6 +535,11 @@
     <Content Include="Views\POrders\Index.cshtml" />
     <Content Include="Views\POrders\GiftEditorRow.cshtml" />
     <Content Include="Views\POrders\CreateOrderDetailView.cshtml" />
+    <Content Include="Views\StatusOrders\Create.cshtml" />
+    <Content Include="Views\StatusOrders\Delete.cshtml" />
+    <Content Include="Views\StatusOrders\Details.cshtml" />
+    <Content Include="Views\StatusOrders\Edit.cshtml" />
+    <Content Include="Views\StatusOrders\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

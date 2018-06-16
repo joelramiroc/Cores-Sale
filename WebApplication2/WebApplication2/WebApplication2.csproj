@@ -249,6 +249,7 @@
     <Compile Include="Models\SaleOrder.cs" />
     <Compile Include="Models\SalesByDispatch.cs" />
     <Compile Include="Models\StatusNote.cs" />
+    <Compile Include="Models\StatusOrder.cs" />
     <Compile Include="Models\Storage.cs" />
     <Compile Include="Models\TelephoneClient.cs" />
     <Compile Include="Models\TelephoneEmployee.cs" />
