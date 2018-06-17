@@ -225,7 +225,6 @@
     <Compile Include="Controllers\ProvidersController.cs" />
     <Compile Include="Controllers\RUCsController.cs" />
     <Compile Include="Controllers\StatusOrdersController.cs" />
-    <Compile Include="Controllers\StoragesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -297,7 +296,6 @@
     <Compile Include="ViewModel\PurchaseOrder\DetailsOrderDetailViewModel.cs" />
     <Compile Include="ViewModel\PurchaseOrder\OrderDetailsComprasViewModel.cs" />
     <Compile Include="ViewModel\PurchaseOrder\POrderDetail.cs" />
-    <Compile Include="ViewModel\Storage\CreateStorageViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -542,11 +540,7 @@
     <Content Include="Views\StatusOrders\Details.cshtml" />
     <Content Include="Views\StatusOrders\Edit.cshtml" />
     <Content Include="Views\StatusOrders\Index.cshtml" />
-    <Content Include="Views\Storages\Create.cshtml" />
-    <Content Include="Views\Storages\Delete.cshtml" />
-    <Content Include="Views\Storages\Details.cshtml" />
-    <Content Include="Views\Storages\Edit.cshtml" />
-    <Content Include="Views\Storages\Index.cshtml" />
+    <Content Include="Views\POrders\AdProductToAlmacen.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -598,9 +592,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>51217</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:51712/</IISUrl>
-          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
-          <IISAppRootUrl>http://localhost:51712/</IISAppRootUrl>
+          <IISUrl>http://localhost:51217/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

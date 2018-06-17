@@ -21,12 +21,12 @@ namespace ProjectSalesCore.Controllers
 
     public class ProvidersController : Controller
     {
-//        private readonly IRepository<CSales.Database.Models.Provider> providerRepository;
+        //        private readonly IRepository<CSales.Database.Models.Provider> providerRepository;
         private MyContext db = new MyContext();
 
         public ProvidersController()//IRepository<CSales.Database.Models.Provider> providerRepository)
         {
-  //          this.providerRepository = providerRepository;
+            //          this.providerRepository = providerRepository;
         }
 
         // GET: Providers
@@ -60,7 +60,8 @@ namespace ProjectSalesCore.Controllers
                 IsForeignProvider = provider.IsForeignProvider,
                 Name = provider.Name,
                 Telephones = this.db.TelephoneProvider.Where(t => t.IdPRV == provider.Id),
-                Addresses = this.db.AddressProvider.Where(a => a.IdPRV == provider.Id)
+                Addresses = this.db.AddressProvider.Where(a => a.IdPRV == provider.Id),
+                CitiesDistricts = this.db.CityProvider.Where(cd => cd.IdProv == provider.Id)
             };
             return View(prov);
         }
@@ -102,6 +103,16 @@ namespace ProjectSalesCore.Controllers
                 {
                     this.db.Database.ExecuteSqlCommand(@"INSERT INTO TELPROV(NUMBER,DESCRIPTION,IDPRV) values ({0},{1},{2})", provider.Telephones.ElementAt(i), "Descripcion default", newProv.Id);
                 }
+
+                var cCorriente = new CurrentAccountProvider
+                {
+                    CreatedDate = DateTime.Now,
+                    IdProvider = newProv.Id,
+                    TotalDebt = 0
+                };
+
+                this.db.CurrentAcountProvider.Add(cCorriente);
+                this.db.SaveChanges();
 
                 return RedirectToAction("Index");
             }

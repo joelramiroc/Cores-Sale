@@ -35,7 +35,12 @@
             @Html.DisplayFor(modelItem => item.CreatedDate)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.PurchaseNumber }) |
+            @if (!item.StatusOrder.StatusName.Equals("DISTRIBUIDO"))
+            {
+                @Html.ActionLink("Edit", "Edit", new { id = item.PurchaseNumber })
+                <as> | </as>
+            }
+
             @Html.ActionLink("Details", "Details", new { id=item.PurchaseNumber }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.PurchaseNumber })
         </td>
