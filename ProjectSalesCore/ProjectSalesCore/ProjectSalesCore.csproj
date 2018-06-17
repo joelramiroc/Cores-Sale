@@ -540,6 +540,7 @@
     <Content Include="Views\StatusOrders\Details.cshtml" />
     <Content Include="Views\StatusOrders\Edit.cshtml" />
     <Content Include="Views\StatusOrders\Index.cshtml" />
+    <Content Include="Views\POrders\AdProductToAlmacen.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

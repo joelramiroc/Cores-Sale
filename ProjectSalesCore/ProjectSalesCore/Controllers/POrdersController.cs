@@ -119,6 +119,12 @@ namespace ProjectSalesCore.Controllers
                     };
                     this.db.OrderDetailsCompras.Add(n);
                     this.db.SaveChanges();
+
+                }
+
+                if (this.db.PaymentCondition.Find(pOrder.IdPaymentCondition).ConditionName.Equals("DISTRIBUIDO"))
+                {
+                    return this.AdProductToAlmacen(pOrder);
                 }
 
                 return RedirectToAction("Index");
@@ -126,6 +132,18 @@ namespace ProjectSalesCore.Controllers
 
             ViewBag.IdProvider = new SelectList(db.Provider, "Id", "Name", pOrder.IdProvider);
             return View(pOrder);
+        }
+
+        public ActionResult AdProductToAlmacen(CreatePurchaseOrderViewModel pOrder)
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult AdProductToAlmacen()
+        {
+            return View();
         }
 
         // GET: POrders/Edit/5
