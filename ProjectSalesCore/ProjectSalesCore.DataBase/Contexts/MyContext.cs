@@ -32,6 +32,8 @@ namespace CSales.Database.Contexts
 
         public DbSet<AddressProvider> AddressProvider { get; set; }
 
+        public DbSet<AddressStorage> AddressStorage { get; set; }
+
         public DbSet<AddressEmployee> AddressEmployee { get; set; }
 
         public DbSet<StatusOrder> StatusOrder { get; set; }

@@ -12,6 +12,7 @@
     using CSales.Database.Models;
     using CSales.Database.Repositories;
     using ViewModel.Storage;
+    using DataBase.Models;
 
     public class StoragesController : Controller
     {
@@ -41,7 +42,7 @@
         // GET: Storages/Create
         public ActionResult Create()
         {
-            return View();
+            return View(new CreateStorageViewModel());
         }
 
         // POST: Storages/Create
@@ -55,10 +56,23 @@
             {
                 var sNew = new Storage
                 {
-                    
+                    StorageName = storage.StorageName,
+                    CreatedDate = DateTime.Now
                 };
-                db.Storage.Add(sNew);
+                var sn = db.Storage.Add(sNew);
                 db.SaveChanges();
+
+                foreach (var item in storage.Addresses)
+                {
+                    var n = new AddressStorage
+                    {
+                        AddressName = item.ToString(),
+                        Description = "DEFAULT DESCRIPTION",
+                        IdStorage = sn.IdStorage,
+                    };
+                    this.db.AddressStorage.Add(n);
+                    this.db.SaveChanges();
+                }
                 return RedirectToAction("Index");
             }
 

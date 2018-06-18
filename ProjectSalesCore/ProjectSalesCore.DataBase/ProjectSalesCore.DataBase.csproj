@@ -64,6 +64,7 @@
     <Compile Include="Models\AddressClient.cs" />
     <Compile Include="Models\AddressEmployee.cs" />
     <Compile Include="Models\AddressProvider.cs" />
+    <Compile Include="Models\AddressStorage.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\Bank.cs" />
     <Compile Include="Models\Bill.cs" />
@@ -119,6 +120,7 @@
     <Compile Include="Models\TelephoneClient.cs" />
     <Compile Include="Models\TelephoneEmployee.cs" />
     <Compile Include="Models\TelephoneProvider.cs" />
+    <Compile Include="Models\TelephoneStorage.cs" />
     <Compile Include="Models\TestDate.cs" />
     <Compile Include="Models\TypeOfPurchaseDocument.cs" />
     <Compile Include="Models\TypeOfSaleDocument.cs" />

@@ -11,9 +11,7 @@
     {
         public string StorageName { get; set; }
 
-        public Address Address { get; set; }
-
-        public IEnumerable<Telephone> Telephones { get; set; }
+        public string Addresses { get; set; }
 
         public DateTime CreatedDate { get; set; }
     }
