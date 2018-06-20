@@ -12,29 +12,9 @@
 
     public class HomeController : Controller
     {
-        private readonly IRepository<Bank> bak;
-
-        public HomeController(IRepository<Bank> bak)
-        {
-            this.bak = bak;
-        }
 
         public ActionResult Index()
         {
-            Bank bank;
-
-            bank = new Bank
-            {
-                IdBank = this.bak.All().Count(),
-                BankName = "Banco prueba",
-                Description = "Este es el banco de pruebas",
-            };
-
-            this.bak.Create(bank);
-            this.bak.SaveChangesAsync();
-
-            var list = this.bak.All();
-
             return View();
         }
 

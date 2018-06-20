@@ -28,9 +28,12 @@ namespace ProjectSalesCore.ViewModel.Provider
         public string Contact { get; set; }
 
         public bool IsForeignProvider { get; set; }
-        
+
+        [ForeignKey(nameof(BusinessName))]
+        [Column("BUSINESSNAME")]
         public int IdBusinessName { get; set; }
 
+        [Column("BUSINESSNAME")]
         public virtual BusinessName BusinessName { get; set; }
     }
 }

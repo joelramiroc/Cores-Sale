@@ -24,7 +24,7 @@ namespace CSales.Database.Models
         [Column("STORAGENAME")]
         public string StorageName { get; set; }
 
-        [Column("CREATEDDATE")] 
+        [Column("CREATEDDATE")]
         public DateTime CreatedDate { get; set; }
     }
 }

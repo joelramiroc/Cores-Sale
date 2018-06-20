@@ -122,8 +122,10 @@ namespace ProjectSalesCore.Controllers
 
                 }
 
-                if (this.db.PaymentCondition.Find(pOrder.IdPaymentCondition).ConditionName.Equals("DISTRIBUIDO"))
+                var state = this.db.StatusOrder.Find(pOrder.IdStatusOrder);
+                if (state.StatusName.Equals("DISTRIBUIDO"))
                 {
+                    pOrder.PurchaseNumber = ordenG.PurchaseNumber;
                     return this.AdProductToAlmacen(pOrder);
                 }
 
@@ -136,14 +138,31 @@ namespace ProjectSalesCore.Controllers
 
         public ActionResult AdProductToAlmacen(CreatePurchaseOrderViewModel pOrder)
         {
-            return View();
+            var s = new AddProcuctsToAlmacenViewModel
+            {
+                PurchaseNumber = pOrder.PurchaseNumber,
+            };
+
+            var Lista = new List<OrderDetail_IdAlmacenViewModel>();
+            foreach (var item in pOrder.OrderDetailsCompras)
+            {
+                item.Product = this.db.Product.Find(item.IdProduct).ProductName;
+                var nP = new OrderDetail_IdAlmacenViewModel
+                {
+                    OrderDetailsComprasViewModel = item
+                };
+                Lista.Add(nP);
+            }
+
+            s.OrderDetail_IdAlmacenViewModel = Lista;
+
+            ViewBag.IdStorage = new SelectList(db.Storage, "IdStorage", "StorageName");
+            return View("AdProductToAlmacen", s);
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult AdProductToAlmacen()
+        public ActionResult AddProductToAlmacen(AddProcuctsToAlmacenViewModel addProcuctsToAlmacenViewModel)
         {
-            return View();
+            return View("AdProductToAlmacen", addProcuctsToAlmacenViewModel);
         }
 
         // GET: POrders/Edit/5
@@ -182,8 +201,11 @@ namespace ProjectSalesCore.Controllers
             {
                 db.Entry(pOrder).State = EntityState.Modified;
                 db.SaveChanges();
+
+                var state = this.db.StatusOrder.Find(pOrder.IdStatusOrder);
                 return RedirectToAction("Index");
             }
+
             ViewBag.IdProvider = new SelectList(db.Provider, "Id", "Name", pOrder.IdProvider);
             ViewBag.IdPaymentCondition = new SelectList(db.PaymentCondition, "IdPaymentCondition", "ConditionName");
             ViewBag.IdStatusOrder = new SelectList(db.StatusOrder, "IdStatusOrder", "StatusName");

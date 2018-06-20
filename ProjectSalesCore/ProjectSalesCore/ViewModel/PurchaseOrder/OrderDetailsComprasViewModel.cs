@@ -16,7 +16,7 @@ namespace ProjectSalesCore.ViewModel.PurchaseOrder
 
         public int IdProduct { get; set; }
 
-        public virtual Product Product { get; set; }
+        public string Product { get; set; }
 
         public int Quantity { get; set; }
 
